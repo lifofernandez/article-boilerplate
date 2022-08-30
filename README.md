@@ -2,53 +2,54 @@
 title: Producción gráfica de documentos acádemicos con Pandoc
 authot: Lisandro Fernández
 abstract: |
-  Conjunto de herramientas de publicación académica potente, extensible y repleto
-  de funciones. Construya y personalice con Pandoc, utilice un sistema de
-  composición tipográfica (LaTeX) y componentes predefinidos, y dé vida a los
-  proyectos con potentes filtros.
+  Pandoc como entorno textutal de producción de documentos
+  académicos. El texto plano beneficia a todos los usuarios, deben poder
+  encontrar lo que necesitan, comprender lo que encuentran y usarlo para realizar
+  tareas.
 bibliography: referencias.bib
 csl: ieee.csl
 #csl: iso690-author-date-es.csl
 #csl: apa-annotated-bibliography.csl
 ---
 
-# Academic document production sandboxig
+# Entorno de producción académica
 
-```
-# Para obtener Citation Style Language 
-wget raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
+El presente documento propone el uso de Pandoc como entorno puramente textual
+de producción gráfica de documentos académicos ó de alta complejidad @caleb.
+El texto plano beneficia a todos los usuarios, deben poder encontrar lo que
+necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 
-# Para generar pdf
 
-pandoc README.md --citeproc \
-     -s --toc --toc-depth=3 --number-sections --columns=80 \
-     -o README.pdf 
-
-# ó
-make pdf
-
-```
+# Pandoc
 
 Powerful, extensible, and feature-packed academic publishing
 toolkit. Build and customize with Pandoc, utilize prebuilt a
 typesetting system (TeX) and components, and bring projects to
 life with powerful filters.
 
-## citeproc y crossref
+## Generar pdf
+
+```
+pandoc README.md --mathjax \
+   -F pandoc-crossref -F mermaid-filter --citeproc \
+   --template=plantilla --pdf-engine-opt=-shell-escape \
+   -s --toc --toc-depth=3 --number-sections --columns=80 \
+   -o README.pdf
+
+# ó
+make pdf
+
+```
+
+
+# Citas y referencias bibliogáficas 
 
 Este es el ejemplo de referencia @moolenaar2000.
 
 Una referencia con paginas [@knuth1986texbook, p.12-23].
 
-## Pandoc
 
-## Mermaid
-
-~~~mermaid
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-~~~
+# Gráficos y diagramas
 
 ```
 ~~~mermaid
@@ -58,81 +59,42 @@ sequenceDiagram
 ~~~
 ```
 
-con referencias
-
-``` {.mermaid #fig:example}
+~~~mermaid
 sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
-```
-```{.mermaid}
+~~~
 
+
+~~~mermaid
 gitGraph
-
    commit
-
    commit
-
    branch develop
-
    commit
-
    commit
-
    commit
-
    checkout main
-
    commit
-
    commit
+~~~
 
-```
-
-
-
-```{.mermaid}
-
+~~~mermaid
 sequenceDiagram
-
     participant dotcom
-
     participant iframe
-
     participant viewscreen
-
     dotcom->>iframe: loads html w/ iframe url
-
     iframe->>viewscreen: request template
-
     viewscreen->>iframe: html & javascript
-
     iframe->>dotcom: iframe ready
-
     dotcom->>iframe: set mermaid data on iframe
-
     iframe->>iframe: render mermaid
+~~~
 
 
 
-```
-
-
-
-```{.mermaid}
-
-sequenceDiagram
-
-
-
-    Alice->>John: Hello John, how are you?
-
-    John-->>Alice: Great!
-
-```
-
-```{.mermaid}
-
+~~~mermaid
 erDiagram
 
           CUSTOMER }|..|{ DELIVERY-ADDRESS : has
@@ -150,13 +112,9 @@ erDiagram
           PRODUCT-CATEGORY ||--|{ PRODUCT : contains
 
           PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+~~~
 
-```
-
-
-
-```{.mermaid}
-
+~~~mermaid
 gantt
 
     dateFormat  YYYY-MM-DD
@@ -216,12 +174,9 @@ gantt
     Add gantt diagram to demo page      :20h
 
     Add another diagram to demo page    :48h
+~~~
 
-```
-
-
-```{.mermaid}
-
+~~~mermaid
 journey
 
     title My working day
@@ -239,8 +194,7 @@ journey
       Go downstairs: 5: Me
 
       Sit down: 5: Me
-
-```
+~~~
 
 ## MathJax
 

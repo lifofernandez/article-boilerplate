@@ -1,0 +1,11 @@
+{
+"format":"svg",
+"theme":"neutral",
+"fontFamily": "monospace",
+"logLevel": "info",
+"flowchart": {
+  "htmlLabels": true,
+  "curve": "linear"
+}
+}
+
