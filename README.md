@@ -14,18 +14,100 @@ csl: ieee.csl
 
 # Producción gráfica de documentos acádemicos con Pandoc
 
-El presente documento propone el uso de Pandoc como entorno puramente textual
-de producción gráfica de documentos académicos ó de alta complejidad @caleb.
+Este proyecto propone el uso de
+Pandoc como entorno puramente textual
+de producción gráfica
+de documentos académicos ó de complejidad considerable @caleb.
+
+Con el sistema de composición tipográfica de alta calidad LaTeX; que incluye
+funciones diseñadas para la producción de documentación técnica y científica.
+[]:LaTeX es el estándar de facto para la comunicación y publicación de documentos
+[]:científicos. 
+
+## Texto plano
 El texto plano beneficia a todos los usuarios, deben poder encontrar lo que
 necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 
-# Pandoc
+[]:Powerful, extensible, and feature-packed academic publishing toolkit. Build and
+[]:customize with Pandoc, utilize prebuilt a typesetting system (TeX) and
+[]:components, and bring projects to life with powerful filters.
 
-Powerful, extensible, and feature-packed academic publishing toolkit. Build and
-customize with Pandoc, utilize prebuilt a typesetting system (TeX) and
-components, and bring projects to life with powerful filters.
+## Pandoc
 
-## Generar PDF
+Pandoc comprende una serie de extensiones útiles de la sintaxis de markdown,
+como los metadatos del documento (título, autor, fecha); las notas al pie; las
+tablas; las listas de definiciones; los superíndices y subíndices; la
+tachadura; las listas ordenadas mejoradas (el número de inicio y el estilo de
+numeración son significativos); las listas de ejemplos en ejecución; los
+bloques de código delimitados con resaltado de sintaxis; las comillas
+inteligentes, los guiones y las elipses; el markdown dentro de bloques HTML; y
+el LaTeX en línea. Si se desea una compatibilidad estricta con markdown, todas
+estas extensiones pueden desactivarse.
+
+Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
+documentos de markdown. Se proporcionan varios métodos diferentes para
+representar las matemáticas en HTML, incluyendo MathJax y la traducción a
+MathML. Las matemáticas de LaTeX se convierten (según lo requiera el formato de
+salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
+
+Pandoc incluye un potente sistema de citas y bibliografías automáticas. Esto
+significa que puede escribir una cita como
+
+[véase @doe99, pp. 33-35; también @smith04, cap. 1]
+
+y pandoc la convertirá en una cita con el formato adecuado utilizando
+cualquiera de los cientos de estilos CSL (incluyendo estilos de nota al pie,
+estilos numéricos y estilos autor-fecha), y añadirá una bibliografía con el
+formato adecuado al final del documento. Los datos bibliográficos pueden estar
+en formato BibTeX, BibLaTeX, CSL JSON o CSL YAML. Las citas funcionan en todos
+los formatos de salida.
+
+Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
+incluyendo un sistema de plantillas y un potente sistema para escribir filtros.
+
+Pandoc incluye una biblioteca Haskell y un programa de línea de comandos
+independiente. La biblioteca incluye módulos separados para cada formato de
+entrada y salida, por lo que para añadir un nuevo formato de entrada o salida
+sólo hay que añadir un nuevo módulo.
+
+Pandoc es software libre, publicado bajo la GPL. Copyright 2006-2022 John MacFarlane.
+
+---
+
+Pandoc es una biblioteca Haskell para convertir de un formato de marcado a
+otro, y una herramienta de línea de comandos que utiliza esta biblioteca.
+
+Pandoc puede convertir entre numerosos formatos de marcado y de procesamiento
+de textos, incluyendo, pero sin limitarse a, varios sabores de Markdown, HTML,
+LaTeX y Word docx. Para ver la lista completa de formatos de entrada y salida,
+consulte las opciones --from y --to más abajo. Pandoc también puede producir
+una salida en formato PDF: consulte la sección de creación de un PDF, más
+abajo.
+
+La versión mejorada de Markdown de Pandoc incluye sintaxis para tablas, listas
+de definiciones, bloques de metadatos, notas a pie de página, citas,
+matemáticas y mucho más. Véase más abajo en Markdown de Pandoc.
+
+Pandoc tiene un diseño modular: consta de un conjunto de lectores, que analizan
+el texto en un formato determinado y producen una representación nativa del
+documento (un árbol sintáctico abstracto o AST), y un conjunto de escritores,
+que convierten esta representación nativa en un formato de destino. Así, para
+añadir un formato de entrada o de salida basta con añadir un lector o un
+escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
+para modificar el AST intermedio.
+
+Dado que la representación intermedia de un documento por parte de pandoc es
+menos expresiva que muchos de los formatos entre los que convierte, no hay que
+esperar conversiones perfectas entre todos los formatos. Pandoc intenta
+conservar los elementos estructurales de un documento, pero no los detalles de
+formato, como el tamaño de los márgenes. Y algunos elementos del documento,
+como las tablas complejas, pueden no encajar en el modelo de documento simple
+de pandoc. Mientras que las conversiones del Markdown de pandoc a todos los
+formatos aspiran a ser perfectas, las conversiones de formatos más expresivos
+que el Markdown de pandoc pueden tener pérdidas.
+
+
+## Generar este documento
 
 ```console
 pandoc README.md --mathjax \
@@ -40,7 +122,10 @@ make pdf
 ```
 
 
-# Citas y referencias bibliogáficas 
+[]:# Citas y referencias bibliogáficas 
+[]:# BibLATEX – Sophisticated Bibliographies in LATEX
+
+## BibLATEX - Bibliografías sofisticadas en LATEX
 
 Este es el ejemplo de referencia @moolenaar2000.
 
