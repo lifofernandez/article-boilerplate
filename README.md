@@ -12,24 +12,22 @@ csl: ieee.csl
 #csl: apa-annotated-bibliography.csl
 ---
 
-# Entorno de producción académica
+# Producción gráfica de documentos acádemicos con Pandoc
 
 El presente documento propone el uso de Pandoc como entorno puramente textual
 de producción gráfica de documentos académicos ó de alta complejidad @caleb.
 El texto plano beneficia a todos los usuarios, deben poder encontrar lo que
 necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 
-
 # Pandoc
 
-Powerful, extensible, and feature-packed academic publishing
-toolkit. Build and customize with Pandoc, utilize prebuilt a
-typesetting system (TeX) and components, and bring projects to
-life with powerful filters.
+Powerful, extensible, and feature-packed academic publishing toolkit. Build and
+customize with Pandoc, utilize prebuilt a typesetting system (TeX) and
+components, and bring projects to life with powerful filters.
 
-## Generar pdf
+## Generar PDF
 
-```
+```console
 pandoc README.md --mathjax \
    -F pandoc-crossref -F mermaid-filter --citeproc \
    --template=plantilla --pdf-engine-opt=-shell-escape \
@@ -274,7 +272,16 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 
 ### Fenced Code Block
 
+https://pandoc.org/MANUAL.html#fenced-code-blocks
+
+https://pandoc.org/MANUAL.html#syntax-highlighting
+
+
+```console
+pandoc --print-highlight-style pygments > my.theme
 ```
+
+```json
 {
   "firstName": "John",
   "lastName": "Smith",

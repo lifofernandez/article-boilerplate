@@ -1,8 +1,9 @@
 {
 "format":"svg",
-"theme":"neutral",
+"size":"1024",
 "fontFamily": "monospace",
 "logLevel": "info",
+"background":"transparent",
 "flowchart": {
   "htmlLabels": true,
   "curve": "linear"
