@@ -1,0 +1,21 @@
+name: Pandoc Action
+# https://github.com/pandoc/pandoc-action-example
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: docker://pandoc/latex:2.9
+        with:
+         # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+          args: >-  # allows you to break string into multiple lines
+            -F mermaid-filter -F pandoc-crossref --citeproc --mathjax 
+            --highlight-style my.theme
+            --template=plantilla --pdf-engine-opt=-shell-escape
+            -s --toc --toc-depth=2 --number-sections --columns=80
+            --output README.pdf
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
