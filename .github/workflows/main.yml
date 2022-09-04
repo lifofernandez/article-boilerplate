@@ -11,7 +11,7 @@ jobs:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >-  # allows you to break string into multiple lines
             -F mermaid-filter -F pandoc-crossref -C --mathjax 
-            --highlight-style my.theme
+            --highlight-style=my.theme
             --template=plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
             --output README.pdf
