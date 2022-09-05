@@ -23,11 +23,12 @@ jobs:
         with:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >-  # allows you to break string into multiple lines
+            --input ./README.md
             -F pandoc-crossref -C --mathjax 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
-            --output README.pdf
+            --output ./README.pdf
       - uses: actions/upload-artifact@master
         with:
           name: upload
