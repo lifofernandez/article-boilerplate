@@ -78,7 +78,7 @@ pandoc README.md --mathjax \
 
 ### Build remoto
 
-[![Pandoc Action](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
+[![Build remoto](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
 
 ## Texto plano
 
