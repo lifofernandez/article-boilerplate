@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: deps
-        run: npm install --global mermaid-filter
+        run: npm install --location=global mermaid-filter
       - name: file list 
         id: files_list
         run: |
