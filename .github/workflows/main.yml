@@ -19,13 +19,13 @@ jobs:
       - name: List files 
         id: files_list
         run: |
-          ls node_modules -lha
+          # ls node_modules -lha
           ls ./
           pwd
           # node_modules/mermaid-filter/index.js
           # node_modules/.bin/mermaid-filter
           
-          # -F node_modules/mermaid-filter/index.js
+          # local -F node_modules/mermaid-filter/index.js
             
           
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
