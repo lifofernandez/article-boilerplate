@@ -20,6 +20,8 @@ jobs:
       # - name: deps
       - run: npm add global yarn
       - run: yarn add global mermaid-filter
+      - run: yarn global dir
+      - run: ls ~/.config/yarn/global
       - run: mkdir -p output
       - name: List files 
         id: files_list
