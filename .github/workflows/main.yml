@@ -12,7 +12,7 @@ jobs:
       - name: Node List files 
         id: files_list
         run: |
-          ls node_modules/ -lha
+          ls node_modules/.bin/ -lha
           pwd
           # node_modules/mermaid-filter/index.js
           
@@ -21,11 +21,10 @@ jobs:
           # mkdir output  # create output dir
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
-          
+      - uses: actions/checkout@v2
       - run: mkdir -p output
       - uses: docker://pandoc/latex:2.18
         with:
-         # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >- 
             ./README.md
             --citeproc -F pandoc-crossref --mathjax 
@@ -33,10 +32,8 @@ jobs:
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
             --output=output/README.pdf
-            
-      - uses: actions/checkout@v2
      
       - uses: actions/upload-artifact@v3
         with:
           name: output
-          path: ./output/README.pdf
+          path: output/README.pdf
