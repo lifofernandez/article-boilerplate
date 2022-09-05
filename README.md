@@ -76,6 +76,10 @@ pandoc README.md --mathjax \
    -o README.pdf
 ```
 
+### Build remoto
+
+[![Pandoc Action](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
+
 ## Texto plano
 
 El texto plano beneficia a todos los usuarios, deben poder encontrar lo que
