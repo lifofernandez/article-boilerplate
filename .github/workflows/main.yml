@@ -9,10 +9,22 @@ jobs:
       - uses: actions/checkout@v2
       - name: deps
         run: npm install mermaid-filter
-      - name: Node List files 
+      
+      - uses: actions/checkout@v2
+      - run: mkdir -p output
+      - uses: docker://pandoc/latex:2.18
+        with:
+          args: >- 
+            ./README.md
+            -F ~/node_modules/mermaid-filter/index.js -F pandoc-crossref --mathjax --citeproc 
+            --highlight-style=./my.theme
+            --template=./plantilla --pdf-engine-opt=-shell-escape
+            -s --toc --toc-depth=2 --number-sections --columns=80
+            --output=output/README.pdf
+      - name: List files 
         id: files_list
         run: |
-          ls node_modules/.bin/ -lha
+          ls  -lha
           pwd
           # node_modules/mermaid-filter/index.js
           # node_modules/.bin/mermaid-filter
@@ -22,18 +34,6 @@ jobs:
           # mkdir output  # create output dir
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
-      - uses: actions/checkout@v2
-      - run: mkdir -p output
-      - uses: docker://pandoc/latex:2.18
-        with:
-          args: >- 
-            ./README.md
-            -F node_modules/.bin/mermaid-filter -F pandoc-crossref --mathjax --citeproc 
-            --highlight-style=./my.theme
-            --template=./plantilla --pdf-engine-opt=-shell-escape
-            -s --toc --toc-depth=2 --number-sections --columns=80
-            --output=output/README.pdf
-     
       - uses: actions/upload-artifact@v3
         with:
           name: output
