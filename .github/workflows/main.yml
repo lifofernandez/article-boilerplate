@@ -7,16 +7,19 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: create file list
+      - uses: ./
+      - name: deps
+        run: npm install --global mermaid-filter
+      - name: file list 
         id: files_list
         run: |
+          ls -lha
+          pwd
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
           # echo "dolor sit amet" > lorem_2.md
           #mkdir output  # create output dir
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
-          ls -lha
-          pwd
       - uses: docker://pandoc/latex:2.18
         with:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
