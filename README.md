@@ -2,9 +2,8 @@
 title: Producción gráfica de documentos acádemicos con Pandoc
 authot: Lisandro Fernández
 abstract: |
-  Pandoc como entorno textual de producción de documentos
-  académicos.
-  El texto plano beneficia a todos los usuarios, deben poder
+  Pandoc como entorno textutal de producción de documentos
+  académicos. El texto plano beneficia a todos los usuarios, deben poder
   encontrar lo que necesitan, comprender lo que encuentran y usarlo para realizar
   tareas.
 bibliography: referencias.bib
@@ -53,6 +52,9 @@ entrada y salida, por lo que para añadir un nuevo formato de entrada o salida
 sólo hay que añadir un nuevo módulo.
 --->
 
+Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
+incluyendo un sistema de plantillas y un potente sistema para escribir filtros.
+
 
 Pandoc es software libre, publicado bajo la GPL. Copyright 2006-2022 John MacFarlane.
 
@@ -94,20 +96,14 @@ necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 ## BibLATEX - Bibliografías sofisticadas en LATEX
 
 Pandoc incluye un potente sistema de citas y bibliografías automáticas. Esto
-significa que puede escribir una cita como
+significa que puede escribir una cita como véase @moolenaar2000, también
+[@knuth1986texbook p.3-9] y pandoc la convertirá en una cita con el formato
+adecuado utilizando cualquiera de los cientos de estilos CSL (incluyendo
+estilos de nota al pie, estilos numéricos y estilos autor-fecha), y añadirá una
+bibliografía con el formato adecuado al final del documento. Los datos
+bibliográficos pueden estar en formato BibTeX, BibLaTeX, CSL JSON o CSL YAML.
+Las citas funcionan en todos los formatos de salida.
 
-[véase @doe99, pp. 33-35; también @smith04, cap. 1]
-
-y pandoc la convertirá en una cita con el formato adecuado utilizando
-cualquiera de los cientos de estilos CSL (incluyendo estilos de nota al pie,
-estilos numéricos y estilos autor-fecha), y añadirá una bibliografía con el
-formato adecuado al final del documento. Los datos bibliográficos pueden estar
-en formato BibTeX, BibLaTeX, CSL JSON o CSL YAML. Las citas funcionan en todos
-los formatos de salida.
-
-Este es el ejemplo de referencia @moolenaar2000.
-
-Una referencia con paginas [@knuth1986texbook, p.12-23].
 
 ## MathJax
 
@@ -119,6 +115,9 @@ salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
 
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+
+
 
 ## Gráficos y diagramas
 
@@ -304,8 +303,6 @@ de pandoc. Mientras que las conversiones del Markdown de pandoc a todos los
 formatos aspiran a ser perfectas, las conversiones de formatos más expresivos
 que el Markdown de pandoc pueden tener pérdidas.
 
-Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
-incluyendo un sistema de plantillas y un potente sistema para escribir filtros.
 
 ## Basic Syntax
 
