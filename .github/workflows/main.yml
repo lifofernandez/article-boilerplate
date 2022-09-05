@@ -5,46 +5,32 @@ on: push
 jobs:
   convert_via_pandoc:
     runs-on:  ubuntu-20.04
-    steps:
-      # - uses: actions/checkout@v2
-      
+    steps:      
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
       
-      # - name: Setup Yarn
-      #  uses: mskelton/setup-yarn@v1.2.1
-
-      # - name: deps
-      - run: npm install --global yarn
-      - run: yarn add mermaid-filter
-      - run: yarn global dir
-      - run: ls /home/runner/.config/GitHub
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 16
+      # - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
+      # - run: npm install mermaid-filter
+ 
       - run: mkdir -p output
       - name: List files 
         id: files_list
         run: |
           # ls node_modules -lha
-          sudo ls /usr/bin/
-          
+          # sudo ls /usr/bin/
+          ls -lha
+          ls ./
           pwd
-          
-          # local -F node_modules/mermaid-filter/index.js
-          # yarn global /home/runner/.config/yarn/global/mermaid-filter
-          
-          # echo "Lorem ipsum" > lorem_1.md  # create two example files
-          # echo "dolor sit amet" > lorem_2.md
-          # mkdir output  # create output dir
-          # this will also include README.md
-          # echo "::set-output name=files::$(printf '"%s" ' *.md)"
           
       - uses: docker://pandoc/latex:2.18
         with:
+          # -F node_modules/mermaid-filter/index.js 
+          # Error running filter node_modules/mermaid-filter/index.js:
+          # env: can't execute 'node': No such file or directory
           args: >- 
             ./README.md
-            -F node_modules/mermaid-filter/index.js
             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
