@@ -12,8 +12,9 @@ jobs:
       - name: Node List files 
         id: files_list
         run: |
-          ls node_modules/mermaid-filter/ -lha
+          ls node_modules/ -lha
           pwd
+          # node_modules/mermaid-filter/index.js
           
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
           # echo "dolor sit amet" > lorem_2.md
@@ -38,4 +39,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: output
-          path: output/README.pdf
+          path: ./output/README.pdf
