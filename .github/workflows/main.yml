@@ -38,7 +38,6 @@ jobs:
         with:
           args: >- 
             ./README.md
-            # -F node_modules/mermaid-filter/index.js
             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
