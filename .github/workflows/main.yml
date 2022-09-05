@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: ln -s /usr/bin/nodejs /usr/bin/node
+      - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
       - name: deps
         run: npm install mermaid-filter
       - run: mkdir -p output
