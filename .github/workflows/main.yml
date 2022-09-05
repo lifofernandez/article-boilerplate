@@ -18,7 +18,7 @@ jobs:
       #  uses: mskelton/setup-yarn@v1.2.1
 
       # - name: deps
-      - run: npm install location=global yarn
+      - run: npm install --global yarn
       - run: yarn add global mermaid-filter
       - run: yarn global dir
       - run: ls /home/runner/.config/
