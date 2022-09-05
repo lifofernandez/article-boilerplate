@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
       - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
       - name: deps
-        run: npm install mermaid-filter
+        run: npm install --location=global mermaid-filter
       - run: mkdir -p output
       - name: List files 
         id: files_list
@@ -38,6 +38,7 @@ jobs:
         with:
           args: >- 
             ./README.md
+            -F mermaid-filter
             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
