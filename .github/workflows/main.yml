@@ -13,21 +13,21 @@ jobs:
         with:
           node-version: 16
       - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
-      - name: Setup Yarn
-        uses: mskelton/setup-yarn@v1.2.1
+      
+      # - name: Setup Yarn
+      #  uses: mskelton/setup-yarn@v1.2.1
 
-        # - name: deps
-        # run: npm install mermaid-filter
+      # - name: deps
+      - run: npm add global yarn
       - run: yarn add global mermaid-filter
       - run: mkdir -p output
       - name: List files 
         id: files_list
         run: |
           # ls node_modules -lha
-          ls ./
+          sudo ls /usr/bin/
+          
           pwd
-          # node_modules/mermaid-filter/index.js
-          # node_modules/.bin/mermaid-filter
           
           # local -F node_modules/mermaid-filter/index.js
             
