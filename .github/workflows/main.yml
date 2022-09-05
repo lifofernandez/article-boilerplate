@@ -21,7 +21,7 @@ jobs:
       - run: npm add global yarn
       - run: yarn add global mermaid-filter
       - run: yarn global dir
-      - run: ls ~/.config/yarn/global
+      - run: ls /home/runner/.config/yarn/global
       - run: mkdir -p output
       - name: List files 
         id: files_list
@@ -32,7 +32,7 @@ jobs:
           pwd
           
           # local -F node_modules/mermaid-filter/index.js
-            
+          # yarn global /home/runner/.config/yarn/global/mermaid-filter
           
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
           # echo "dolor sit amet" > lorem_2.md
