@@ -8,27 +8,29 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: deps
-        run: npm install --location=global mermaid-filter
-      - name: file list 
+        run: npm install mermaid-filter
+      - name: List files 
         id: files_list
         run: |
           ls -lha
           pwd
+          
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
           # echo "dolor sit amet" > lorem_2.md
           # mkdir output  # create output dir
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
+          
       - uses: docker://pandoc/latex:2.18
         with:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >- 
             ./README.md
-            -F pandoc-crossref -C --mathjax 
+            -F pandoc-crossref - mermaid-filter --citeproc --mathjax 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
-            --output ./README.pdf
+            --output=./README.pdf
       - uses: actions/upload-artifact@master
         with:
           name: upload
