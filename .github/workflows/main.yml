@@ -16,7 +16,7 @@ jobs:
         with:
           args: >- 
             ./README.md
-            -F ~/node_modules/mermaid-filter/index.js -F pandoc-crossref --mathjax --citeproc 
+            -F node_modules/mermaid-filter/index.js -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
