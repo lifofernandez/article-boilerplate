@@ -22,8 +22,8 @@ jobs:
       - uses: docker://pandoc/latex:2.18
         with:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
-          args: >-  # allows you to break string into multiple lines
-            --input ./README.md
+          args: >- 
+            ./README.md
             -F pandoc-crossref -C --mathjax 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
