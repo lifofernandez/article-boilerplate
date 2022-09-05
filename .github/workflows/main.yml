@@ -25,6 +25,9 @@ jobs:
           # node_modules/mermaid-filter/index.js
           # node_modules/.bin/mermaid-filter
           
+          # -F node_modules/mermaid-filter/index.js
+            
+          
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
           # echo "dolor sit amet" > lorem_2.md
           # mkdir output  # create output dir
@@ -34,7 +37,8 @@ jobs:
         with:
           args: >- 
             ./README.md
-            -F node_modules/mermaid-filter/index.js -F pandoc-crossref --mathjax --citeproc 
+            -F mermeid-filter
+            -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
