@@ -9,10 +9,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: deps
         run: npm install mermaid-filter
-      - name: List files 
+      - name: Node List files 
         id: files_list
         run: |
-          ls -lha
+          ls node_modules/ -lha
           pwd
           
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
@@ -26,12 +26,15 @@ jobs:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >- 
             ./README.md
-            -F pandoc-crossref --citeproc --mathjax 
+            --citeproc -F pandoc-crossref -F mermaid-filter  --mathjax 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
             --output=./README.pdf
-      - uses: actions/upload-artifact@master
+            
+      - uses: actions/checkout@v2
+      - run: mkdir -p src
+      - uses: actions/upload-artifact@v3
         with:
-          name: upload
+          name: output
           path: ./README.pdf
