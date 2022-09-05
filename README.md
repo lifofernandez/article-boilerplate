@@ -2,8 +2,9 @@
 title: Producción gráfica de documentos acádemicos con Pandoc
 authot: Lisandro Fernández
 abstract: |
-  Pandoc como entorno textutal de producción de documentos
-  académicos. El texto plano beneficia a todos los usuarios, deben poder
+  Pandoc como entorno textual de producción de documentos
+  académicos.
+  El texto plano beneficia a todos los usuarios, deben poder
   encontrar lo que necesitan, comprender lo que encuentran y usarlo para realizar
   tareas.
 bibliography: referencias.bib
@@ -51,9 +52,6 @@ La biblioteca incluye módulos separados para cada formato de
 entrada y salida, por lo que para añadir un nuevo formato de entrada o salida
 sólo hay que añadir un nuevo módulo.
 --->
-
-Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
-incluyendo un sistema de plantillas y un potente sistema para escribir filtros.
 
 
 Pandoc es software libre, publicado bajo la GPL. Copyright 2006-2022 John MacFarlane.
@@ -122,10 +120,7 @@ salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-
-
-
-# Gráficos y diagramas
+## Gráficos y diagramas
 
 ```
 ~~~mermaid
@@ -309,6 +304,8 @@ de pandoc. Mientras que las conversiones del Markdown de pandoc a todos los
 formatos aspiran a ser perfectas, las conversiones de formatos más expresivos
 que el Markdown de pandoc pueden tener pérdidas.
 
+Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
+incluyendo un sistema de plantillas y un potente sistema para escribir filtros.
 
 ## Basic Syntax
 
