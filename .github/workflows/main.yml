@@ -19,9 +19,9 @@ jobs:
 
       # - name: deps
       - run: npm install --global yarn
-      - run: yarn add global mermaid-filter
+      - run: yarn add mermaid-filter
       - run: yarn global dir
-      - run: ls /home/runner/.config/
+      - run: ls /home/runner/.config/GitHub
       - run: mkdir -p output
       - name: List files 
         id: files_list
@@ -44,7 +44,7 @@ jobs:
         with:
           args: >- 
             ./README.md
-            -F mermaid-filter
+            -F node_modules/mermaid-filter/index.js
             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
