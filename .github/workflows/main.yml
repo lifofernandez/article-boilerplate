@@ -4,7 +4,7 @@ on: push
 
 jobs:
   convert_via_pandoc:
-    runs-on: ubuntu-18.04
+    runs-on:  ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: deps
@@ -21,6 +21,7 @@ jobs:
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
           
+      - run: mkdir -p output
       - uses: docker://pandoc/latex:2.18
         with:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
@@ -30,11 +31,11 @@ jobs:
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
-            --output=./README.pdf
+            --output=output/README.pdf
             
       - uses: actions/checkout@v2
-      - run: mkdir -p src
+     
       - uses: actions/upload-artifact@v3
         with:
           name: output
-          path: ./README.pdf
+          path: output/README.pdf
