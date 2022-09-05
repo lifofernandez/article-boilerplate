@@ -6,25 +6,17 @@ jobs:
   convert_via_pandoc:
     runs-on:  ubuntu-20.04
     steps:
+      # - uses: actions/checkout@v2
+      
       - uses: actions/checkout@v2
       - name: deps
         run: npm install mermaid-filter
-      
-      - uses: actions/checkout@v2
       - run: mkdir -p output
-      - uses: docker://pandoc/latex:2.18
-        with:
-          args: >- 
-            ./README.md
-            -F node_modules/mermaid-filter/index.js -F pandoc-crossref --mathjax --citeproc 
-            --highlight-style=./my.theme
-            --template=./plantilla --pdf-engine-opt=-shell-escape
-            -s --toc --toc-depth=2 --number-sections --columns=80
-            --output=output/README.pdf
       - name: List files 
         id: files_list
         run: |
-          ls  -lha
+          ls node_modules -lha
+          ls ./
           pwd
           # node_modules/mermaid-filter/index.js
           # node_modules/.bin/mermaid-filter
@@ -34,6 +26,16 @@ jobs:
           # mkdir output  # create output dir
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
+      - uses: docker://pandoc/latex:2.18
+        with:
+          args: >- 
+            ./README.md
+            -F node_modules/mermaid-filter/index.js -F pandoc-crossref --mathjax --citeproc 
+            --highlight-style=./my.theme
+            --template=./plantilla --pdf-engine-opt=-shell-escape
+            -s --toc --toc-depth=2 --number-sections --columns=80
+            --output=output/README.pdf
+      
       - uses: actions/upload-artifact@v3
         with:
           name: output
