@@ -12,7 +12,7 @@ jobs:
       - name: Node List files 
         id: files_list
         run: |
-          ls node_modules/ -lha
+          ls node_modules/mermaid-filter/ -lha
           pwd
           
           # echo "Lorem ipsum" > lorem_1.md  # create two example files
@@ -26,7 +26,7 @@ jobs:
          # args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >- 
             ./README.md
-            --citeproc -F pandoc-crossref -F mermaid-filter  --mathjax 
+            --citeproc -F pandoc-crossref --mathjax 
             --highlight-style=./my.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
