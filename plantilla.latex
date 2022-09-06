@@ -363,11 +363,13 @@ $if(natbib)$
 \usepackage[$natbiboptions$]{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
+
 $if(biblatex)$
 \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
 $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
+
 $endif$
 $if(nocite-ids)$
 \nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
@@ -381,6 +383,7 @@ $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allow verbatim text in footnotes
 $endif$
+
 \hypersetup{
 $if(title-meta)$
   pdftitle={$title-meta$},
@@ -408,56 +411,169 @@ $else$
 $endif$
   pdfcreator={LaTeX via pandoc}}
 
-$if(title)$
-\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
-$endif$
-$if(subtitle)$
-$if(beamer)$
-$else$
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-$endif$
-\subtitle{$subtitle$}
-$endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-\date{$date$}
-$if(beamer)$
-$if(institute)$
-\institute{$for(institute)$$institute$$sep$ \and $endfor$}
-$endif$
-$if(titlegraphic)$
-\titlegraphic{\includegraphics{$titlegraphic$}}
-$endif$
-$if(logo)$
-\logo{\includegraphics{$logo$}}
-$endif$
-$endif$
+% $if(title)$
+% \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+% $endif$
+% $if(subtitle)$
+% $if(beamer)$
+% $else$
+% \usepackage{etoolbox}
+% \makeatletter
+% \providecommand{\subtitle}[1]{% add subtitle to \maketitle
+%   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+% }
+% \makeatother
+% 
+% $endif$
+% \subtitle{$subtitle$}
+% $endif$
+% \author{$for(author)$$author$$sep$ \and $endfor$}
+% \date{$date$}
+% $if(beamer)$
+% $if(institute)$
+% \institute{$for(institute)$$institute$$sep$ \and $endfor$}
+% $endif$
+% $if(titlegraphic)$
+% \titlegraphic{\includegraphics{$titlegraphic$}}
+% $endif$
+% $if(logo)$
+% \logo{\includegraphics{$logo$}}
+% $endif$
+% $endif$
 
 \begin{document}
-$if(has-frontmatter)$
-\frontmatter
+
+%$if(has-frontmatter)$
+%\frontmatter
+%$endif$
+%
+%$if(title)$
+%$if(beamer)$
+%\frame{\titlepage}
+%$else$
+%\maketitle
+%$endif$
+%$if(abstract)$
+%\begin{abstract}
+%$abstract$
+%\end{abstract}
+%$endif$
+%$endif$
+
+\begin{titlepage}
+
+\topskip0pt
+\vspace*{\fill}
+
+$if(institucion)$
+\begin{center}
+\huge
+$institucion$
+\end{center}
 $endif$
+
+\bigskip
+\bigskip
+
+$if(departamento)$
+\begin{center}
+\large
+$departamento$
+\end{center}
+$endif$
+
+$if(carrera)$
+\begin{center}
+\large
+\uppercase{$carrera$}
+\end{center}
+$endif$
+
+$if(director)$
+\begin{center}
+Director de Carrera:
+$director$
+\end{center}
+$endif$
+
+\bigskip
+\bigskip
+
+$if(programa)$
+\begin{center}
+\large
+Seminario
+
+\large
+\uppercase{$programa$}
+\end{center}
+$endif$
+
+$if(tutor)$
+\begin{center}
+Profesor:
+$tutor$
+\end{center}
+$endif$
+
+\bigskip
+\bigskip
+
 $if(title)$
-$if(beamer)$
-\frame{\titlepage}
-$else$
-\maketitle
+\begin{center}
+\large
+$title$
+\end{center}
 $endif$
+
+$if(subtitle)$
+\begin{center}
+\large
+\uppercase{$subtitle$}
+\end{center}
+$endif$
+
+$if(author)$
+\begin{center}
+Presentado por:
+$author$
+\end{center}
+$endif$
+
+\bigskip
+\bigskip
+
 $if(abstract)$
 \begin{abstract}
 $abstract$
 \end{abstract}
 $endif$
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+$if(date)$
+\begin{center}
+$date$
+\end{center}
 $endif$
+
+$if(place)$
+\begin{center}
+$place$
+\end{center}
+$endif$
+
+\vspace*{\fill}
+
+\end{titlepage}
 
 $for(include-before)$
 $include-before$
-
 $endfor$
+
 $if(toc)$
 $if(toc-title)$
 \renewcommand*\contentsname{$toc-title$}
@@ -475,13 +591,13 @@ $if(colorlinks)$
 \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
 $endif$
 \setcounter{tocdepth}{$toc-depth$}
-MISI 2020 - Herramientas para el desarrollo de Tesis 2021 - Lisandro Ferández
-\newpage
+
 
 \renewcommand{\contentsname}{Contendios}
 \tableofcontents
 }
 $endif$
+
 $endif$
 $if(lof)$
 \listoffigures

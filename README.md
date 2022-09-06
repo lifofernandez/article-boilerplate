@@ -1,13 +1,23 @@
 ---
+institucion: 'Universidad Nacional de Tecnológica'
+departamento: 'Escuela de Posgrado' 
+carrera: 'Maestría en Ingeniería en Sistemas de Información'
+director: 'Dra. Ma. Florencia Pollo Cattaneo'
+programa: 'Herramientas para el desarrollo de Tesis 2021'
+#subtitle: 'Herramientas para el desarrollo de Tesis 2021'
+tutor: 'Florencia Pollo Cattaneo'
+date:  'Octubre 2022'
+place: 'Buenos Aires, Argentina'
+tags: ['representación', 'texto plano', 'CLI', 'pandoc']
 title: Producción gráfica de documentos acádemicos con Pandoc
-authot: Lisandro Fernández
-abstract: |
-  Pandoc como entorno textutal de producción de documentos
-  académicos. El texto plano beneficia a todos los usuarios, deben poder
-  encontrar lo que necesitan, comprender lo que encuentran y usarlo para realizar
-  tareas.
+author: Lisandro Fernández
 bibliography: referencias.bib
 csl: ieee.csl
+abstract: >-
+
+  Pandoc como entorno textutal de producción de documentos académicos.
+  El texto llano beneficia a todos los usuarios, deben poder encontrar lo que necesitan,
+  comprender lo que encuentran y usarlo para realizar tareas.'
 #csl: iso690-author-date-es.csl
 #csl: apa-annotated-bibliography.csl
 colorlinks: true
@@ -34,7 +44,8 @@ científica.
 # Justificación
 
 Pandoc es a la los documentos gráficos lo que https://ffmpeg.org/about.html es para el video.
-El texto plano beneficia a todos los usuarios, deben poder encontrar lo que
+
+El tessto plano beneficia a todos los usuarios, deben poder encontrar lo que
 necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 
 <!--- 
@@ -195,16 +206,34 @@ To mention a few:
 The Citation Style Language (CSL) is an XML-based format to describe the
 formatting of citations, notes and bibliographies, offering:
 
-An open format
-Compact and robust styles
-Extensive support for style requirements
-Automatic style localization
-Infrastructure for style distribution and updating
-Thousands of freely available styles (Creative Commons BY-SA licensed)
+- An open format
+- Compact and robust styles
+- Extensive support for style requirements
+- Automatic style localization
+- Infrastructure for style distribution and updating
+- Thousands of freely available styles (Creative Commons BY-SA licensed)
 
-For additional documentation, the CSL schema, styles, and locales, visit the CSL project home, citationstyles.org.
+For additional documentation, the CSL schema, styles, and locales, visit the
+CSL project home, citationstyles.org.  Si alguna vez has escrito un trabajo de
+investigación, probablemente hayas incluido referencias a otros trabajos. Las
+referencias son importantes en la comunicación académica, ya que proporcionan
+la atribución y vinculan la investigación publicada. Sin embargo, formatear
+manualmente las referencias puede llevar mucho tiempo, especialmente cuando se
+trata de varias revistas que tienen su propio estilo de citación.
+
+Por suerte, el software de gestión de referencias puede ayudar. Programas como
+Zotero, Mendeley y Papers no sólo te ayudan a gestionar tu biblioteca de
+investigación, sino que también pueden generar automáticamente citas y
+bibliografías. Pero para formatear las referencias en el estilo deseado, estos
+programas necesitan descripciones de cada estilo de citación en un lenguaje que
+el ordenador pueda entender. Como habrás adivinado, el Lenguaje de Estilos de
+Citación (LEC) es ese lenguaje
+
 
 https://docs.citationstyles.org/en/stable/specification.html
+
+https://docs.citationstyles.org/en/stable/primer.html#what-is-csl
+
 
 
 ### MathJax
@@ -237,6 +266,12 @@ Office, LaTeX, wikis, and other software.
 
 ### Gráficos y diagramas
 
+<!--- 
+Además, adjunte un cronograma de presentaciones intermedias,
+considerando que se debe realizar, como mínimo,
+una entrega intermedia antes de la entrega final.
+--->
+
 ```{.plantuml caption="This is an image, created by **PlantUML**." width=50%}
 @startuml
 Alice -> Bob: Authentication Request Bob --> Alice: Authentication Response
@@ -261,28 +296,20 @@ sequenceDiagram
 
 # Resultados
 
-<!--- 
-los productos resultantes que entregará.
-Entregables/productos/
-el repositorio del codigo
-y
-andamiaje necesario para 
-reproducir estem proyecto
-esto incluye:
-configuraciones
-estructura
-filtros 
-cls
-plantilla
-resaltado de codigo
-instrcuciones de uso
---->
+El producto de este proyecto son una conjunto de diferentes piezas de software
+integradas  el repositorio del codigo y andamiaje necesario para reproducir
+estem proyecto esto incluye:
 
-<!--- 
-Además, adjunte un cronograma de presentaciones intermedias,
-considerando que se debe realizar, como mínimo,
-una entrega intermedia antes de la entrega final.
---->
+- configuraciones
+- estructura
+- filtros 
+- cls
+- plantilla
+- resaltado de codigo
+- instrcuciones de uso
+
+
+## Generar Portable Document Format (PDF)
 
 Un ejemplo de como utilizar estas herramientas es
 el mismo repositorio 
@@ -299,9 +326,12 @@ pandoc README.md --mathjax \
    -o README.pdf
 ```
 
+## Ver Apendice
+
+apendice.pdf
+
 # Conclusion
 
-## Ver Apendice
 
 <!---
 Tenga en cuenta que en la entrega final, deberá realizar una conclusión donde se
