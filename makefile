@@ -1,6 +1,6 @@
 pdf:
 	@pandoc README.md --mathjax \
-		-F mermaid-filter -F pandoc-crossref --citeproc \
+        -F mermaid-filter -F pandoc-crossref --citeproc \
 		--highlight-style my.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \

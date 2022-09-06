@@ -274,3 +274,21 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+node_modules/
+/noto-emoji/
+out.pdf
+output.md
+package-lock.json
+template.aux
+*.aux
+*.fdb_latexmk
+*.log
+*.fls
+xpto123.txt
+twemoji/
+tex2pdf.*
+/out.*
+*.bak
+*.orig
+/example.*
+!/example.pdf
