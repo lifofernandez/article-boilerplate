@@ -7,6 +7,9 @@ $endif$
 $if(CJKmainfont)$
 \PassOptionsToPackage{space}{xeCJK}
 $endif$
+
+
+
 %
 \documentclass[
 $if(fontsize)$
@@ -34,6 +37,8 @@ $if(background-image)$
   \includegraphics[width=\paperwidth]{$background-image$}%
 }
 $endif$
+
+
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
@@ -440,6 +445,10 @@ $endif$
 % \logo{\includegraphics{$logo$}}
 % $endif$
 % $endif$
+
+% clear 1st page
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 \begin{document}
 
