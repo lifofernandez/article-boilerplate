@@ -73,7 +73,7 @@ Pandoc es software libre, publicado bajo la GPL. Copyright 2006-2022 John MacFar
 
 ## Texto Plano
 
-De los multiples beneficios que trabajar con texto plano habilita
+De los beneficios que trabajar con texto plano habilita
 se resalta la accesibilidad y la posbilidad de 
 producir documentos graficos de la misma manera que se produce softweare
 intcluirlo en en un pipeline de desarrollo de software
@@ -89,7 +89,6 @@ Powerful, extensible, and feature-packed academic publishing toolkit. Build and
 customize with Pandoc, utilize prebuilt a typesetting system (TeX) and
 components, and bring projects to life with powerful filters.
 --->
-
 
 <!---
 Citas y referencias bibliogáficas 
@@ -133,6 +132,7 @@ añadir un formato de entrada o de salida basta con añadir un lector o un
 escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
 para modificar el AST intermedio.
 --->
+
 
 ## Integración
 
@@ -190,7 +190,7 @@ To mention a few:
 - Validation of bibliographic data against a data model
 - Subdivided and/or filtered bibligraphies, bibliographies per chapter, section etc.
 
-### CLS
+#### CLS
 
 The Citation Style Language (CSL) is an XML-based format to describe the
 formatting of citations, notes and bibliographies, offering:
@@ -207,7 +207,7 @@ For additional documentation, the CSL schema, styles, and locales, visit the CSL
 https://docs.citationstyles.org/en/stable/specification.html
 
 
-## MathJax
+### MathJax
 
 Services
 
@@ -235,7 +235,7 @@ output.
 expression zoom and interactive exploration. You also can copy equations into
 Office, LaTeX, wikis, and other software.
 
-## Gráficos y diagramas
+### Gráficos y diagramas
 
 ```{.plantuml caption="This is an image, created by **PlantUML**." width=50%}
 @startuml
@@ -257,8 +257,6 @@ sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
 ~~~
-
-
 
 
 # Resultados
