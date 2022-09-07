@@ -1,12 +1,11 @@
 {
-"format":"svg",
-"size":"1024",
-"fontFamily": "monospace",
-"logLevel": "info",
-"background":"transparent",
-"flowchart": {
-  "htmlLabels": true,
-  "curve": "linear"
-}
+ "format":"svg",
+ "size":"1024",
+ "fontFamily": "monospace",
+ "background":"transparent",
+ "flowchart": {
+   "htmlLabels": true,
+   "curve": "linear"
+ }
 }
 

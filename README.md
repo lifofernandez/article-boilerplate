@@ -1,33 +1,7 @@
----
-institucion: 'Universidad Nacional de Tecnológica'
-departamento: 'Escuela de Posgrado' 
-carrera: 'Maestría en Ingeniería en Sistemas de Información'
-director: 'Dra. Ma. Florencia Pollo Cattaneo'
-programa: 'Herramientas para el desarrollo de Tesis 2021'
-#subtitle: 'Herramientas para el desarrollo de Tesis 2021'
-tutor: 'Florencia Pollo Cattaneo'
-date:  'Octubre 2022'
-place: 'Buenos Aires, Argentina'
-tags: ['representación', 'texto plano', 'CLI', 'pandoc']
-title: Producción gráfica de documentos acádemicos con Pandoc
-author: Lisandro Fernández
-bibliography: referencias.bib
-csl: ieee.csl
-abstract: >-
-
-  Pandoc como entorno textutal de producción de documentos académicos.
-  El texto llano beneficia a todos los usuarios, deben poder encontrar lo que necesitan,
-  comprender lo que encuentran y usarlo para realizar tareas.'
-#csl: iso690-author-date-es.csl
-#csl: apa-annotated-bibliography.csl
-colorlinks: true
----
-
 # Producción gráfica de documentos acádemicos Pandoc
 
-
 <!--- temática que abordará,
-LaTeX A document preparation system
+A document preparation system
 puramente textual
 intro --->
 
@@ -176,6 +150,117 @@ salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
 
 ### Gráficos y diagramas
 
+#### pandoc-plot
+
+https://laurentrdc.github.io/pandoc-plot/
+
+```{.matplotlib}
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.title('This is an example figure')
+```
+
+
+
+```{.plantuml}
+@startuml
+!theme plain
+
+package "Some Group" {
+  HTTP - [First Component]
+  [Another Component]
+}
+
+node "Other Groups" {
+  FTP - [Second Component]
+  [First Component] --> FTP
+}
+
+cloud {
+  [Example 1]
+}
+
+
+database "MySql" {
+  folder "This is my folder" {
+    [Folder 3]
+  }
+  frame "Foo" {
+    [Frame 4]
+  }
+}
+
+
+[Another Component] --> [Example 1]
+[Example 1] --> [Folder 3]
+'[Folder 3] --> [Frame 4]
+
+@enduml
+```
+https://the-lum.github.io/puml-themes-gallery/
+
+```{.plantuml}
+@startuml
+robust "DNS Resolver" as DNS
+robust "Web Browser" as WB
+concise "Web User" as WU
+
+@0
+WU is Idle
+WB is Idle
+DNS is Idle
+
+@+100
+WU -> WB : URL
+WU is Waiting
+WB is Processing
+
+@+200
+WB is Waiting
+WB -> DNS@+50 : Resolve URL
+
+@+100
+DNS is Processing
+
+@+300
+DNS is Idle
+@enduml
+```
+
+```{.matplotlib}
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(23)
+
+# Compute areas and colors
+N = 150
+r = 2 * np.random.rand(N)
+theta = 2 * np.pi * np.random.rand(N)
+area = 200 * r**2
+colors = theta
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='polar')
+c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
+plt.title('This is an example figure')
+```
+
+
+
+
+#### MermaidJS
+
 Mermaid es una herramienta de diagramación y gráficos basada en JavaScript que
 utiliza definiciones de texto inspiradas en Markdown y un renderizador para
 crear y modificar diagramas complejos. El objetivo principal de Mermaid es
@@ -227,7 +312,7 @@ proporcionadas por LATEX. El formato de la bibliografía está totalmente
 controlado por las macros de LATEX, y un conocimiento práctico de LATEX debería
 ser suficiente para diseñar nuevos estilos de bibliografía y citación.
 
-<---!s
+<!---
 BibLATEX
 utiliza su propio programa de respaldo de datos llamado "biber" para leer y
 procesar los datos bibliográficos. 
@@ -328,6 +413,7 @@ apendice.pdf
 # Conclusion
 
 cls
+
 - Un formato abierto
 - Estilos compactos y robustos
 - Amplia compatibilidad con los requisitos de estilo

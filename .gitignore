@@ -292,3 +292,6 @@ tex2pdf.*
 *.orig
 /example.*
 !/example.pdf
+
+#pandoc-plot
+plots/
