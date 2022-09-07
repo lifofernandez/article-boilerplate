@@ -23,12 +23,17 @@ abstract: >-
 colorlinks: true
 ---
 
-# Producción gráfica de documentos acádemicos con Pandoc
+# Producción gráfica de documentos acádemicos Pandoc
 
-<!--- temática que abordará, intro --->
+
+<!--- temática que abordará,
+LaTeX A document preparation system
+puramente textual
+intro --->
 
 Este proyecto describe el uso de
-Pandoc como pieza central de un entorno puramente textual
+Pandoc como pieza central de un entorno
+sin interfaz visual
 de producción gráfica
 de documentos académicos ó de complejidad considerable @caleb.
 
@@ -36,25 +41,32 @@ Con el sistema de composición tipográfica de alta calidad LaTeX entre bastidor
 incluye funciones diseñadas para la producción de documentación técnica y
 científica.
 
+LaTeX es el estándar de facto para la comunicación y publicación de documentos
+científicos. 
+
 <!--- 
-[]:LaTeX es el estándar de facto para la comunicación y publicación de documentos
-[]:científicos. 
+# Justificación
+Pandoc es a la los documentos gráficos lo que https://ffmpeg.org/about.html es para el video.
 --->
 
-# Justificación
-
-Pandoc es a la los documentos gráficos lo que https://ffmpeg.org/about.html es para el video.
-
-El tessto plano beneficia a todos los usuarios, deben poder encontrar lo que
+El texto plano y legible beneficia a todos los usuarios, deben poder encontrar lo que
 necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 
 <!--- 
 junto con su justificación y
-
 enconbineta
 --->
 
 ## Pandoc
+
+<!---
+Pandoc incluye una biblioteca Haskell y un programa de línea de comandos
+independiente.
+
+La biblioteca incluye módulos separados para cada formato de
+entrada y salida, por lo que para añadir un nuevo formato de entrada o salida
+sólo hay que añadir un nuevo módulo.
+--->
 
 Pandoc es una biblioteca Haskell para convertir de un formato de markUp a
 otro, y una herramienta de línea de comandos que utiliza esta biblioteca.
@@ -62,20 +74,6 @@ otro, y una herramienta de línea de comandos que utiliza esta biblioteca.
 Pandoc puede convertir entre numerosos formatos de marcado y de procesamiento
 de textos, incluyendo, pero sin limitarse a, varios sabores de Markdown, HTML,
 LaTeX y Word docx.
-
-<!---
-Para ver la lista completa de formatos de entrada y salida,
-consulte las opciones --from y --to más abajo.
-Pandoc también puede producir
-una salida en formato PDF: consulte la sección de creación de un PDF, más
-abajo.
-
-Pandoc incluye una biblioteca Haskell y un programa de línea de comandos
-independiente.
-La biblioteca incluye módulos separados para cada formato de
-entrada y salida, por lo que para añadir un nuevo formato de entrada o salida
-sólo hay que añadir un nuevo módulo.
---->
 
 Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
 incluyendo un sistema de plantillas y un potente sistema para escribir filtros.
@@ -108,8 +106,9 @@ BibLATEX – Sophisticated Bibliographies in LATEX
 
 ### Markdown
 
-Lo que distingue a Markdown de muchas otras sintaxis de marcado ligero, que
-suelen ser más fáciles de escribir, es su legibilidad.
+Lo que distingue a Markdown de muchas otras sintaxis de marcado ligero,
+que suelen ser más fáciles de escribir,
+es su legibilidad.
 
 Como escribe Gruber:
 El objetivo primordial del diseño de la sintaxis de formato de Markdown es
@@ -147,18 +146,21 @@ para modificar el AST intermedio.
 
 ## Integración
 
-LaTeX – A document preparation system
+pandoc funciona como la piaza central que integra
+
+mermaidjs
+Mermaid le permite crear diagramas y visualizaciones utilizando texto y código.
+
+Se trata de una herramienta de diagramación y graficación basada en JavaScript
+que renderiza definiciones de texto inspiradas en Markdown para crear y
+modificar diagramas de forma dinámica.
 
 LaTeX is a high-quality typesetting system; it includes features designed for
 the production of technical and scientific documentation. LaTeX is the de facto
 standard for the communication and publication of scientific documents. LaTeX
 is available as free software.
 
-pandoc funciona como la piaza central que integra
-
-Pandoc incluyes
-
- un potente sistema de citas y bibliografías automáticas.
+Pandoc incluye un potente sistema de citas y bibliografías automáticas.
 
 Esto significa que puede escribir una cita como véase @moolenaar2000, también
 [@knuth1986texbook p.3-9] y pandoc la convertirá en una cita con el formato
@@ -168,58 +170,91 @@ bibliografía con el formato adecuado al final del documento.
 
 Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
 documentos de markdown.
-
 Las matemáticas de LaTeX se convierten (según lo requiera el formato de
 salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
+
+
+### Gráficos y diagramas
+
+Mermaid es una herramienta de diagramación y gráficos basada en JavaScript que
+utiliza definiciones de texto inspiradas en Markdown y un renderizador para
+crear y modificar diagramas complejos. El objetivo principal de Mermaid es
+ayudar a que la documentación se ponga al día con el desarrollo.
+
+La diagramación y la documentación cuestan un tiempo precioso a los
+desarrolladores y quedan obsoletas rápidamente. Pero no tener diagramas o
+documentación arruina la productividad y perjudica el aprendizaje de la
+organización.
+
+Mermaid aborda este problema permitiendo a los usuarios crear diagramas
+fácilmente modificables, que también pueden formar parte de los scripts de
+producción (y otras piezas de código).
+
+Mermaid permite incluso a los no programadores crear fácilmente diagramas
+detallados y a través del Mermaid Live Editor.
+
+Tiene tutoriales en vídeo. Utilice Mermaid con sus aplicaciones favoritas,
+consulte la lista de integraciones y usos de Mermaid.
+
+<!--- 
+Además, adjunte un cronograma de presentaciones intermedias,
+considerando que se debe realizar, como mínimo,
+una entrega intermedia antes de la entrega final.
+--->
+
+```
+~~~mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+~~~
+```
+
+~~~mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+~~~
+
 
 ### BibLATEX - Bibliografías sofisticadas en LATEX
 
 Los datos bibliográficos pueden estar en formato BibTeX, BibLaTeX, CSL JSON o
-CSL YAML.  Las citas funcionan en todos los formatos de salida.
+CSL YAML. Las citas funcionan en todos los formatos de salida.
 
-BibLATEX is a complete reimplementation of the bibliographic facilities
-provided by LATEX. Formatting of the bibliography is entirely controlled by
-LATEX macros, and a working knowledge of LATEX should be sufficient to design
-new bibliography and citation styles. BibLATEX uses its own data backend
-program called “biber” to read and process the bibliographic data. With biber,
-BibLATEX has many features rivalling or surpassing other bibliography systems.
+BibLATEX es una reimplementación completa de las facilidades bibliográficas
+proporcionadas por LATEX. El formato de la bibliografía está totalmente
+controlado por las macros de LATEX, y un conocimiento práctico de LATEX debería
+ser suficiente para diseñar nuevos estilos de bibliografía y citación.
 
-To mention a few:
+<---!s
+BibLATEX
+utiliza su propio programa de respaldo de datos llamado "biber" para leer y
+procesar los datos bibliográficos. 
+--->
 
-- Full Unicode support
-- Highly customisable sorting using the Unicode Collation Algorithm + CLDR tailoring
-- Highly customisable bibliography labels
-- Complex macro-based on-the-fly data modification without changing your data sources
-- A tool mode for transforming bibliographic data sources
-- Multiple bibliographies and lists of bibliographic information in the same document with different sorting
-- Highly customisable data source inheritance rules
-- Polyglossia and babel suppport for automatic language switching for bibliographic entries and citations
-- Automatic bibliography data recoding (UTF-8 -> latin1, LATEX macros -> UTF-8 etc)
-- Remote data sources
-- Highly sophisticated automatic name and name list disambiguation system
-- Highly customisable data model so users can define their own bibliographic data types
-- Validation of bibliographic data against a data model
-- Subdivided and/or filtered bibligraphies, bibliographies per chapter, section etc.
+Con biber BibLATEX tiene muchas características que rivalizan o superan a otros
+sistemas bibliográficos.
 
 #### CLS
 
-The Citation Style Language (CSL) is an XML-based format to describe the
-formatting of citations, notes and bibliographies, offering:
+El Lenguaje de Estilo de Citación (CSL) es un formato basado en XML para
+describir el formato de citas, notas y bibliografías, ofreciendo:
 
-- An open format
-- Compact and robust styles
-- Extensive support for style requirements
-- Automatic style localization
-- Infrastructure for style distribution and updating
-- Thousands of freely available styles (Creative Commons BY-SA licensed)
+https://docs.citationstyles.org/en/stable/primer.html#what-is-csl
 
-For additional documentation, the CSL schema, styles, and locales, visit the
-CSL project home, citationstyles.org.  Si alguna vez has escrito un trabajo de
-investigación, probablemente hayas incluido referencias a otros trabajos. Las
-referencias son importantes en la comunicación académica, ya que proporcionan
-la atribución y vinculan la investigación publicada. Sin embargo, formatear
-manualmente las referencias puede llevar mucho tiempo, especialmente cuando se
-trata de varias revistas que tienen su propio estilo de citación.
+Para obtener más documentación, el esquema CSL, los estilos y las
+localizaciones, visite la página web del proyecto proyecto CSL,
+citationstyles.org.
+
+Si alguna vez has escrito un trabajo de investigación, habrás trabajo de
+investigación, probablemente has incluido referencias a otros trabajos. La
+página web referencias son importantes en la comunicación académica, ya que
+proporcionan la atribución y enlazan la atribución y enlazan la investigación
+publicada.
+Sin embargo, formatear manualmente
+las referencias puede llevar mucho tiempo, especialmente cuando se trata de
+múltiples múltiples revistas que tienen su propio estilo de citación.
 
 Por suerte, el software de gestión de referencias puede ayudar. Programas como
 Zotero, Mendeley y Papers no sólo te ayudan a gestionar tu biblioteca de
@@ -229,70 +264,31 @@ programas necesitan descripciones de cada estilo de citación en un lenguaje que
 el ordenador pueda entender. Como habrás adivinado, el Lenguaje de Estilos de
 Citación (LEC) es ese lenguaje
 
-
 https://docs.citationstyles.org/en/stable/specification.html
-
-https://docs.citationstyles.org/en/stable/primer.html#what-is-csl
-
-
 
 ### MathJax
 
-Services
+Se proporcionan varios métodos diferentes para representar las matemáticas en
+HTML, incluyendo MathJax y la traducción a MathML.
 
-Se proporcionan varios métodos diferentes para
-representar las matemáticas en HTML, incluyendo MathJax y la traducción a
-MathML.
-
-
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+Cuando $a \ne 0$, hay dos soluciones a \(ax^2 + bx + c = 0\) las cuales son
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-**Content Transformation: ** Stylized Epub logoMathJax provides tools to transform your content from
-traditional print sources into modern, accessible web content and ePubs.
+**Transformación de contenidos:** Logotipo estilizado de EpubMathJax proporciona
+herramientas para transformar sus contenidos de fuentes impresas tradicionales
+en contenidos web y ePubs modernos y accesibles.
 
+**Tipografía de alta calidad:** MathJax utiliza CSS con fuentes web o SVG, en
+lugar de de imágenes de mapa de bits o Flash, por lo que las ecuaciones se
+escalan con el texto circundante en todos los niveles de zoom.
 
-**High-quality typography: ** MathJax uses CSS with web fonts or SVG, instead
-of bitmap images or Flash, so equations scale with surrounding text at all zoom
-levels.
+**Modular la entrada y la salida:** MathJax es altamente modular en la entrada y
+la salida. Utiliza MathML, TeX, y ASCIImath como entrada y produce HTML+CSS,
+SVG, o MathML como salida.
 
-**Modular Input & Output: ** MathJax is highly modular on input and output. Use
-MathML, TeX, and ASCIImath as input and produce HTML+CSS, SVG, or MathML as
-output.
-
-**Accessible & reusable: ** MathJax works with screenreaders & provides
-expression zoom and interactive exploration. You also can copy equations into
-Office, LaTeX, wikis, and other software.
-
-### Gráficos y diagramas
-
-<!--- 
-Además, adjunte un cronograma de presentaciones intermedias,
-considerando que se debe realizar, como mínimo,
-una entrega intermedia antes de la entrega final.
---->
-
-```{.plantuml caption="This is an image, created by **PlantUML**." width=50%}
-@startuml
-Alice -> Bob: Authentication Request Bob --> Alice: Authentication Response
-Alice -> Bob: Another authentication Request Alice <-- Bob: another Response
-@enduml
-```
-
-```
-~~~mermaid
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-~~~
-```
-
-~~~mermaid
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-~~~
-
+**Accesible y reutilizable:** MathJax funciona con lectores de pantalla y proporciona
+zoom de expresión y exploración interactiva. También puede copiar ecuaciones en
+Office, LaTeX, wikis y otro software.
 
 # Resultados
 
@@ -304,10 +300,9 @@ estem proyecto esto incluye:
 - estructura
 - filtros 
 - cls
-- plantilla
+- plantilla latex
 - resaltado de codigo
-- instrcuciones de uso
-
+- configuraciones para operaciones remotas
 
 ## Generar Portable Document Format (PDF)
 
@@ -331,6 +326,31 @@ pandoc README.md --mathjax \
 apendice.pdf
 
 # Conclusion
+
+cls
+- Un formato abierto
+- Estilos compactos y robustos
+- Amplia compatibilidad con los requisitos de estilo
+- Localización automática de estilos
+- Infraestructura para la distribución y actualización de estilos
+- Miles de estilos disponibles gratuitamente (con licencia Creative Commons BY-SA)
+
+Por bibtext algunos:
+
+- Soporte completo de Unicode
+- Ordenación altamente personalizable mediante el Algoritmo de Cotejo Unicode + adaptación de CLDR
+- Etiquetas de bibliografía altamente personalizables
+- Compleja modificación de datos sobre la marcha basada en macros sin cambiar las fuentes de datos
+- Un modo de herramienta para transformar las fuentes de datos bibliográficos
+- Múltiples bibliografías y listas de información bibliográfica en el mismo documento con diferente ordenación
+- Reglas de herencia de fuentes de datos altamente personalizables
+- Soporte de poliglosia y babel para el cambio automático de idioma de las entradas y citas bibliográficas
+- Recodificación automática de datos bibliográficos (UTF-9 -> latin1, macros LATEX -> UTF-8, etc.)
+- Fuentes de datos remotas
+- Sistema de desambiguación automática de nombres y listas de nombres altamente sofisticado
+- Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
+- Validación de los datos bibliográficos con respecto a un modelo de datos
+- Bibligrafías subdivididas y/o filtradas, bibliografías por capítulo, sección, etc.
 
 
 <!---
@@ -359,7 +379,6 @@ formatos aspiran a ser perfectas, las conversiones de formatos más expresivos
 que el Markdown de pandoc pueden tener pérdidas.
 
 HTML vs PDF
-
 
 
 # Referencias

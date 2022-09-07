@@ -1,5 +1,5 @@
 ---
-title: Producción gráfica de documentos acádemicos con Pandoc
+title: 'APENDICE: Producción gráfica de documentos acádemicos con Pandoc'
 authot: Lisandro Fernández
 abstract: |
   Pandoc como entorno textutal de producción de documentos
