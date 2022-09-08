@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: 3.10
 
-      uses: s-weigand/setup-conda@v1
+      - uses: s-weigand/setup-conda@v1
         with:
           activate-conda: false
       - run: conda --version
