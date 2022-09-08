@@ -67,7 +67,7 @@ jobs:
           # env: can't execute 'node': No such file or directory
           args: >- 
             ./README.md
-            -F pancoc-plot -F pandoc-crossref --mathjax --citeproc 
+            -F pandoc-plot -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./pygments.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
