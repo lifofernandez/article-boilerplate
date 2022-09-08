@@ -1,11 +1,6 @@
 ---
 title: 'APENDICE: Producción gráfica de documentos acádemicos con Pandoc'
 authot: Lisandro Fernández
-abstract: |
-  Pandoc como entorno textutal de producción de documentos
-  académicos. El texto plano beneficia a todos los usuarios, deben poder
-  encontrar lo que necesitan, comprender lo que encuentran y usarlo para realizar
-  tareas.
 bibliography: referencias.bib
 csl: ieee.csl
 colorlinks: true
@@ -192,20 +187,43 @@ These are the elements outlined in John Gruber’s original design document. All
 
 ---
 
-### Link
+### Enlaces
 
 [Markdown Guide](https://www.markdownguide.org)
 
-### Image
+### Imagenes
 
-![alt text](https://www.markdownguide.org/assets/images/tux.png)
+<!---
+# Chapter 1. Figures
+{#sec:sec1}
+--->
+
+It is also possible to mix different references, like [@fig:figure1;
+@tbl:table1;], which will be grouped in order they are specified.
+
+<!---
+You can even intermix this with regular citations, although it's not recommended: [@fig:figure1; @tbl:table1; @unprocessedCitation]
+--->
+
+You can also have custom chapter reference labels, like @sec:tables
+
+Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
+
+![alt text](https://www.markdownguide.org/assets/images/tux.png){#fig:figure1}
+
+<div id="fig:subfigures">
+![Subfigure a](https://www.markdownguide.org/assets/images/tux.png)
+![Subfigure b]{#fig:subfigureB}
+
+Subfigures caption
+</div>
 
 ## Extended Syntax
 
 These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
 [extended syntax](https://www.markdownguide.org/extended-syntax).
 
-### Table
+### Tablas {#sec:tablas}
 
 | Syntax      | Description |
 | ----------- | ----------- |

@@ -1,18 +1,17 @@
 pdf:
 	@pandoc -F pandoc-plot README.md \
 		--metadata-file=metadata.yaml --mathjax \
-        -F mermaid-filter -F pandoc-crossref --citeproc \
-		--highlight-style my.theme \
+		-F mermaid-filter -F pandoc-crossref --citeproc \
+		--highlight-style pygments.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
 		-o README.pdf
 
 # install:
-#  	sudo pacman -S pandoc texlive-most 
+# 	sudo pacman -S pandoc texlive-most 
 # 	wget raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
-#   pandoc --print-highlight-style pygments > my.theme
-#  	pandoc-plot
- 
+# 	# pandoc --print-highlight-style pygments > pygments.theme
+#  	make pandoc-plot
 
 # pandoc-plot:
 # 	git clone https://aur.archlinux.org/pandoc-plot-bin.git
