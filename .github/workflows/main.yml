@@ -70,11 +70,12 @@ jobs:
           # env: can't execute 'node': No such file or directory
           
           # -F $CONDA/bin/pandoc-plot 
+          # -F /usr/share/miniconda/bin/pandoc-plot 
           # Error running filter $CONDA/bin/pandoc-plot:
           # Could not find executable $CONDA/bin/pandoc-plot
           
           args: >- 
-            -F /usr/share/miniconda/bin/pandoc-plot ./README.md -f markdown
+            ./README.md -f markdown
             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./pygments.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
