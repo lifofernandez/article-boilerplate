@@ -49,6 +49,7 @@ jobs:
         run: |
           conda install -c conda-forge pandoc-plot
           echo $CONDA
+          /usr/share/miniconda/pandoc-plot -h
           
       - run: mkdir -p output
 
@@ -73,7 +74,7 @@ jobs:
           # Could not find executable $CONDA/bin/pandoc-plot
           
           args: >- 
-            ./README.md
+            ./README.md -f markdown
              -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./pygments.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
