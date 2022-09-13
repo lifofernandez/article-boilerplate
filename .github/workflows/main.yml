@@ -48,7 +48,7 @@ jobs:
       - name: Install pandoc-plot
         run: |
           conda install -c conda-forge pandoc-plot
-          $CONDA
+          echo $CONDA
           
       - run: mkdir -p output
 
