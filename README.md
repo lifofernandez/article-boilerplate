@@ -19,8 +19,6 @@ cuenta con las capacidades necesarias
 para la producción de documentación técnica y
 científica.
 
-
-
 <!--- 
 LaTeX es el estándar de facto para la comunicación y publicación de documentos
 científicos. 

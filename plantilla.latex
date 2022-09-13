@@ -481,6 +481,13 @@ $institucion$
 \end{center}
 $endif$
 
+$if(facultad)$
+\begin{center}
+\large
+$facultad$
+\end{center}
+$endif$
+
 \bigskip
 \bigskip
 
@@ -500,7 +507,7 @@ $endif$
 
 $if(director)$
 \begin{center}
-Director de Carrera:
+Dir:
 $director$
 \end{center}
 $endif$
@@ -520,7 +527,7 @@ $endif$
 
 $if(tutor)$
 \begin{center}
-Profesor:
+Prof:
 $tutor$
 \end{center}
 $endif$
@@ -528,23 +535,22 @@ $endif$
 \bigskip
 \bigskip
 
-$if(title)$
-\begin{center}
-\large
-$title$
-\end{center}
-$endif$
-
 $if(subtitle)$
 \begin{center}
 \large
-\uppercase{$subtitle$}
+$subtitle$
+\end{center}
+$endif$
+
+$if(title)$
+\begin{center}
+\large
+\uppercase{$title$}
 \end{center}
 $endif$
 
 $if(author)$
 \begin{center}
-Presentado por:
 $author$
 \end{center}
 $endif$

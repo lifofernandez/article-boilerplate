@@ -1,18 +1,16 @@
 ---
-institucion: |
-  Universidad Tecnológica Nacional
-  Facultad Regional Buenos Aires
+institucion: Universidad Tecnológica Nacional
 facultad: 'Facultad Regional Buenos Aires' 
 departamento: 'Escuela de Posgrado' 
 carrera: 'Maestría en Ingeniería en Sistemas de Información'
 director: 'Dra. Ma. Florencia Pollo Cattaneo'
 programa: 'Herramientas para el desarrollo de Tesis 2021'
-#subtitle: 'Herramientas para el desarrollo de Tesis 2021'
+subtitle: 'Trabajo Práctico Final'
 tutor: 'Florencia Pollo Cattaneo'
 date:  'Octubre 2022'
 place: 'Buenos Aires, Argentina'
 tags: ['representación', 'texto plano', 'CLI', 'pandoc']
-title: Producción gráfica de documentos acádemicos con Pandoc
+title: Producción artículos acádemicos con Pandoc
 author: Lisandro Fernández
 bibliography: referencias.bib
 csl: ieee.csl
