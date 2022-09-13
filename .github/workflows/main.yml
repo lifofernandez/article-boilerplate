@@ -49,7 +49,7 @@ jobs:
         run: |
           conda install -c conda-forge pandoc-plot
           echo $CONDA
-          /usr/share/miniconda/pandoc-plot -h
+          /usr/share/miniconda/bin/pandoc-plot -h
           
       - run: mkdir -p output
 
