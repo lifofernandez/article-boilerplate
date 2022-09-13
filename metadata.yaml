@@ -6,11 +6,11 @@ carrera: 'Maestría en Ingeniería en Sistemas de Información'
 director: 'Dra. Ma. Florencia Pollo Cattaneo'
 programa: 'Herramientas para el desarrollo de Tesis 2021'
 subtitle: 'Trabajo Práctico Final'
+title: 'Producción académica con Pandoc'
 tutor: 'Florencia Pollo Cattaneo'
 date:  'Octubre 2022'
 place: 'Buenos Aires, Argentina'
-tags: ['representación', 'texto plano', 'CLI', 'pandoc']
-title: Producción artículos acádemicos con Pandoc
+tags: ['authoring', 'texto plano', 'CLI', 'pandoc']
 author: Lisandro Fernández
 bibliography: referencias.bib
 csl: ieee.csl

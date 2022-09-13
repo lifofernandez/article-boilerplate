@@ -11,17 +11,32 @@ de producción
 de documentos académicos, de complejidad considerable,
 sin interfaz grafica @caleb.
 
-Con el sistema de composición tipográfica
-y preparacion de documentos 
-de alta calidad LaTeX entre bastidores;
 incluye funciones diseñadas
 cuenta con las capacidades necesarias
 para la producción de documentación técnica y
 científica.
 
-<!--- 
+con numerosas relacionones de referencias
+
+permite la utilizacion 
+Con el sistema de composición tipográfica
+y preparacion de documentos 
+de alta calidad LaTeX
+entre bastidores;
+
+pero sin requerir conocimiento de la sitaxis del mismo
+la que puede ser opaca para la mayoria del 
+creadores de contenido
+interpretes
+
 LaTeX es el estándar de facto para la comunicación y publicación de documentos
-científicos. 
+científicos y
+markdown lo es para la documentacion online.
+
+integracion sencilla
+infraestructura robusta
+
+<!--- 
 # Justificación
 Pandoc es a la los documentos gráficos lo que https://ffmpeg.org/about.html es
 para el video.
@@ -47,15 +62,12 @@ otro, y una herramienta de línea de comandos que utiliza esta biblioteca.
 
 Pandoc puede convertir entre numerosos formatos de marcado y de procesamiento
 de textos,
+
 <!---
 incluyendo, pero sin limitarse a, varios sabores de Markdown, HTML,
 LaTeX y Word docx.
 
-Hay muchas maneras de personalizar pandoc para que se adapte a sus necesidades,
 --->
-incluye un sistema de plantillas
-y
-un potente sistema para escribir filtros.
 
 Pandoc es software libre, publicado bajo la GPL.
 Copyright 2006-2022 John MacFarlane.
@@ -82,10 +94,10 @@ sino que tambien
 la tarea involucra a multimples agentes
 autores/supervisores/editores
 
-vuleve el 
-el control estetico y unidad en estilo
+devuleve el 
+el control estetico y da unidad en estilo
 en la composicion grafica resultante
-a multiples productos.
+de diversos productos.
 
 De los beneficios que trabajar con texto plano habilita
 se resalta la accesibilidad y la posbilidad de 
@@ -111,8 +123,30 @@ y componentes, y dé vida a los proyectos con potentes filtros.
 
 ### Markdown
 
+
+Markdown es una sintaxis
+plain text formatting syntax
+sitaxis de formato de texto, 
+
+
+
+El formato de texto es el marcado que se aplica a un texto simple para añadir
+datos de estilo más allá de la semántica de los elementos: colores, estilos
+(negrita, itálica), tamaño, y características especiales (como hipervínculos).
+Al texto resultante se le conoce como texto formateado, texto con estilos, o
+texto enriquecido
+
+
+https://wires.onlinelibrary.wiley.com/doi/10.1002/wics.1348
+
+This article is categorized under:
+Software for Computational Statistics > Software/Statistical Software
+
+El
+con enfasis en la legibilidad
+
+de autoria de texto
 Lo que distingue a Markdown de muchas otras sintaxis de marcado ligero,
-que suelen ser más fáciles de escribir,
 es su legibilidad.
 
 Como escribe Gruber:
@@ -124,46 +158,61 @@ con etiquetas o instrucciones de formato.
 
 https://github.github.com/gfm/
 
-La versión mejorada de Markdown de Pandoc incluye sintaxis para tablas, listas
-de definiciones, bloques de metadatos, notas a pie de página, citas,
-matemáticas y mucho más. Véase más abajo en Markdown de Pandoc.
+La versión mejorada de Markdown de Pandoc
+incluye sintaxis para
+tablas, listas de definiciones,
+bloques de metadatos, notas a pie de página, citas,
+matemáticas y mucho más.
 
-Pandoc comprende una serie de extensiones útiles de la sintaxis de markdown,
-como los metadatos del documento (título, autor, fecha); las notas al pie; las
+Véase más abajo en Markdown de Pandoc.
+https://pandoc.org/MANUAL.html#pandocs-markdown
+
+Pandoc
+comprende una serie de extensiones útiles de la sintaxis de markdown,
+como los metadatos del documento (título, autor, fecha);
+las notas al pie; las
 tablas; las listas de definiciones; los superíndices y subíndices; la
 tachadura; las listas ordenadas mejoradas (el número de inicio y el estilo de
 numeración son significativos); las listas de ejemplos en ejecución; los
-bloques de código delimitados con resaltado de sintaxis; las comillas
-inteligentes, los guiones y las elipses; el markdown dentro de bloques HTML; y
-el LaTeX en línea. Si se desea una compatibilidad estricta con markdown, todas
+bloques de código de software delimitados con resaltado de sintaxis; las comillas
+inteligentes,
+los guiones y las elipses;
+el markdown dentro de bloques HTML;
+y el LaTeX en línea.
+
+Si se desea una compatibilidad estricta con markdown, todas
 estas extensiones pueden desactivarse.
 
-<!---
-Pandoc tiene un diseño modular: consta de un conjunto de lectores, que analizan
+
+## Integración
+
+un potente sistema para escribir filtros.
+
+Es
+el diseño modular: consta de un conjunto de lectores, que analizan
 el texto en un formato determinado y producen una representación nativa del
 documento (un árbol sintáctico abstracto o AST), y un conjunto de escritores,
 que convierten esta representación nativa en un formato de destino. Así, para
 añadir un formato de entrada o de salida basta con añadir un lector o un
 escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
 para modificar el AST intermedio.
---->
-
-
-## Integración
-
 pandoc funciona como la piaza central que integra
 
-mermaidjs
-Mermaid le permite crear diagramas y visualizaciones utilizando texto y código.
-
-Se trata de una herramienta de diagramación y graficación basada en JavaScript
-que renderiza definiciones de texto inspiradas en Markdown para crear y
-modificar diagramas de forma dinámica.
-
+<!---
 LaTeX is a high-quality typesetting system; it includes features designed for
-the production of technical and scientific documentation. LaTeX is the de facto
+the production of technical and scientific documentation.
+
+LaTeX is the de facto
 standard for the communication and publication of scientific documents. LaTeX
 is available as free software.
+
+--->
+
+De los uchas maneras de personalizar pandoc para que se adapte a sus necesidades,
+este proyecto se destaca el uso de 
+
+incluye un sistema de plantillas
+y
 
 Pandoc incluye un potente sistema de citas y bibliografías automáticas.
 
@@ -178,10 +227,32 @@ documentos de markdown.
 Las matemáticas de LaTeX se convierten (según lo requiera el formato de
 salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
 
+sitema de diagramcion y  generacion graficos 
+
+permite crear diagramas y visualizaciones utilizando texto y código.
+Se trata de una herramienta de diagramación y graficación
+
+basada en JavaScript
+que renderiza definiciones de texto inspiradas en Markdown para crear y
+
+modificar diagramas de forma dinámica.
+
+<!--- 
+Además, adjunte un cronograma de presentaciones intermedias,
+considerando que se debe realizar, como mínimo,
+una entrega intermedia antes de la entrega final.
+--->
 
 ### Gráficos y diagramas
 
+Diagramación y la documentación cuestan un tiempo precioso a los
+desarrolladores y quedan obsoletas rápidamente.
+
+Pero no tener diagramas o documentación arruina la productividad y perjudica el
+aprendizaje de la organización.
+
 #### pandoc-plot
+
 
 https://laurentrdc.github.io/pandoc-plot/
 
@@ -200,8 +271,6 @@ ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.title('This is an example figure')
 ```
-
-
 
 ```{.plantuml}
 @startuml
@@ -288,8 +357,6 @@ plt.title('This is an example figure')
 ```
 
 
-
-
 #### MermaidJS
 
 Mermaid es una herramienta de diagramación y gráficos basada en JavaScript que
@@ -297,26 +364,18 @@ utiliza definiciones de texto inspiradas en Markdown y un renderizador para
 crear y modificar diagramas complejos. El objetivo principal de Mermaid es
 ayudar a que la documentación se ponga al día con el desarrollo.
 
-La diagramación y la documentación cuestan un tiempo precioso a los
-desarrolladores y quedan obsoletas rápidamente. Pero no tener diagramas o
-documentación arruina la productividad y perjudica el aprendizaje de la
-organización.
-
-Mermaid aborda este problema permitiendo a los usuarios crear diagramas
-fácilmente modificables, que también pueden formar parte de los scripts de
-producción (y otras piezas de código).
+Mermaid
+aborda este problema
+permite
+crear diagramas
+fácilmente modificables,
+del código
+de piezas de software.
 
 Mermaid permite incluso a los no programadores crear fácilmente diagramas
 detallados y a través del Mermaid Live Editor.
 
-Tiene tutoriales en vídeo. Utilice Mermaid con sus aplicaciones favoritas,
-consulte la lista de integraciones y usos de Mermaid.
 
-<!--- 
-Además, adjunte un cronograma de presentaciones intermedias,
-considerando que se debe realizar, como mínimo,
-una entrega intermedia antes de la entrega final.
---->
 
 ```
 ~~~mermaid
@@ -325,6 +384,7 @@ sequenceDiagram
     John-->>Alice: Great!
 ~~~
 ```
+
 
 ~~~mermaid
 sequenceDiagram
@@ -378,7 +438,7 @@ proporcionan la atribución, enlazan referentes.
 
 Sin embargo, formatear manualmente
 las referencias puede llevar mucho tiempo, especialmente cuando se trata de
-múltiples puvblicaciones que tienen su propio estilo de citación.
+múltiples publicaciones con diferentes estilos de citación.
 
 El software de gestión de referencias puede ayudar.
 <!---
@@ -435,11 +495,22 @@ este proyecto esto incluye:
 - resaltado de codigo
 - configuraciones para operaciones remotas
 
+
+El documento 
+y su contraparte 
+
+Para recrear el proceso que
+se utilizo para confeccionar este documento
+
+## Medodotologia 
+
+El desarrollo de este trabajo fue realizado
+
+nota al pie: Como conseguir una instalcion funcional de 
+Esta fuera de los alcances de este articulo.
+
 ## Generar Documentos (PDF)
 
-Para recrear el
-proceso que
-se utilizo para confeccionar este documento
 
 Con una version funcionando en ejecutar en la terminal 
 del mismo el siguiente sentencia:
@@ -464,23 +535,27 @@ es el markdown
 apendice.pdf
 
 # Conclusion
+<!---
+esto puede mitigar con trabajos encauzados mediante 
+matrices a las diferentes versiones
 
-en cadena de produccion de sof
-los documentos graficos 
-suele producirce 
-mediante rutinas directamente de la base de datos
-se recmienda un proceso similar al descripto
-donde se repalde el conocimiento en 
-contedores de formato simple y legible, sin codificar ni 
-opacar
-y pueda ser manipulados con procesos rudimentales
+
+Tenga en cuenta que en la entrega final, deberá realizar una conclusión donde se
+tendrán que detallar las futuras líneas de trabajo.
+--->
+
+contar lo que se hizo
+
+Se consigue un cadena de produccion 
+
+
 
 En general 
 
 - Un formato libre y abierto
 - Componentes isolados, compactos y robustos
 - Amplia compatibilidad con requisitos de estilo
-- Miles de estilos disponibles gratuitamente (con licencia Creative Commons BY-SA)
+- Miles de estilos disponibles predifindos por la comunida
 - Etiquetas de bibliografía altamente personalizables
 - Fuentes de datos remotas para publicaciones frecuentes con informacion dinámico.
 
@@ -491,27 +566,51 @@ Estilos de citas
 - Compleja modificación de datos sobre la en produccion,
   basada en macros sin cambiar las fuentes de datos
 
-
 Para revisiones de literatura que comprometan múltiples bibliografías y
 listas de información bibliográfica en el mismo documento con diferente ordenación
 
-- Ordenación altamente personalizable mediante el Algoritmo de Cotejo Unicode + adaptación de CLDR
+- Ordenación altamente personalizable mediante el Algoritmo de Cotejo Unicode (Unicode collation algorithm - UCA) (https://www.unicode.org/reports/tr10/)
+- Adaptación de CLDR (https://cldr.unicode.org/)
 - Bibligrafías jeraquizadas por capítulo, sección, etc.
 - Soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas
 - Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
 - Validación de los datos bibliográficos con respecto a un modelo de datos
 
 <!---
-- Reglas de herencia de fuentes de datos altamente personalizables
-- Un modo de herramienta para transformar las fuentes de datos bibliográficos
-
+Reglas de herencia de fuentes de datos altamente personalizables
+Un modo de herramienta para transformar las fuentes de datos bibliográficos
 Por bibtext algunos:
-
-- Soporte completo de Unicode
-- Recodificación automática de datos bibliográficos (UTF-9 -> latin1, macros LATEX -> UTF-8, etc.)
-- Sistema de desambiguación automática de nombres y listas de nombres altamente sofisticado
-
+Soporte completo de Unicode
+Recodificación automática de datos bibliográficos (UTF-9 -> latin1, macros LATEX -> UTF-8, etc.)
+Sistema de desambiguación automática de nombres y listas de nombres altamente sofisticado
 --->
+
+los documentos graficos 
+suele producirce 
+mediante rutinas directamente de la base de datos
+como comprueba en
+es beficio 
+	se recmienda
+un proceso similar al descripto
+donde se repalde el conocimiento en 
+contedores de formato simple y legible, sin codificar ni 
+opacar
+y pueda ser manipulados con procesos rudimentales
+
+## Futuras lineas de trabajo
+
+### Operaciones Remotas automaticas
+
+https://pandoc.org/installing.html#github-actions
+
+disponible el repositorio con
+
+[![Build remoto](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
+
+Integracion continua
+https://about.gitlab.com/features/continuous-integration/
+
+
 ## Debilidades
 
 Dado que la representación intermedia de un documento por parte de Pandoc es
@@ -524,7 +623,8 @@ de formatos más expresivos
 que Markdown de Pandoc pueden tener diferencias.
 
 Pandoc intenta conservar los elementos estructurales de un documento,
-pero no los detalles de formato, como el tamaño de los márgenes.
+pero no los detalles de formato,
+como el tamaño de los márgenes.
 
 Y algunos elementos del documento,
 como por ejemplo tablas complejas,
@@ -542,6 +642,7 @@ y depender de
 versiones de las herramientas 
 en las diferente distribuciones y sistemas operativos
 puede inferir en la integración y operaciones.
+
 Pero en una implemntacion 
 empresarial
 esto puede ser solucionado 
@@ -549,29 +650,6 @@ ejecutando en servidor remoto donde
 solamente se carguen como insumos 
 los ficheros de contenido 
 y las configuraciones y plantillas esten 
-
-<!---
-esto puede mitigar con trabajos encauzados mediante 
-matrices a las diferentes versiones
-
-
-Tenga en cuenta que en la entrega final, deberá realizar una conclusión donde se
-tendrán que detallar las futuras líneas de trabajo.
---->
-
-contar lo que se hizo
-
-## Operaciones Remotas
-
-Futuras lineas de trabajo
-
-disponible
-el repositorio con
-
-### Acciones remoto
-
-[![Build remoto](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
-
 
 
 # Referencias

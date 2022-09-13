@@ -18,7 +18,6 @@ This is a demo file for pandoc-crossref. With this filter, you can cross-referen
 
 For immediate example, see @fig:figure0
 
-![A figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure0}
 
 There is also support for code blocks, for example, [@lst:captionAttr; @lst:tableCaption; @lst:wrappingDiv]
 
@@ -37,14 +36,14 @@ Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
 
 ![First figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure1}
 
-![Second figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure2}
+![Second figure](https://upload.wikimedia.org/wikipedia/commons/8/83/The_GNU_logo.png){#fig:figure2}
 
 ![Third figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure3}
 
 ![Unlabelled image](https://www.markdownguide.org/assets/images/tux.png)
 
 <div id="fig:subfigures">
-![Subfigure a](https://www.markdownguide.org/assets/images/tux.png)
+![Subfigure a](https://upload.wikimedia.org/wikipedia/commons/8/83/The_GNU_logo.png)
 
 ![Subfigure b](https://www.markdownguide.org/assets/images/tux.png){#fig:subfigureB}
 
