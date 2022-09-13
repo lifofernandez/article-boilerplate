@@ -43,11 +43,12 @@ jobs:
       # - name: Test with pytest
       #   run: |
       #    conda install pytest
-      #   $CONDA/bin/pytest
+      #    $CONDA/bin/pytest
 
       - name: Install pandoc-plot
         run: |
           conda install -c conda-forge pandoc-plot
+          $CONDA
           
       - run: mkdir -p output
 
@@ -62,12 +63,18 @@ jobs:
 
       - uses: docker://pandoc/latex:2.18
         with:
+          # Problems with c
           # -F node_modules/mermaid-filter/index.js 
           # Error running filter node_modules/mermaid-filter/index.js:
           # env: can't execute 'node': No such file or directory
+          
+          # -F $CONDA/bin/pandoc-plot 
+          # Error running filter $CONDA/bin/pandoc-plot:
+          # Could not find executable $CONDA/bin/pandoc-plot
+          
           args: >- 
             ./README.md
-            -F $CONDA/bin/pandoc-plot -F pandoc-crossref --mathjax --citeproc 
+             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./pygments.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
