@@ -1,0 +1,491 @@
+[
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/NU5ICIXE",
+		"type": "article-journal",
+		"abstract": "A review of prior, relevant literature is an essential feature of any academic project. An effective review creates a firm foundation for advancing knowledge. It facilitates theory development, closes areas where a plethora of research exists, and uncovers areas where research is needed. In the information systems (IS) field, we see few published review articles. As a result, the progress of our field is impeded. To address this concern, the MIS Quarterly launched MISQ Review several years ago. The clear intention was to accelerate the accumulation of IS knowledge. A particular goal was to advance the state of theory within the IS field. The stated purpose of MISQ Review is to …promote MIS research by publishing articles that conceptualize research areas and survey and synthesize prior research. These articles will provide important input in setting directions for future research. 1",
+		"container-title": "MIS Quarterly",
+		"issue": "2",
+		"title": "Analyzing the past to prepare for the future: Writing a literature review",
+		"URL": "http://www.misq.org/misreview/announce.html",
+		"volume": "26",
+		"author": [
+			{
+				"family": "Webster",
+				"given": "Jane"
+			},
+			{
+				"family": "Watson",
+				"given": "Richard T."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/UDPE58HM",
+		"type": "article-journal",
+		"container-title": "-",
+		"DOI": "10.1.1.117.471",
+		"title": "Guidelines for performing Systematic Literature Reviews in Software Engineering",
+		"URL": "https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.117.471",
+		"author": [
+			{
+				"family": "Kitchenham",
+				"given": "B."
+			},
+			{
+				"family": "Kitchenham",
+				"given": "B."
+			},
+			{
+				"family": "Charters",
+				"given": "S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/HPKQST4Y",
+		"type": "article-journal",
+		"container-title": "Requirements Engineering",
+		"DOI": "10.1007/s00766-005-0021-6",
+		"ISSN": "0947-3602",
+		"issue": "1",
+		"page": "102–107",
+		"title": "Requirements engineering paper classification and evaluation criteria: a proposal and a discussion",
+		"volume": "11",
+		"author": [
+			{
+				"family": "Wieringa",
+				"given": "Roel"
+			},
+			{
+				"family": "Maiden",
+				"given": "Neil"
+			},
+			{
+				"family": "Mead",
+				"given": "Nancy"
+			},
+			{
+				"family": "Rolland",
+				"given": "Colette"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2006",
+					3
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/JX4MEBAF",
+		"type": "article-journal",
+		"abstract": "While there has been an increasing number of studies on smart cities, there are still issues in assessment and governance of these cities. This study aims to analyze and provide insights into the research done in smart city maturity models by conducting a systemically review of related literature. The study discusses and analyzes 22 maturity frameworks from the peer-reviewed articles. The discussion also included the alignment of the smart city to the United Nations sustainable development goals. The analysis shows that there is an increased emphasis on the development of maturity models over the years 2011-2018 However, only 9 out of the 22 models were comprehensive, other models were focused on specific aspects such as citizens, data and IoT. In addition, 50% of the models from the literature included components related to technology but most of the models lacked assessment of the environmental aspects. This review indicates the need for a comprehensive smart cities' maturity model to assess the cities in their smartness transformation.",
+		"container-title": "2019 International Conference on Innovation and Intelligence for Informatics, Computing, and Technologies, 3ICT 2019",
+		"DOI": "10.1109/3ICT.2019.8910321",
+		"title": "Systematic literature review of the smart city maturity model",
+		"author": [
+			{
+				"family": "Aljowder",
+				"given": "Thajba"
+			},
+			{
+				"family": "Ali",
+				"given": "Mazin"
+			},
+			{
+				"family": "Kurnia",
+				"given": "Sherah"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/FHJFR69E",
+		"type": "article-journal",
+		"abstract": "Smart city represents a new future framework which integrates multiple information and communication technology (ICT), which provides solution to cope with urban challenges and at the same time to improve the quality of life of the citizens. However, it is still an unclear concept with no standardised nomenclature that could be effectively describing itself and lacking in standardised criteria and framework to visualise the concept. This paper aims to review smart city literature to achieve the understandings on the fundamentals of smart city. The research procedure focuses on the dimensions of the smart city. The studies selected from two major databases; Scopus and Science Direct. The selection process involves searching for literature sources and screening and filtering the studies based on titles, abstracts, and full-text reading. Final 28 documents are selected and adopted in this study. Based on the review, it is identified that there are 11 dimensions that contributes to the development of smart cities; smart economy, smart governance, smart people, smart environment, smart infrastructure, smart technology, smart living, smart mobility, smart water and waste, smart security and smart agriculture. Thus, the findings provide insights for scholars researching on the subject, and the parties considering applying them into practice.",
+		"container-title": "IOP Conference Series: Earth and Environmental Science",
+		"DOI": "10.1088/1755-1315/498/1/012087",
+		"ISSN": "1755-1315",
+		"issue": "1",
+		"page": "012087",
+		"title": "A Systematic Literature Review on The Dimensions of Smart Cities",
+		"URL": "https://iopscience.iop.org/article/10.1088/1755-1315/498/1/012087 https://iopscience.iop.org/article/10.1088/1755-1315/498/1/012087/meta",
+		"volume": "498",
+		"author": [
+			{
+				"family": "Wahab",
+				"given": "N. S. N."
+			},
+			{
+				"family": "Seow",
+				"given": "T. W."
+			},
+			{
+				"family": "Radzuan",
+				"given": "I. S. M."
+			},
+			{
+				"family": "Mohamed",
+				"given": "S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					5
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/DAQ7IUBI",
+		"type": "article-journal",
+		"abstract": "This paper systematically reviews the top 200 Google Scholar publications in the area of smart city with the aid of data-driven methods from the fields natural language processing and time series forecasting. Specifically, our algorithm crawls the textual information of the considered articles and uses the created ad-hoc database to identify the most relevant streams &ldquo;smart infrastructure&rdquo;, &ldquo;smart economy &amp; policy&rdquo;, &ldquo;smart technology&rdquo;, &ldquo;smart sustainability&rdquo;, and &ldquo;smart health&rdquo;. Next, we automatically assign each manuscript into these subject areas by dint of several interdisciplinary scientific methods. Each stream is evaluated in a deep-dive analysis by (i) creating a word cloud to find the most important keywords, (ii) examining the main contributions, and (iii) applying time series methodologies to determine the past and future relevance. Due to our large-scaled literature, an in-depth evaluation of each stream is possible, which ultimately reveals strengths and weaknesses. We hereby acknowledge that smart sustainability will come to the fore in the next years&mdash;this fact confirms the current trend, as minimizing the required input of energy, water, food, waste, heat output and air pollution is becoming increasingly important.",
+		"container-title": "Sustainability 2020, Vol. 12, Page 8460",
+		"DOI": "10.3390/SU12208460",
+		"ISSN": "2071-1050",
+		"issue": "20",
+		"page": "8460",
+		"title": "Understanding Smart City—A Data-Driven Literature Review",
+		"URL": "https://www.mdpi.com/2071-1050/12/20/8460/htm https://www.mdpi.com/2071-1050/12/20/8460",
+		"volume": "12",
+		"author": [
+			{
+				"family": "Stübinger",
+				"given": "Johannes"
+			},
+			{
+				"family": "Schneider",
+				"given": "Lucas"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/ZPCQAW7S",
+		"type": "article-journal",
+		"abstract": "This paper offers guidance to conducting a rigorous literature review. We present this in the form of a five-stage process in which we use Grounded Theory as a method. We first probe the guidelines...",
+		"container-title": "https://doi.org/10.1057/ejis.2011.51",
+		"DOI": "10.1057/EJIS.2011.51",
+		"ISSN": "14769344",
+		"issue": "1",
+		"note": "publisher: Taylor & Francis",
+		"page": "45-55",
+		"title": "Using grounded theory as a method for rigorously reviewing literature",
+		"URL": "https://www.tandfonline.com/doi/abs/10.1057/ejis.2011.51",
+		"volume": "22",
+		"author": [
+			{
+				"family": "Wolfswinkel",
+				"given": "Joost F."
+			},
+			{
+				"family": "Furtmueller",
+				"given": "Elfi"
+			},
+			{
+				"family": "Wilderom",
+				"given": "Celeste P. M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/T3LIC3UT",
+		"type": "article-journal",
+		"abstract": "Many scholars are not well trained in conducting a standalone literature review, a scholarly paper that in its entirety summarizes and synthesizes knowledge from a prior body of research. Numerous guides that exist for information systems (IS) research mainly concentrate on only certain parts of the process; few span the entire process. This paper introduces the rigorous, standardized methodology for the systematic literature review (also called systematic review) to IS scholars. This comprehensive guide extends the base methodology from the health sciences and other fields with numerous adaptations to meet the needs of methodologically diverse fields such as IS research, especially those that involve including and synthesizing both quantitative and qualitative studies. Moreover, this guide provides many examples from IS research and provides references to guides with further helpful details for conducting a rigorous and valuable literature review. Although tailored to IS research, it is sufficiently broad to be applicable and valuable to scholars from any social science field.",
+		"container-title": "Communications of the Association for Information Systems",
+		"DOI": "10.17705/1CAIS.03743",
+		"ISSN": "1529-3181",
+		"issue": "1",
+		"note": "publisher: Association for Information Systems",
+		"page": "43",
+		"title": "A Guide to Conducting a Standalone Systematic Literature Review",
+		"URL": "https://aisel.aisnet.org/cais/vol37/iss1/43",
+		"volume": "37",
+		"author": [
+			{
+				"family": "Okoli",
+				"given": "Chitu"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/VL87XN89",
+		"type": "article-journal",
+		"container-title": "Information and Software Technology",
+		"DOI": "10.1016/j.infsof.2010.12.011",
+		"ISSN": "09505849",
+		"issue": "6",
+		"page": "638-651",
+		"title": "Using mapping studies as the basis for further research – A participant-observer case study",
+		"volume": "53",
+		"author": [
+			{
+				"family": "Kitchenham",
+				"given": "Barbara A."
+			},
+			{
+				"family": "Budgen",
+				"given": "David"
+			},
+			{
+				"family": "Brereton",
+				"given": "O. Pearl"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/Y7IC77RK",
+		"type": "article-journal",
+		"abstract": "Background: A mapping study provides a systematic and objective procedure for identifying the nature and extent of the empirical study data that is available to answer a particular research question. Such studies can also form a useful preliminary step for PhD study. Aim: We set out to assess how effective such studies have been when used for software engineering topics, and to identify the specific challenges that they present. Method: We have conducted an informal review of a number of mapping studies in software engineering, describing their main characteristics and the forms of analysis employed. Results: We examine the experiences and outcomes from six mapping studies, of which four are published. From these we note a recurring theme about the problems of classification and a preponderance of 'gaps' in the set of empirical studies. Conclusions: We identify our challenges as improving classification guidelines, encouraging better reporting of primary studies, and argue for identifying some 'empirical grand challenges' for software engineering as a focus for the community 1 .",
+		"title": "Using Mapping Studies in Software Engineering",
+		"URL": "www.ebse.org.uk.",
+		"author": [
+			{
+				"family": "Budgen",
+				"given": "David"
+			},
+			{
+				"family": "Turner",
+				"given": "Mark"
+			},
+			{
+				"family": "Brereton",
+				"given": "Pearl"
+			},
+			{
+				"family": "Kitchenham",
+				"given": "Barbara"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2008"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/ULYP3GN5",
+		"type": "article-journal",
+		"abstract": "With the predicted world population growth of 83 million people per year (increasing 1.09% year on year) compounded with a strong trend for migration to urban centres, there is a developing interest by academics, industry and government to the digitalisation of the built environment and its potential impact on private enterprises, public services and the broader context of society. The governments around the world and others are aiming to guide and standardise this process by developing an array of standards to support this digitalisation, most notably on Building Information Modelling (BIM) and Smart Cities Framework. Furthermore, the advancement of the Internet of Things (IoT) is creating a highly flexible, dynamic and accessible platform for the exchange capture and of information. There is a risk that this information on the built environment is quickly becoming unmanageable, and the value of that information is quickly becoming lost. This paper presents a smart asset alignment framework that creates an alignment between the information captured at the infrastructure asset level and citizen requirements within a Smart City framework. The framework contributes to the debate on designing and developing Smart City solutions in a way that will deliver value to the citizens.",
+		"container-title": "Cities",
+		"DOI": "10.1016/J.CITIES.2019.01.041",
+		"ISSN": "02642751",
+		"note": "publisher: Elsevier Ltd",
+		"page": "32-41",
+		"title": "A conceptual framework for the alignment of infrastructure assets to citizen requirements within a Smart Cities framework",
+		"volume": "90",
+		"author": [
+			{
+				"family": "Heaton",
+				"given": "James"
+			},
+			{
+				"family": "Parlikad",
+				"given": "Ajith Kumar"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/2V689KAR",
+		"type": "article-journal",
+		"abstract": "The level of urbanization, which may impact on urban problems, could be resolved through city development supported by the advanced information technology to build the smart(er) city. However, generally, a smart city is still developed and implemented sporadically, it does not yet adopt a particular framework. Currently, there is a limited conceptual analysis and integrated template, as well as a limited framework based on the regulations issues in Indonesia. Therefore, it is considered necessary to develop a conceptual framework of the smart city for development. The study was conducted based on synthesized and aggregated literature review to build a new conceptual framework. The analysis of literature showed a complementary existing smart city framework, including city services (basic services, non-basic services, and optional services); city resources (suprastructure, infrastructure, and infostructure); city (enterprise) architecture; and city goals (livability, workability, and sustainability). This research contributes to wider insights of smart city reference model for both Indonesia and other developing countries.",
+		"container-title": "Proceedings - 2018 4th International Conference on Science and Technology, ICST 2018",
+		"DOI": "10.1109/ICSTC.2018.8528677",
+		"note": "ISBN: 9781538658130\npublisher: Institute of Electrical and Electronics Engineers Inc.",
+		"title": "Smart City for Development: Towards a Conceptual Framework",
+		"author": [
+			{
+				"family": "Achmad",
+				"given": "Kusuma Adi"
+			},
+			{
+				"family": "Nugroho",
+				"given": "Lukito Edi"
+			},
+			{
+				"family": "Djunaedi",
+				"given": "Achmad"
+			},
+			{
+				"literal": "Widyawan"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/AWHIJCRS",
+		"type": "article-journal",
+		"abstract": "This paper contributes to the philosophical foundations of conceptual modeling by addressing a number of foundational questions such as: What is a conceptual model? Among models used in computer science, which are conceptual, and which are not? How are conceptual models different from other models used in the Sciences and Engineering? The paper takes a stance in answering these questions and, in order to do that, it draws from a broad literature in philosophy, cognitive science, Logics, as well as several areas of Computer Science (including Databases, Software Engineering, Artificial Intelligence, Information Systems Engineering, among others). After a brief history of conceptual modeling, the paper addresses the aforementioned questions by proposing a characterization of conceptual models with respect to conceptual semantics and ontological commitments. Finally, we position our work w.r.t. to a \"Reference Framework for Conceptual\" modeling recently proposed in the literature.",
+		"container-title": "Frontiers in Artificial Intelligence and Applications",
+		"DOI": "10.3233/FAIA200002",
+		"ISSN": "09226389",
+		"note": "ISBN: 9781643680446\npublisher: IOS Press",
+		"page": "1-15",
+		"title": "On the Philosophical Foundations of Conceptual Models",
+		"URL": "https://ebooks.iospress.nl/doi/10.3233/FAIA200002",
+		"volume": "321",
+		"author": [
+			{
+				"family": "Guarino",
+				"given": "Nicola"
+			},
+			{
+				"family": "Guizzardi",
+				"given": "Giancarlo"
+			},
+			{
+				"family": "Mylopoulosc",
+				"given": "John"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/WGQAK8IP",
+		"type": "article-journal",
+		"abstract": "AbstractWe understand this paper as a contribution to the “anatomy” of conceptual models. We propose a signature of conceptual models for their characterization, which allows a clear distinction fr...",
+		"container-title": "Software and Systems Modeling",
+		"DOI": "10.1007/S10270-020-00836-Z",
+		"ISSN": "16191374",
+		"issue": "1",
+		"note": "publisher: Springer Berlin HeidelbergBerlin/Heidelberg",
+		"page": "7-24",
+		"title": "The triptych of conceptual modeling",
+		"URL": "https://dl.acm.org/doi/abs/10.1007/s10270-020-00836-z",
+		"volume": "20",
+		"author": [
+			{
+				"family": "Mayr",
+				"given": "Heinrich C."
+			},
+			{
+				"family": "Thalheim",
+				"given": "Bernhard"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/B9tmISLG/items/D6GBKLWZ",
+		"type": "article-journal",
+		"abstract": "The field of conceptual modeling continues to evolve and be applied to important modeling problems in many domains. With a goal of articulating the breadth and depth of the field, our initial work focused on the many implicit and explicit definitions of conceptual modeling, resulting in the Characterizing Conceptual Modeling (CCM) framework. In this paper, we focus on conceptual modeling research, presenting a Characterizing Conceptual Model Research (CCMR) framework and a series of evaluations to assess the coverage and usability of CCMR, the utility and independence of the individual fields in the framework, and likelihood of consistent use.",
+		"container-title": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+		"DOI": "10.1007/978-3-030-33246-4_3",
+		"ISSN": "16113349",
+		"note": "ISBN: 9783030332457\npublisher: Springer",
+		"page": "40-57",
+		"title": "Characterizing conceptual modeling research",
+		"volume": "11877 LNCS",
+		"author": [
+			{
+				"family": "Delcambre",
+				"given": "Lois M. L."
+			},
+			{
+				"family": "Liddle",
+				"given": "Stephen W."
+			},
+			{
+				"family": "Pastor",
+				"given": "Oscar"
+			},
+			{
+				"family": "Storey",
+				"given": "Veda C."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019"
+				]
+			]
+		}
+	}
+]

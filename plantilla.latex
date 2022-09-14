@@ -626,11 +626,43 @@ $endif$
 $if(has-frontmatter)$
 \mainmatter
 $endif$
+
+
+$for(reference)$
+ $if(reference.DOI)$
+  DOI: $reference.DOI$
+ $endif$
+ $if(reference.URL)$
+  URL: $reference.URL$
+ $endif$
+ \newline
+$endfor$
+
 $body$
+
+
+
+
+% $for(references)$
+%     $if(references.id)$
+%         % \author{$author.name$}
+%         % $if(author.affiliation)$
+%         %     \affiliation{\institution{$author.affiliation$}}
+%         % $endif$
+%         % $if(author.email)$
+%         %     \email{$author.email$}
+%         % $endif$
+%     $else$
+%         $references$
+%     $endif$
+% $endfor$
+
+
 
 $if(has-frontmatter)$
 \backmatter
 $endif$
+
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$
@@ -648,9 +680,9 @@ $endif$
 $if(beamer)$
 \end{frame}
 $endif$
+$endif$
+$endif$
 
-$endif$
-$endif$
 $if(biblatex)$
 $if(beamer)$
 \begin{frame}[allowframebreaks]{$biblio-title$}
@@ -660,10 +692,10 @@ $if(beamer)$
 $else$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 $endif$
-
 $endif$
+
 $for(include-after)$
 $include-after$
-
 $endfor$
+
 \end{document}

@@ -1,7 +1,6 @@
-# Producción gráfica de documentos Pandoc
+# Producción de academica Pandoc
 
-<!--- temática que abordará,
-intro --->
+<!--- temática que abordará, intro --->
 
 Este proyecto
 describe el uso de
@@ -47,6 +46,27 @@ integración
 --->
 
 ## Pandoc
+
+
+\foreach \i/\q in 
+  \iterable{
+    \noindent \i \q\\
+   }
+
+\sms
+
+Test 123. Table:
+
+\begin{footnotesize}
+  \captionof{table}{A \LaTeX-table. \label{tbl:latex}}
+  \begin{tabular}{ | l l l | } \hline
+    \textbf{Expression}        & \textbf{Meaning}            & \textbf{Associativity} \\ \hline
+    \texttt{e1 grouped by e2}  & Add a group to a grouping   & left                   \\
+    \texttt{e1 where e2}       & Filter a grouping           & left                   \\ \hline
+  \end{tabular}
+\end{footnotesize}
+
+Some more text. See table @tbl:latex
 
 <!---
 Pandoc incluye una biblioteca Haskell y un programa de línea de comandos
@@ -441,10 +461,7 @@ las referencias puede llevar mucho tiempo, especialmente cuando se trata de
 múltiples publicaciones con diferentes estilos de citación.
 
 El software de gestión de referencias puede ayudar.
-<!---
-Programas como
-Zotero, Mendeley y Papers
---->
+<!--- Programas como Zotero, Mendeley y Papers --->
 no sólo ayudan a gestionar bibliotecas de
 investigación, sino que también pueden generar automáticamente citas y
 bibliografías.
@@ -480,6 +497,12 @@ zoom de expresión y exploración interactiva. También puede copiar ecuaciones 
 Office, LaTeX, wikis y otro software.
 
 # Resultados
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+
 
 El producto de este proyecto
 la integracion de diferentes piezas de software
@@ -649,11 +672,11 @@ esto puede ser solucionado
 ejecutando en servidor remoto donde
 solamente se carguen como insumos 
 los ficheros de contenido 
-y las configuraciones y plantillas esten 
+y las configuraciones y plantillas esten @Delcambre2019
 
 
-# Referencias
 
 <!---
+# Referencias
 Indique la bibliografía que utilizará a lo largo del desarrollo del trabajo.
 --->

@@ -1,52 +1,3 @@
-institucion: Universidad Tecnológica Nacional
-facultad: 'Facultad Regional Buenos Aires' 
-departamento: 'Escuela de Posgrado' 
-carrera: 'Maestría en Ingeniería en Sistemas de Información'
-director: 'Dra. Ma. Florencia Pollo Cattaneo'
-programa: 'Herramientas para el desarrollo de Tesis 2021'
-subtitle: 'Trabajo Práctico Final'
-title: 'Producción académica con Pandoc'
-tutor: 'Florencia Pollo Cattaneo'
-author: Lisandro Fernández
-date:  'Octubre 2022'
-place: 'Buenos Aires, Argentina'
-tags: ['authoring', 'texto plano', 'CLI', 'pandoc']
-abstract: >-
-  Pandoc como entorno textutal de producción de documentos académicos.
-  El texto llano beneficia a todos los usuarios, deben poder encontrar lo que necesitan,
-  comprender lo que encuentran y usarlo para realizar tareas. @delcambre'
-bibliography: 
- - referencias.bib
- - ep.bib
-reference-section-title: 'Referencias'
-csl: ieee.csl
-#csl: iso690-author-date-es.csl
-#csl: apa-annotated-bibliography.csl
-
-colorlinks: true
-
-header-includes: |
-    \usepackage{pgffor}
-    \usepackage{caption}
-    \newcommand\iterable{
-      item1/description1,
-      item2/description2,
-      item3/description3
-    }
-
-    \newcommand{\sms}{
-            $for(reference)$
-             $if(reference.DOI)$
-              DOI: $reference.DOI$
-             $endif$
-             $if(reference.URL)$
-              URL: $reference.URL$
-             $endif$
-             \newline
-            $endfor$
-    }
-
-reference: 
 - URL: http://www.misq.org/misreview/announce.html
   abstract: "A review of prior, relevant literature is an essential feature of any\
     \ academic project. An effective review creates a firm foundation for advancing\
@@ -486,25 +437,4 @@ reference:
   title: Characterizing conceptual modeling research
   type: article-journal
   volume: 11877 LNCS
-- type: article-journal
-  id: WatsonCrick1953
-  author:
-  - family: Watson
-    given: J. D.
-  - family: Crick
-    given: F. H. C.
-  issued:
-    date-parts:
-    - - 1953
-      - 4
-      - 25
-  title: 'Molecular structure of nucleic acids: a structure for deoxyribose
-    nucleic acid'
-  title-short: Molecular structure of nucleic acids
-  container-title: Nature
-  volume: 171
-  issue: 4356
-  page: 737-738
-  DOI: 10.1038/171737a0
-  URL: http://www.nature.com/nature/journal/v171/n4356/abs/171737a0.html
-  language: en-GB
+
