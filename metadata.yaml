@@ -21,9 +21,9 @@ reference-section-title: 'Referencias'
 
 bibliography: 
  - referencias.bib
-   #  - ep.bib  
-   # nocite: |
-   #   @Guarino2020,@Kitchenham2011
+ - ep.bib  
+nocite: |
+  @Guarino2020,@Kitchenham2011
 
 csl: ieee.csl
 

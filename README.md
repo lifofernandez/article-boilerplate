@@ -8,26 +8,25 @@ Cuenta con capacidades necesarias para la producción de documentación
 técnica y científica, todo el proceso es controlado mediante linea de
 comandos evitando así depender de interfaces captivas [@gancarz2003linux p.88-97]
 
-Se propone un entorno donde _Pandoc a universal document converter_ 
-como pieza central e interprete del sistema de composición tipográfica y
+El objetivo de este trabaja es un entorno
+el cual _Pandoc "a universal document converter"_ 
+es la pieza central, e interprete del sistema de composición tipográfica y
 preparación de documentos de alta calidad LaTeX, estándar de facto para la
 comunicación y publicación de documentos académicos [@macfarlane; @knuth1986texbook].
 
-Mediante una integración simple una infraestructura robusta
-con LaTeX entre bastidores; 
+
+Con integraciones sencillas se consigue una infraestructura robusta que incluye
+funciones diseñadas con gestionar la exposición de extensas referencias,
+múltiples citas bibliografía, notación matemática, generación gráficos y
+diagramas.
+
+
+<!--- 
+creadores de contenido
+que con LaTeX entre bastidores; 
 sin requerir conocimiento de la sintaxis del mismo
 la que puede resultar opaca para la mayoría de 
-creadores de contenido
-Incluye funciones diseñadas
-
-permite la utilizacion 
-
-
-con numerosas relacionones de referencias
-
-científicos y
-
-markdown lo es para la documentacion online.
+-->
 
 <!--- 
 # Justificación
@@ -58,10 +57,10 @@ de textos,
 incluyendo, pero sin limitarse a, varios sabores de Markdown, HTML,
 LaTeX y Word docx.
 
---->
 
 Pandoc es software libre, publicado bajo la GPL.
 Copyright 2006-2022 John MacFarlane.
+--->
 
 ## Texto Plano
 
@@ -71,18 +70,17 @@ e interfaces captivas
 beneficia a todos los usuarios, que deben poder encontrar lo que
 necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
 
-Separando contenido, referencias y
-estilo 
+habilita el separar contenido, referencias y estilo.
 
 en un contexto
 de organizaciones
 con actividades relacionadas
-a la publicacion
+a la publicación
 
 donde no solo los documentos son 
 complejos
-sino que tambien
-la tarea involucra a multimples agentes
+sino que también
+la tarea involucra a múltiples agentes
 autores/supervisores/editores
 
 devuleve el 
@@ -386,6 +384,7 @@ sequenceDiagram
 
 ### BibLATEX - Bibliografías sofisticadas en LATEX
 
+
 <!---
 Citas y referencias bibliogáficas 
 BibLATEX – Sophisticated Bibliographies in LATEX
@@ -410,6 +409,8 @@ Con biber BibLATEX tiene muchas características que rivalizan o superan a otros
 sistemas bibliográficos.
 
 #### CLS
+
+https://www.mendeley.com/guides/csl-editor/
 
 El Lenguaje de Estilo de Citación (CSL) es un formato basado en XML para
 describir el formato de citas, notas y bibliografías, ofreciendo:
@@ -526,6 +527,7 @@ es el markdown
 apendice.pdf
 
 # Conclusion
+
 <!---
 esto puede mitigar con trabajos encauzados mediante 
 matrices a las diferentes versiones
@@ -537,11 +539,9 @@ tendrán que detallar las futuras líneas de trabajo.
 
 contar lo que se hizo
 
-Se consigue un cadena de produccion 
+Se consigue un cadena de producción 
 
-
-
-En general 
+Características generales
 
 - Un formato libre y abierto
 - Componentes isolados, compactos y robustos
@@ -557,15 +557,6 @@ Estilos de citas
 - Compleja modificación de datos sobre la en produccion,
   basada en macros sin cambiar las fuentes de datos
 
-Para revisiones de literatura que comprometan múltiples bibliografías y
-listas de información bibliográfica en el mismo documento con diferente ordenación
-
-- Ordenación altamente personalizable mediante el Algoritmo de Cotejo Unicode (Unicode collation algorithm - UCA) (https://www.unicode.org/reports/tr10/)
-- Adaptación de CLDR (https://cldr.unicode.org/)
-- Bibligrafías jeraquizadas por capítulo, sección, etc.
-- Soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas
-- Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
-- Validación de los datos bibliográficos con respecto a un modelo de datos
 
 <!---
 Reglas de herencia de fuentes de datos altamente personalizables
@@ -576,21 +567,9 @@ Recodificación automática de datos bibliográficos (UTF-9 -> latin1, macros LA
 Sistema de desambiguación automática de nombres y listas de nombres altamente sofisticado
 --->
 
-los documentos graficos 
-suele producirce 
-mediante rutinas directamente de la base de datos
-como comprueba en
-es beficio 
-	se recmienda
-un proceso similar al descripto
-donde se repalde el conocimiento en 
-contedores de formato simple y legible, sin codificar ni 
-opacar
-y pueda ser manipulados con procesos rudimentales
-
 ## Futuras lineas de trabajo
 
-### Operaciones Remotas automaticas
+### Operaciones remotas automáticas
 
 https://pandoc.org/installing.html#github-actions
 
@@ -601,6 +580,17 @@ disponible el repositorio con
 Integracion continua
 https://about.gitlab.com/features/continuous-integration/
 
+### Revisión sistemática de literatura
+
+Para revisiones de literatura que comprometan múltiples bibliografías y
+listas de información bibliográfica en el mismo documento con diferente ordenación
+
+- Ordenación altamente personalizable mediante el Algoritmo de Cotejo Unicode (Unicode collation algorithm - UCA) (https://www.unicode.org/reports/tr10/)
+- Adaptación de CLDR (https://cldr.unicode.org/)
+- Bibligrafías jeraquizadas por capítulo, sección, etc.
+- Soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas
+- Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
+- Validación de los datos bibliográficos con respecto a un modelo de datos
 
 ## Debilidades
 
@@ -634,13 +624,46 @@ versiones de las herramientas
 en las diferente distribuciones y sistemas operativos
 puede inferir en la integración y operaciones.
 
-Pero en una implemntacion 
-empresarial
+Pero en una implementación 
+organizacional
 esto puede ser solucionado 
 ejecutando en servidor remoto donde
 solamente se carguen como insumos 
 los ficheros de contenido 
-y las configuraciones y plantillas esten 
+y las configuraciones y plantillas estén 
+
+
+## Indicaciones 
+
+es un proyecto que sirva
+como
+de guia para 
+patrones de diseño 
+y
+buenas practicas
+para 
+proyectos similares
+
+si bien este proyecto está enfocado a la 
+producción de literatura académica 
+esta misma cadena puede ser considerado 
+en en el desarrollo de cualquier sistemas de gestión documental, 
+registros médicos, documentos legales, certificados, etc
+
+donde productos gráficos imprimibles 
+se generan
+mediante rutinas
+directamente de bases de datos,
+una capa codificada extra que opaca
+la relación con el interprete el y 
+el contenido,
+se recomienda
+un proceso similar al descripto
+de respaldo del la información en 
+contenedores de formato simple y legible,
+sin codificar u opacar habilitando ser manipulados con herramientas obícuas, 
+con acceso directo mediante sistemas rudimentales.
+
 
 
 <!---
