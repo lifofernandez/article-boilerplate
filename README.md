@@ -1,47 +1,38 @@
 # Producción gráfica de documentos Pandoc
 
-<!--- temática que abordará,
-intro --->
+<!--- temática que abordará, intro --->
 
-Este proyecto
-describe el uso de
-Pandoc como pieza central
-en un entorno
-de producción
-de documentos académicos, de complejidad considerable,
-sin interfaz grafica @caleb.
+Este proyecto describe el proceso de confección de escritos académicos, de
+complejidad considerable, sin la necesidad de interfaces gráficas @caleb.
+Cuenta con capacidades necesarias para la producción de documentación
+técnica y científica, todo el proceso es controlado mediante linea de
+comandos evitando así depender de interfaces captivas [@gancarz2003linux p.88-97]
 
-incluye funciones diseñadas
-cuenta con las capacidades necesarias
-para la producción de documentación técnica y
-científica.
+Se propone un entorno donde _Pandoc a universal document converter_ 
+como pieza central e interprete del sistema de composición tipográfica y
+preparación de documentos de alta calidad LaTeX, estándar de facto para la
+comunicación y publicación de documentos académicos [@macfarlane; @knuth1986texbook].
+
+Mediante una integración simple una infraestructura robusta
+con LaTeX entre bastidores; 
+sin requerir conocimiento de la sintaxis del mismo
+la que puede resultar opaca para la mayoría de 
+creadores de contenido
+Incluye funciones diseñadas
+
+permite la utilizacion 
+
 
 con numerosas relacionones de referencias
 
-permite la utilizacion 
-Con el sistema de composición tipográfica
-y preparacion de documentos 
-de alta calidad LaTeX
-entre bastidores;
-
-pero sin requerir conocimiento de la sitaxis del mismo
-la que puede ser opaca para la mayoria del 
-creadores de contenido
-interpretes
-
-LaTeX es el estándar de facto para la comunicación y publicación de documentos
 científicos y
-markdown lo es para la documentacion online.
 
-integracion sencilla
-infraestructura robusta
+markdown lo es para la documentacion online.
 
 <!--- 
 # Justificación
-Pandoc es a la los documentos gráficos lo que https://ffmpeg.org/about.html es
-para el video.
-El texto plano y legible
 
+El texto plano y legible
 junto con su justificación y
 integración
 --->
@@ -652,8 +643,7 @@ los ficheros de contenido
 y las configuraciones y plantillas esten 
 
 
-# Referencias
-
 <!---
+# Referencias
 Indique la bibliografía que utilizará a lo largo del desarrollo del trabajo.
 --->

@@ -57,7 +57,7 @@
     <terms>
       <term name="chapter" form="short">ch.</term>
       <term name="presented at">presented at the</term>
-      <term name="available at">disponible</term>
+      <term name="available at">available</term>
     </terms>
   </locale>
   <!-- Macros -->
@@ -300,8 +300,9 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout delimiter=", ">
-      <group prefix="[" suffix="]" delimiter=", ">
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <!-- <group prefix="[" suffix="]" delimiter=", "> --> 
+      <group  delimiter=", ">
         <text variable="citation-number"/>
         <text macro="citation-locator"/>
       </group>
