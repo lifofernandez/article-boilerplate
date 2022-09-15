@@ -227,7 +227,7 @@ gráficos mediante código.
 bibliografia 
 
 Por ejemplo, esto significa que puede escribir una referencia como 
-'@moolenaar2000' o también '[@knuth1986texbook p.3-9]' y _Pandoc_ a convertirá
+`@moolenaar2000` o también `[@knuth1986texbook p.3-9]` y _Pandoc_ a convertirá
 en una cita con el formato predefinido, utilizando cualquiera de los cientos de
 Lenguajes de Estilo de Cita (Citation Style Language - CSL) incluyendo estilos
 de nota al pie, numéricos y autoría, fuente y fechas), y añadirá una
@@ -271,12 +271,33 @@ código en documentos.
 Esta página está generada a partir de _Markdown_ utilizando
 _pandoc-plot_, para que puedas hacerte una idea de lo que es posible.
 
-
-
 https://laurentrdc.github.io/pandoc-plot/
+https://the-lum.github.io/puml-themes-gallery/
+
+
+```{.matplotlib }
+import numpy as np
+import matplotlib.pyplot as plt
+
+theta = np.arange(0, 2 * np.pi, .01)[1:]
+r = theta - np.pi
+positive_r = r >= 0
+
+fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 5), subplot_kw={'polar': True})
+
+for ax in (ax1, ax2):
+    if ax == ax2:
+        # change negative r values to positive, rotating theta by 180º
+        theta = np.where(r >= 0, theta, theta + np.pi)
+        r = np.abs(r)
+    ax.plot(theta[positive_r], r[positive_r], color='skyblue')
+    ax.plot(theta[~positive_r], r[~positive_r], color='tomato')
+ax1.set_title('Default: negative $r$\non same side as $theta$')
+ax2.set_title('Negative $r$ on other side')
+
+```
 
 ```{.matplotlib}
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -309,6 +330,8 @@ ax = fig.add_subplot(111, projection='polar')
 c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
 plt.title('This is an example figure')
 ```
+
+<!--- plantUML --->
 
 ```{.plantuml}
 @startuml
@@ -346,7 +369,6 @@ database "MySql" {
 @enduml
 ```
 
-https://the-lum.github.io/puml-themes-gallery/
 
 
 ```{.plantuml}
