@@ -10,15 +10,14 @@ comandos evitando así depender de interfaces captivas [@gancarz2003linux p.88-9
 
 El objetivo de este trabaja es un entorno
 el cual _Pandoc "a universal document converter"_ 
-es la pieza central, e interprete del sistema de composición tipográfica y
+es la pieza central, interprete del sistema de composición tipográfica y
 preparación de documentos de alta calidad LaTeX, estándar de facto para la
 comunicación y publicación de documentos académicos [@macfarlane; @knuth1986texbook].
 
-
-Con integraciones sencillas se consigue una infraestructura robusta que incluye
-funciones diseñadas con gestionar la exposición de extensas referencias,
-múltiples citas bibliografía, notación matemática, generación gráficos y
-diagramas.
+Mediante integraciones sencillas se consigue una infraestructura robusta con
+funciones diseñadas para gestionar exposición de extensas referencias,
+múltiples citas y bibliografía a diferentes fuentes; notación matemática,
+generación gráficos y diagramas, entre otras capacidades.
 
 
 <!--- 
@@ -38,20 +37,25 @@ integración
 
 ## Pandoc
 
+_Pandoc_ es una biblioteca _Haskell_ @marlow2010haskell para convertir
+de un formato de marcado ligero a
+otro, y una herramienta de línea de comandos
+que accede a las funciones en 
+esta biblioteca
+para convertir entre numerosos formatos y de procesamiento
+de textos.
+
+La biblioteca incluye módulos separados para cada formato de
+entrada y salida,
+por lo que para añadir un nuevo formato de entrada o salida
+sólo hay que añadir un nuevo módulo.
+
+
 <!---
 Pandoc incluye una biblioteca Haskell y un programa de línea de comandos
 independiente.
 
-La biblioteca incluye módulos separados para cada formato de
-entrada y salida, por lo que para añadir un nuevo formato de entrada o salida
-sólo hay que añadir un nuevo módulo.
 --->
-
-Pandoc es una biblioteca Haskell para convertir de un formato de markUp a
-otro, y una herramienta de línea de comandos que utiliza esta biblioteca.
-
-Pandoc puede convertir entre numerosos formatos de marcado y de procesamiento
-de textos,
 
 <!---
 incluyendo, pero sin limitarse a, varios sabores de Markdown, HTML,
@@ -69,28 +73,25 @@ formatos codificados o de poca legibilidad
 e interfaces captivas
 beneficia a todos los usuarios, que deben poder encontrar lo que
 necesitan, comprender lo que encuentran y usarlo para realizar tareas @das.
+Habilita el separar contenido, referencias y estilo.
 
-habilita el separar contenido, referencias y estilo.
-
-en un contexto
+En un contexto
 de organizaciones
 con actividades relacionadas
 a la publicación
-
-donde no solo los documentos son 
-complejos
+donde la complejidad no solo de documentos 
 sino que también
-la tarea involucra a múltiples agentes
-autores/supervisores/editores
+lo es la tarea ya involucra a múltiples agentes
+como 
+autores, correctores y editores,
 
-devuleve el 
-el control estetico y da unidad en estilo
-en la composicion grafica resultante
+el control estético y da unidad en estilo
+en la composición gráfica resultante
 de diversos productos.
 
 De los beneficios que trabajar con texto plano habilita
-se resalta la accesibilidad y la posbilidad de 
-producir documentos graficos de la misma manera que se produce software
+se resalta la accesibilidad y la posibilidad de 
+producir documentos gráficos de la misma manera que se produce software
 
 intcluirlo en una cadena de desarrollo de propia de las software factories
 
@@ -173,55 +174,77 @@ Si se desea una compatibilidad estricta con markdown, todas
 estas extensiones pueden desactivarse.
 
 
-## Integración
+# Medodotología 
+
+<!--- describir el proceso -->
+El desarrollo de este trabajo fue realizado
+nota al pie: Como conseguir una instalcion funcional de 
+Esta fuera de los alcances de este articulo.
+
+<!---
+### Generar Documentos (PDF)
+Con una version funcionando en ejecutar en la terminal 
+del mismo el siguiente sentencia:
+
+```console
+pandoc README.md --mathjax \
+   -F pandoc-crossref -F mermaid-filter --citeproc \
+   --template=plantilla --pdf-engine-opt=-shell-escape \
+   -s --toc --toc-depth=3 --number-sections --columns=80 \
+   -o README.pdf
+```
+La salida de este comadno 
+produce un documento grafico en formato PDF 
+a partir del LINK
+de este mismo texto cuya fuente
+es el markdown
+--->
+
 
 un potente sistema para escribir filtros.
-
-Es
-el diseño modular: consta de un conjunto de lectores, que analizan
+El diseño modular: consta de un conjunto de lectores,
+que analizan
 el texto en un formato determinado y producen una representación nativa del
-documento (un árbol sintáctico abstracto o AST), y un conjunto de escritores,
-que convierten esta representación nativa en un formato de destino. Así, para
+documento (Abstract Sintactic Three - AST), y un conjunto de escritores,
+que convierten esta representación nativa en un formato de destino.
+
+<!---
+Así, para
 añadir un formato de entrada o de salida basta con añadir un lector o un
 escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
 para modificar el AST intermedio.
-pandoc funciona como la piaza central que integra
-
-<!---
-LaTeX is a high-quality typesetting system; it includes features designed for
-the production of technical and scientific documentation.
-
-LaTeX is the de facto
-standard for the communication and publication of scientific documents. LaTeX
-is available as free software.
-
+_Pandoc_ funciona como la pieza central que integra
 --->
 
-De los uchas maneras de personalizar pandoc para que se adapte a sus necesidades,
-este proyecto se destaca el uso de 
+De los múltiples maneras de personalizar _Pandoc_
+para que se adapte a los requisitos de cada proyecto,
+se destaca el uso de un sistema de plantillas y
+un potente sistema de citas y bibliografías automáticas y la generación de
+gráficos mediante código.
 
-incluye un sistema de plantillas
-y
+## Integración
 
-Pandoc incluye un potente sistema de citas y bibliografías automáticas.
+bibliografia 
 
-Esto significa que puede escribir una cita como véase @moolenaar2000, también
-[@knuth1986texbook p.3-9] y pandoc la convertirá en una cita con el formato
-adecuado utilizando cualquiera de los cientos de estilos CSL (incluyendo
-estilos de nota al pie, estilos numéricos y estilos autor-fecha), y añadirá una
+Por ejemplo, esto significa que puede escribir una referencia como 
+'@moolenaar2000' o también '[@knuth1986texbook p.3-9]' y _Pandoc_ a convertirá
+en una cita con el formato predefinido, utilizando cualquiera de los cientos de
+Lenguajes de Estilo de Cita (Citation Style Language - CSL) incluyendo estilos
+de nota al pie, numéricos y autoría, fuente y fechas), y añadirá una
 bibliografía con el formato adecuado al final del documento.
 
 Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
-documentos de markdown.
-Las matemáticas de LaTeX se convierten (según lo requiera el formato de
-salida) en unicode, objetos de ecuación nativos de Word, MathML o roff eqn.
+documentos de _Markdown_. Las matemáticas de LaTeX se convierten (según lo
+requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
+MathML o roff eqn.
 
 sitema de diagramcion y  generacion graficos 
 
 permite crear diagramas y visualizaciones utilizando texto y código.
 Se trata de una herramienta de diagramación y graficación
-
+<!---
 basada en JavaScript
+--->
 que renderiza definiciones de texto inspiradas en Markdown para crear y
 
 modificar diagramas de forma dinámica.
@@ -232,7 +255,7 @@ considerando que se debe realizar, como mínimo,
 una entrega intermedia antes de la entrega final.
 --->
 
-### Gráficos y diagramas
+## Gráficos y diagramas
 
 Diagramación y la documentación cuestan un tiempo precioso a los
 desarrolladores y quedan obsoletas rápidamente.
@@ -240,7 +263,14 @@ desarrolladores y quedan obsoletas rápidamente.
 Pero no tener diagramas o documentación arruina la productividad y perjudica el
 aprendizaje de la organización.
 
-#### pandoc-plot
+### pandoc-plot
+
+_pandoc-plot_ es un filtro de _Pandoc_ para generar figuras a partir de bloques de
+código en documentos.
+
+Esta página está generada a partir de _Markdown_ utilizando
+_pandoc-plot_, para que puedas hacerte una idea de lo que es posible.
+
 
 
 https://laurentrdc.github.io/pandoc-plot/
@@ -258,6 +288,25 @@ fig, ax = plt.subplots(
 ax.plot(theta, r)
 ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
+plt.title('This is an example figure')
+```
+
+```{.matplotlib}
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(23)
+
+# Compute areas and colors
+N = 150
+r = 2 * np.random.rand(N)
+theta = 2 * np.pi * np.random.rand(N)
+area = 200 * r**2
+colors = theta
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='polar')
+c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
 plt.title('This is an example figure')
 ```
 
@@ -296,7 +345,9 @@ database "MySql" {
 
 @enduml
 ```
+
 https://the-lum.github.io/puml-themes-gallery/
+
 
 ```{.plantuml}
 @startuml
@@ -326,27 +377,9 @@ DNS is Idle
 @enduml
 ```
 
-```{.matplotlib}
-import numpy as np
-import matplotlib.pyplot as plt
-
-np.random.seed(23)
-
-# Compute areas and colors
-N = 150
-r = 2 * np.random.rand(N)
-theta = 2 * np.pi * np.random.rand(N)
-area = 200 * r**2
-colors = theta
-
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='polar')
-c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
-plt.title('This is an example figure')
-```
 
 
-#### MermaidJS
+### MermaidJS
 
 Mermaid es una herramienta de diagramación y gráficos basada en JavaScript que
 utiliza definiciones de texto inspiradas en Markdown y un renderizador para
@@ -382,7 +415,7 @@ sequenceDiagram
 ~~~
 
 
-### BibLATEX - Bibliografías sofisticadas en LATEX
+## BibLATEX - Bibliografías sofisticadas en LATEX
 
 
 <!---
@@ -408,7 +441,7 @@ procesar los datos bibliográficos.
 Con biber BibLATEX tiene muchas características que rivalizan o superan a otros
 sistemas bibliográficos.
 
-#### CLS
+### CLS
 
 https://www.mendeley.com/guides/csl-editor/
 
@@ -447,7 +480,7 @@ Citación (CSL) es ese lenguaje
 
 https://docs.citationstyles.org/en/stable/specification.html
 
-### MathJax
+## MathJax
 
 Se proporcionan varios métodos diferentes para representar las matemáticas en
 HTML, incluyendo MathJax y la traducción a MathML.
@@ -471,21 +504,61 @@ SVG, o MathML como salida.
 zoom de expresión y exploración interactiva. También puede copiar ecuaciones en
 Office, LaTeX, wikis y otro software.
 
+
+
 # Resultados
 
 El producto de este proyecto
 la integracion de diferentes piezas de software
-
-andamiaje necesario para reproducir
+y andamiaje necesario para reproducir
 este proyecto esto incluye:
+Configuraciones,
+estructura ejemplo
+filtros,
+cls,
+plantilla Latex,
+resaltado de còdigo,
+configuraciones para operaciones remotas
 
-- configuraciones
-- estructura
-- filtros 
-- cls
-- plantilla latex
-- resaltado de codigo
-- configuraciones para operaciones remotas
+Un ejemplo de como usar esta herramienta
+es el mismo comando que sirve para conseguir 
+este documento desde su fuente en _Markdown_ @markdown.
+
+```console
+$ pandoc README.md \
+  -F pandoc-plot --metadata-file=metadata.yaml --mathjax \
+  -F mermaid-filter -F pandoc-crossref --citeproc \
+  --highlight-style pygments.theme \
+  --template=plantilla --pdf-engine-opt=-shell-escape \
+  -s --toc --toc-depth=2 --number-sections --columns=80 \
+  -o README.pdf
+```
+
+
+Ejecutar el comando precedente 
+en una sistema con una instancia de _Pandoc_ funcionando
+produce las este documento y declara:
+plantillas:
+General LaTex,
+lenguaje de estilo de citas,
+resaltado de código.
+Módulos extra como filtros:
+Notación matemática,
+gestión de Referencias,
+citas
+y
+generación de gráficos.
+Entre otras configuraciones generales
+involucradas en el proceso,
+la profundidad la tabla de contenidos.
+archivo de entrada y de salida.
+
+
+
+
+## Cheat Shet and examples 
+
+apendice.pdf
 
 
 El documento 
@@ -494,68 +567,36 @@ y su contraparte
 Para recrear el proceso que
 se utilizo para confeccionar este documento
 
-## Medodotologia 
 
-El desarrollo de este trabajo fue realizado
+# Conclusión
 
-nota al pie: Como conseguir una instalcion funcional de 
-Esta fuera de los alcances de este articulo.
-
-## Generar Documentos (PDF)
-
-
-Con una version funcionando en ejecutar en la terminal 
-del mismo el siguiente sentencia:
-
-
-```console
-pandoc README.md --mathjax \
-   -F pandoc-crossref -F mermaid-filter --citeproc \
-   --template=plantilla --pdf-engine-opt=-shell-escape \
-   -s --toc --toc-depth=3 --number-sections --columns=80 \
-   -o README.pdf
-```
-
-La salida de este comadno 
-produce un documento grafico en formato PDF 
-a partir del LINK
-de este mismo texto cuya fuente
-es el markdown
-
-## Ver Apendice
-
-apendice.pdf
-
-# Conclusion
 
 <!---
-esto puede mitigar con trabajos encauzados mediante 
-matrices a las diferentes versiones
 
+contar lo que se hizo
 
 Tenga en cuenta que en la entrega final, deberá realizar una conclusión donde se
 tendrán que detallar las futuras líneas de trabajo.
 --->
 
-contar lo que se hizo
 
 Se consigue un cadena de producción 
 
-Características generales
+Características generales:
+un formato libre y abierto,
+componentes isolados, compactos y robustos;
+amplia compatibilidad con requisitos de estilo,
+miles de estilos disponibles predifindos por la comunidad,
+etiquetas de bibliografía altamente personalizables
+y
+fuentes de datos remotas para publicaciones frecuentes con información dinámico.
 
-- Un formato libre y abierto
-- Componentes isolados, compactos y robustos
-- Amplia compatibilidad con requisitos de estilo
-- Miles de estilos disponibles predifindos por la comunida
-- Etiquetas de bibliografía altamente personalizables
-- Fuentes de datos remotas para publicaciones frecuentes con informacion dinámico.
-
-Estilos de citas
-
-- Localización automática de estilos
-- Infraestructura para la distribución y actualización de estilos
-- Compleja modificación de datos sobre la en produccion,
-  basada en macros sin cambiar las fuentes de datos
+Citas y citas:
+localización automática de estilos,
+infraestructura para la distribución y actualización de estilos,
+compleja modificación de datos sobre la en producción
+y
+basada en macros sin cambiar las fuentes de datos.
 
 
 <!---
@@ -568,6 +609,9 @@ Sistema de desambiguación automática de nombres y listas de nombres altamente 
 --->
 
 ## Futuras lineas de trabajo
+
+Se señanal algunas areas de desarrollo 
+
 
 ### Operaciones remotas automáticas
 
@@ -628,41 +672,40 @@ Pero en una implementación
 organizacional
 esto puede ser solucionado 
 ejecutando en servidor remoto donde
+como un servicio de 
+preparación de documentos gráficos,
+tanto preparando para impresión
+o para ser consumidos 
+mediante exploradores de internet
 solamente se carguen como insumos 
 los ficheros de contenido 
 y las configuraciones y plantillas estén 
 
+<!---
+esto puede mitigar con trabajos encauzados mediante 
+matrices a las diferentes versiones
+--->
+
 
 ## Indicaciones 
 
-es un proyecto que sirva
-como
-de guia para 
-patrones de diseño 
-y
-buenas practicas
-para 
-proyectos similares
+Es intencison que este proyecto que sirva como plantilla para proyectos
+similares, patrones de diseño y guia de  buenas practicas para 
+la produccion de documentos graficos de alta complejidad.
 
-si bien este proyecto está enfocado a la 
-producción de literatura académica 
-esta misma cadena puede ser considerado 
+y siendo 
+que este proyecto está enfocado a la 
+producción de literatura académica ,
+esta misma cadena puede ser considerads
 en en el desarrollo de cualquier sistemas de gestión documental, 
-registros médicos, documentos legales, certificados, etc
+registros médicos, documentos legales, certificados, etc.
 
-donde productos gráficos imprimibles 
-se generan
-mediante rutinas
-directamente de bases de datos,
-una capa codificada extra que opaca
-la relación con el interprete el y 
-el contenido,
-se recomienda
-un proceso similar al descripto
-de respaldo del la información en 
-contenedores de formato simple y legible,
-sin codificar u opacar habilitando ser manipulados con herramientas obícuas, 
-con acceso directo mediante sistemas rudimentales.
+Donde productos gráficos imprimibles se generan mediante rutinas directamente
+de bases de datos, una capa codificada extra que opaca la relación con el
+interprete el y el contenido, se recomienda un proceso similar al descripto de
+respaldo del la información en contenedores de formato simple y legible, sin
+codificar u opacar habilitando ser manipulados con herramientas obícuas, con
+acceso directo mediante sistemas rudimentales.
 
 
 
