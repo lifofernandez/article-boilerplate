@@ -100,14 +100,18 @@ y componentes, y dé vida a los proyectos con potentes filtros.
 
 ### Markdown
 
+
 Markdown es una sintaxis plain text formatting syntax sitaxis de formato de
 texto, 
+
+
 
 El formato de texto es el marcado que se aplica a un texto simple para añadir
 datos de estilo más allá de la semántica de los elementos: colores, estilos
 (negrita, itálica), tamaño, y características especiales (como hipervínculos).
 Al texto resultante se le conoce como texto formateado, texto con estilos, o
 texto enriquecido
+
 
 https://wires.onlinelibrary.wiley.com/doi/10.1002/wics.1348
 
@@ -146,69 +150,13 @@ HTML; y el LaTeX en línea.
 Si se desea una compatibilidad estricta con Markdown, todas estas extensiones
 pueden desactivarse.
 
+
 # Metodotología 
-En este capitulo se describe el metodo utilizado
 
-Primro se instroduce al metodo de integracion de diferentes herramientas
-
-luego graficos
-
-luego citas y referencias
-
-luego notacion matematicas
-
-
+<!--- describir el proceso -->
 El desarrollo de este trabajo fue realizado
 nota al pie: Como conseguir una instalcion funcional de 
 Esta fuera de los alcances de este articulo.
-
-
-distribuidas con junto con pandoc
-y otras aportes de la comunidad distribuidos independiemente.
-
-Para la gestison de bliografia Por ejemplo, esto significa que puede escribir
-una referencia como `@moolenaar2000` o también `[@knuth1986texbook p.3-9]` y
-_Pandoc_ a convertirá en una cita con el formato predefinido, utilizando
-cualquiera de los cientos de Lenguajes de Estilo de Cita (Citation Style
-Language - CSL) incluyendo estilos de nota al pie, numéricos y autoría, fuente
-y fechas), y añadirá una bibliografía con el formato adecuado al final del
-documento.
-
-Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
-documentos de _Markdown_. Las matemáticas de LaTeX se convierten (según lo
-requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
-MathML o roff eqn.
-
-sitema de diagramcion y  generacion graficos 
-
-permite crear diagramas y visualizaciones utilizando texto y código.
-Se trata de una herramienta de diagramación y graficación
-
-<!--- basada en JavaScript --->
-
-que renderiza definiciones de texto inspiradas en Markdown para crear y
-
-modificar diagramas de forma dinámica.
-
-
-<!---
-Así, para
-añadir un formato de entrada o de salida basta con añadir un lector o un
-escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
-para modificar el AST intermedio.
-_Pandoc_ funciona como la pieza central que integra
---->
-
-
-
-## Integración
-<!--- describir el proceso -->
-
-Un potente sistema para escribir filtros.  El diseño modular: consta de un
-conjunto de lectores, que analizan el texto en un formato determinado y
-producen una representación nativa del documento (Abstract Sintactic Three -
-AST), y un conjunto de escritores, que convierten esta representación nativa en
-un formato de destino.
 
 <!--- ### Generar Documentos (PDF) Con una version funcionando en ejecutar en
 la terminal del mismo el siguiente sentencia:
@@ -228,14 +176,55 @@ es el markdown
 --->
 
 
-<!--- Además, adjunte un cronograma de presentaciones intermedias, considerando
-que se debe realizar, como mínimo, una entrega intermedia antes de la entrega
-final.  --->
+un potente sistema para escribir filtros.  El diseño modular: consta de un
+conjunto de lectores, que analizan el texto en un formato determinado y
+producen una representación nativa del documento (Abstract Sintactic Three -
+AST), y un conjunto de escritores, que convierten esta representación nativa en
+un formato de destino.
+
+<!---
+Así, para
+añadir un formato de entrada o de salida basta con añadir un lector o un
+escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
+para modificar el AST intermedio.
+_Pandoc_ funciona como la pieza central que integra
+--->
 
 De los múltiples maneras de personalizar _Pandoc_ para que se adapte a los
 requisitos de cada proyecto, se destaca el uso de un sistema de plantillas y un
 potente sistema de citas y bibliografías automáticas y la generación de
 gráficos mediante código.
+
+## Integración
+
+
+Para la gestison de bliografia Por ejemplo, esto significa que puede escribir
+una referencia como `@moolenaar2000` o también `[@knuth1986texbook p.3-9]` y
+_Pandoc_ a convertirá en una cita con el formato predefinido, utilizando
+cualquiera de los cientos de Lenguajes de Estilo de Cita (Citation Style
+Language - CSL) incluyendo estilos de nota al pie, numéricos y autoría, fuente
+y fechas), y añadirá una bibliografía con el formato adecuado al final del
+documento.
+
+Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
+documentos de _Markdown_. Las matemáticas de LaTeX se convierten (según lo
+requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
+MathML o roff eqn.
+
+sitema de diagramcion y  generacion graficos 
+
+permite crear diagramas y visualizaciones utilizando texto y código.
+Se trata de una herramienta de diagramación y graficación
+<!---
+basada en JavaScript
+--->
+que renderiza definiciones de texto inspiradas en Markdown para crear y
+
+modificar diagramas de forma dinámica.
+
+<!--- Además, adjunte un cronograma de presentaciones intermedias, considerando
+que se debe realizar, como mínimo, una entrega intermedia antes de la entrega
+final.  --->
 
 ## Gráficos y diagramas
 
@@ -433,8 +422,11 @@ El formato de la bibliografía está totalmente
 controlado por las macros de LaTeX, y un conocimiento práctico de LaTeX debería
 ser suficiente para diseñar nuevos estilos de bibliografía y citación.
 
-<!--- BibLATEX utiliza su propio programa de respaldo de datos llamado "biber"
-para leer y procesar los datos bibliográficos.  --->
+<!---
+BibLATEX
+utiliza su propio programa de respaldo de datos llamado "biber" para leer y
+procesar los datos bibliográficos. 
+--->
 
 Con biber BibLATEX tiene muchas características que rivalizan o superan a otros
 sistemas bibliográficos.
@@ -464,16 +456,17 @@ las referencias puede llevar mucho tiempo, especialmente cuando se trata de
 múltiples publicaciones con diferentes estilos de citación.
 
 El software de gestión de referencias puede ayudar.
-
-<!--- Programas como Zotero, Mendeley y Papers --->
-
-No sólo ayudan a gestionar bibliotecas de
+<!---
+Programas como
+Zotero, Mendeley y Papers
+--->
+no sólo ayudan a gestionar bibliotecas de
 investigación, sino que también pueden generar automáticamente citas y
 bibliografías.
 Pero para formatear las referencias en el estilo deseado, estos
 programas necesitan descripciones de cada estilo de citación en un lenguaje que
 el ordenador pueda entender. Como habrás adivinado, el Lenguaje de Estilos de
-Citación (Citation Style Languaje -CSL) es ese lenguaje
+Citación (CSL) es ese lenguaje
 
 https://docs.citationstyles.org/en/stable/specification.html
 
@@ -482,24 +475,24 @@ https://docs.citationstyles.org/en/stable/specification.html
 Se proporcionan varios métodos diferentes para representar las matemáticas en
 HTML, incluyendo MathJax y la traducción a MathML.
 
-Cuando $a \ne 0$, hay dos soluciones a \(ax^2 + bx + c = 0\) las cuales son $$x
-= {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+Cuando $a \ne 0$, hay dos soluciones a \(ax^2 + bx + c = 0\) las cuales son
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-**Transformación de contenidos:** Logotipo estilizado de EpubMathJax
-proporciona herramientas para transformar sus contenidos de fuentes impresas
-tradicionales en contenidos web y ePubs modernos y accesibles.
+**Transformación de contenidos:** Logotipo estilizado de EpubMathJax proporciona
+herramientas para transformar sus contenidos de fuentes impresas tradicionales
+en contenidos web y ePubs modernos y accesibles.
 
 **Tipografía de alta calidad:** MathJax utiliza CSS con fuentes web o SVG, en
 lugar de de imágenes de mapa de bits o Flash, por lo que las ecuaciones se
 escalan con el texto circundante en todos los niveles de zoom.
 
-**Modular la entrada y la salida:** MathJax es altamente modular en la entrada
-y la salida. Utiliza MathML, TeX, y ASCIImath como entrada y produce HTML+CSS,
+**Modular la entrada y la salida:** MathJax es altamente modular en la entrada y
+la salida. Utiliza MathML, TeX, y ASCIImath como entrada y produce HTML+CSS,
 SVG, o MathML como salida.
 
-**Accesible y reutilizable:** MathJax funciona con lectores de pantalla y
-proporciona zoom de expresión y exploración interactiva. También puede copiar
-ecuaciones en Office, LaTeX, wikis y otro software.
+**Accesible y reutilizable:** MathJax funciona con lectores de pantalla y proporciona
+zoom de expresión y exploración interactiva. También puede copiar ecuaciones en
+Office, LaTeX, wikis y otro software.
 
 
 
@@ -579,6 +572,7 @@ presentan las limitaciones del estudio y las sugerencias para
 desarrollos futuros, respectivamente.
 
 ## Objetivos
+
 
 Se consigue un cadena de producción 
 
@@ -680,3 +674,7 @@ ordenación:
 - Soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas
 - Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
 - Validación de los datos bibliográficos con respecto a un modelo de datos
+
+
+<!--- # Referencias Indique la bibliografía que utilizará a lo largo del
+desarrollo del trabajo.  --->

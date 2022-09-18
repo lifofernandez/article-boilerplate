@@ -2,15 +2,18 @@ install:
 	sudo pacman -S ghc cabal-install pandoc texlive-most plantuml pandoc-crossref 
 	make pandoc-plot
 	pip install matplotlib
+
 pdf:
+	cat article/*.md > README.md
 	@pandoc README.md \
 		--metadata-file=metadata.yaml --mathjax \
         	-F pandoc-plot -F mermaid-filter -F pandoc-crossref --citeproc \
-		--highlight-style pygments.theme \
+		--highlight-style vendor/pygments.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
 		-o README.pdf
 		brave README.pdf
+
 crossref:
 	@pandoc crossref.md \
 		--mathjax \

@@ -20,11 +20,13 @@ abstract: >-
 reference-section-title: 'Referencias'
 
 bibliography: 
- - referencias.bib
- - ep.bib  
-nocite: |
-  #@Guarino2020,@Kitchenham2011
-  @*
+  - bib/referencias.bib
+  - bib/SMS.bib
+
+#  - ep.bib  
+# nocite: |
+#   #@Guarino2020,@Kitchenham2011
+#   @*
 
 csl: ieee.csl
 
@@ -35,4 +37,5 @@ csl: ieee.csl
 # # https://github.com/seananderson/csl-abbrev
 
 colorlinks: true
+
 # template: plantilla.latex
