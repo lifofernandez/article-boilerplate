@@ -4,10 +4,12 @@ install:
 	pip install matplotlib
 
 pdf:
-	cat article/*.md > README.md
+	cat article/*.md extra/md-pandoc.md extra/crossref.md  > README.md
 	@pandoc README.md \
 		--metadata-file=metadata.yaml --mathjax \
-        	-F pandoc-plot -F mermaid-filter -F pandoc-crossref --citeproc \
+        	-F pandoc-plot \
+	        -F mermaid-filter \
+	        -F pandoc-crossref --citeproc \
 		--highlight-style vendor/pygments.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
@@ -15,21 +17,24 @@ pdf:
 		brave README.pdf
 
 crossref:
-	@pandoc crossref.md \
+	@pandoc extra/crossref.md \
 		--mathjax \
         	-F pandoc-crossref --citeproc \
-		--highlight-style pygments.theme \
-		--template=plantilla --pdf-engine-opt=-shell-escape \
-		-s --toc --toc-depth=2 --number-sections --columns=80 \
-		-o crossref.pdf
+		--highlight-style vendor/pygments.theme \
+		--pdf-engine-opt=-shell-escape \
+		-s --columns=80 \
+		-o extra/crossref.pdf
 apendice:
-	@pandoc -F pandoc-plot APENDICE.md \
-		--metadata-file=metadata.yaml --mathjax \
-        	-F mermaid-filter -F pandoc-crossref --citeproc \
-		--highlight-style pygments.theme \
-		--template=plantilla --pdf-engine-opt=-shell-escape \
-		-s --toc --toc-depth=2 --number-sections --columns=80 \
-		-o APENDICE.pdf
+	@pandoc extra/md-pandoc.md
+		--mathjax \
+        	-F pandoc-crossref --citeproc \
+		--highlight-style vendor/pygments.theme \
+		--pdf-engine-opt=-shell-escape \
+		-s --columns=80 \
+       		-o extra/md-pandoc.pdf
+concat:
+	pdfunite README.pdf extra/md-pandoc.pdf extra/crossref.pdf concat.pdf
+
 
 pandoc-plot:
 	git clone https://aur.archlinux.org/pandoc-plot-bin.git
@@ -41,11 +46,13 @@ pandoc-plot:
 mermaid-filter:
 	sudo  npm install --global mermaid-filter
 
+
+#--include-after-body=extra/md-pandoc.tex \
+	#cat article/*.md extra/md-pandoc.md extra/crossref.md > README.md
 	
 
 
 # wget https://sourceforge.net/projects/plantuml/files/plantuml.jar/download -O plantuml.jar
 # pandoc --print-highlight-style pygments > my.theme
 # wget raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
-#
 

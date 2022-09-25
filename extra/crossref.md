@@ -1,29 +1,15 @@
----
-codeBlockCaptions: True
-figureTitle: |
-  Figure #
-lofTitle: |
-  ## List of Figures
-lotTitle: |
-  ## List of Tables
-tableTemplate: |
-  *$$tableTitle$$ $$i$$*$$titleDelim$$ $$t$$
-autoSectionLabels: True
-title: pandoc-crossref demo document
----
 
-![alt text](https://www.markdownguide.org/assets/images/tux.png)
+# Apendice B: pandoc-crossref demo{-}
 
-This is a demo file for pandoc-crossref. With this filter, you can cross-reference figures (see [@fig:figure1;@fig:figure2;@fig:figure3]), display equations (see @eq:eqn1), tables (see [@tbl:table1]) and sections ([@sec:sec1; @sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div])
+This is a demo file for pandoc-crossref. With this filter, you can cross-reference figures , display equations , tables  and sections)
 
-For immediate example, see @fig:figure0
-
+For immediate example, see @fig:figure1
 
 There is also support for code blocks, for example, [@lst:captionAttr; @lst:tableCaption; @lst:wrappingDiv]
 
-It's possible to capitalize reference prefixes, like this: [@Fig:figure1].
+It's possible to capitalize reference prefixes, like this: [@fig:figure1].
 
-In case of multiple references, capitalization is determined by first reference. [@Fig:figure1; @fig:figure2] is capitalized, while [@fig:figure2; @Fig:figure1] is not.
+In case of multiple references, capitalization is determined by first reference. [@fig:figure1; @fig:figure2] is capitalized, while [@fig:figure2; @Fig:figure1] is not.
 
 It is also possible to mix different references, like [@fig:figure1; @tbl:table1; @lst:captionAttr; @lst:tableCaption; @fig:figure2; @fig:figure3], which will be grouped in order they are specified. You can even intermix this with regular citations, although it's not recommended: [@fig:figure1; @tbl:table1; @unprocessedCitation]
 
@@ -32,7 +18,7 @@ You can also have custom chapter reference labels, like @sec:custlabs
 
 Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
 
-# Chapter 1. Figures {#sec:sec1}
+**Figures**
 
 ![First figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure1}
 
@@ -42,15 +28,15 @@ Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
 
 ![Unlabelled image](https://www.markdownguide.org/assets/images/tux.png)
 
-<div id="fig:subfigures">
+<div id="fig:subfig">
 ![Subfigure a](https://upload.wikimedia.org/wikipedia/commons/8/83/The_GNU_logo.png)
 
-![Subfigure b](https://www.markdownguide.org/assets/images/tux.png){#fig:subfigureB}
+![Subfigure b](https://www.markdownguide.org/assets/images/tux.png){#fig:subfig}
 
 Subfigures caption
 </div>
 
-# Chapter 2. Equations {#sec:sec2}
+**Equations**
 
 Display equations are labelled and numbered
 
@@ -59,7 +45,7 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Since 0.1.6.0 those can also appear in the middle of paragraph
 $$a x^2 + b x^2 + c = 0$${#eq:quadr} like this.
 
-# Chapter 3. Tables
+**Tables** 
 
 | First Header | Second Header |
 |:-------------|:--------------|
@@ -75,11 +61,11 @@ Table without caption:
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-# Chapter 4. Code blocks
+**Code blocks**
 
 There are a couple options for code block labels. Those work only if code block id starts with `lst:`, e.g. `{#lst:label}`
 
-## `caption` attribute {#sec:caption-attr}
+**`caption` attributes**
 
 `caption` attribute will be treated as code block caption. If code block has both id and `caption` attributes, it will be treated as numbered code block.
 
@@ -90,7 +76,7 @@ main = putStrLn "Hello World!"
 
 \pagebreak
 
-## Table-style captions  {#sec:table-capts}
+**Table-style captions**
 
 Enabled with `codeBlockCaptions` metadata option. If code block is immediately
 adjacent to paragraph, starting with `Listing: ` or `: `, said paragraph will be
@@ -103,7 +89,7 @@ main :: IO ()
 main = putStrLn "Hello World!"
 ```
 
-## Wrapping div
+**Wrapping div**
 
 Wrapping code block without label in a div with id `lst:...` and class, starting with `listing`, and adding paragraph before code block, but inside div, will treat said paragraph as code block caption.
 
@@ -115,12 +101,12 @@ main = putStrLn "Hello World!"
 ```
 </div>
 
-# Unnumbered chapter. {-}
+**Unnumbered chapter {-}**
 
 This chapter doesn't change chapter prefix of referenced elements, instead keeping number of previous chapter, e.g.
 $$ S(x) = \int_{x_1}^{x_2} a x+b \  \mathrm{d}x $$ {#eq:eqn2}
 
-# Chapter 5. Reference lists
+**Reference lists** 
 
 It's also possible to show lists of figures and tables, like this:
 
@@ -130,6 +116,8 @@ It's also possible to show lists of figures and tables, like this:
 
 \listoflistings
 
-# Appendix A. Custom labels {label=AppA}
+<!---
+*Custom labels* {label=AppA}{.unlisted}
 
-## This section will have custom label {#sec:custlabs label=CustLab}
+*This section will have custom label* {#sec:custlabs label=CustLab}
+--->

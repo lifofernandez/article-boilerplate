@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "global": "^4.4.0",
+    "mermaid-filter": "^1.4.6"
+  }
+}

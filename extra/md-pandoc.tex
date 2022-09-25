@@ -1,0 +1,368 @@
+\hypertarget{apendice}{%
+\section{Apendice}\label{apendice}}
+
+\hypertarget{graficos-y-diagramas}{%
+\subsection{Graficos y Diagramas}\label{graficos-y-diagramas}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gitGraph}
+\NormalTok{   commit}
+\NormalTok{   commit}
+\NormalTok{   branch develop}
+\NormalTok{   commit}
+\NormalTok{   commit}
+\NormalTok{   commit}
+\NormalTok{   checkout main}
+\NormalTok{   commit}
+\NormalTok{   commit}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sequenceDiagram}
+\NormalTok{    participant dotcom}
+\NormalTok{    participant iframe}
+\NormalTok{    participant viewscreen}
+\NormalTok{    dotcom{-}\textgreater{}\textgreater{}iframe: loads html w/ iframe url}
+\NormalTok{    iframe{-}\textgreater{}\textgreater{}viewscreen: request template}
+\NormalTok{    viewscreen{-}\textgreater{}\textgreater{}iframe: html \& javascript}
+\NormalTok{    iframe{-}\textgreater{}\textgreater{}dotcom: iframe ready}
+\NormalTok{    dotcom{-}\textgreater{}\textgreater{}iframe: set mermaid data on iframe}
+\NormalTok{    iframe{-}\textgreater{}\textgreater{}iframe: render mermaid}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{erDiagram}
+
+\NormalTok{          CUSTOMER \}|..|\{ DELIVERY{-}ADDRESS : has}
+
+\NormalTok{          CUSTOMER ||{-}{-}o\{ ORDER : places}
+
+\NormalTok{          CUSTOMER ||{-}{-}o\{ INVOICE : "liable for"}
+
+\NormalTok{          DELIVERY{-}ADDRESS ||{-}{-}o\{ ORDER : receives}
+
+\NormalTok{          INVOICE ||{-}{-}|\{ ORDER : covers}
+
+\NormalTok{          ORDER ||{-}{-}|\{ ORDER{-}ITEM : includes}
+
+\NormalTok{          PRODUCT{-}CATEGORY ||{-}{-}|\{ PRODUCT : contains}
+
+\NormalTok{          PRODUCT ||{-}{-}o\{ ORDER{-}ITEM : "ordered in"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gantt}
+
+\NormalTok{    dateFormat  YYYY{-}MM{-}DD}
+
+\NormalTok{    title       Adding GANTT diagram functionality to mermaid}
+
+\NormalTok{    excludes    weekends}
+
+\NormalTok{    \%\% (\textasciigrave{}excludes\textasciigrave{} accepts specific dates in YYYY{-}MM{-}DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)}
+
+
+
+\NormalTok{    section A section}
+
+\NormalTok{    Completed task            :done,    des1, 2014{-}01{-}06,2014{-}01{-}08}
+
+\NormalTok{    Active task               :active,  des2, 2014{-}01{-}09, 3d}
+
+\NormalTok{    Future task               :         des3, after des2, 5d}
+
+\NormalTok{    Future task2              :         des4, after des3, 5d}
+
+
+
+\NormalTok{    section Critical tasks}
+
+\NormalTok{    Completed task in the critical line :crit, done, 2014{-}01{-}06,24h}
+
+\NormalTok{    Implement parser and jison          :crit, done, after des1, 2d}
+
+\NormalTok{    Create tests for parser             :crit, active, 3d}
+
+\NormalTok{    Future task in critical line        :crit, 5d}
+
+\NormalTok{    Create tests for renderer           :2d}
+
+\NormalTok{    Add to mermaid                      :1d}
+
+\NormalTok{    Functionality added                 :milestone, 2014{-}01{-}25, 0d}
+
+
+
+\NormalTok{    section Documentation}
+
+\NormalTok{    Describe gantt syntax               :active, a1, after des1, 3d}
+
+\NormalTok{    Add gantt diagram to demo page      :after a1  , 20h}
+
+\NormalTok{    Add another diagram to demo page    :doc1, after a1  , 48h}
+
+
+
+\NormalTok{    section Last section}
+
+\NormalTok{    Describe gantt syntax               :after doc1, 3d}
+
+\NormalTok{    Add gantt diagram to demo page      :20h}
+
+\NormalTok{    Add another diagram to demo page    :48h}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{journey}
+
+\NormalTok{    title My working day}
+
+\NormalTok{    section Go to work}
+
+\NormalTok{      Make tea: 5: Me}
+
+\NormalTok{      Go upstairs: 3: Me}
+
+\NormalTok{      Do work: 1: Me, Cat}
+
+\NormalTok{    section Go home}
+
+\NormalTok{      Go downstairs: 5: Me}
+
+\NormalTok{      Sit down: 5: Me}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{mardown-example}{%
+\section{Mardown example}\label{mardown-example}}
+
+\hypertarget{basic-syntax}{%
+\subsection{Basic Syntax}\label{basic-syntax}}
+
+These are the elements outlined in John Gruber's original design
+document. All Markdown applications support these elements.
+\href{https://www.markdownguide.org/basic-syntax}{basic syntax}
+
+\hypertarget{headings}{%
+\subsubsection{Headings}\label{headings}}
+
+\hypertarget{h1}{%
+\section{H1}\label{h1}}
+
+\hypertarget{h2}{%
+\subsection{H2}\label{h2}}
+
+\hypertarget{h3}{%
+\subsubsection{H3}\label{h3}}
+
+\hypertarget{bold}{%
+\subsubsection{Bold}\label{bold}}
+
+\textbf{bold text}
+
+\hypertarget{italic}{%
+\subsubsection{Italic}\label{italic}}
+
+\emph{italicized text}
+
+\hypertarget{blockquote}{%
+\subsubsection{Blockquote}\label{blockquote}}
+
+\begin{quote}
+blockquote
+\end{quote}
+
+\hypertarget{ordered-list}{%
+\subsubsection{Ordered List}\label{ordered-list}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  First item
+\item
+  Second item
+\item
+  Third item
+\end{enumerate}
+
+\hypertarget{unordered-list}{%
+\subsubsection{Unordered List}\label{unordered-list}}
+
+\begin{itemize}
+\tightlist
+\item
+  First item
+\item
+  Second item
+\item
+  Third item
+\end{itemize}
+
+\hypertarget{code}{%
+\subsubsection{Code}\label{code}}
+
+\texttt{code}
+
+\hypertarget{horizontal-rule}{%
+\subsubsection{Horizontal Rule}\label{horizontal-rule}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{enlaces}{%
+\subsubsection{Enlaces}\label{enlaces}}
+
+\href{https://www.markdownguide.org}{Markdown Guide}
+
+\hypertarget{imagenes}{%
+\subsubsection{Imagenes}\label{imagenes}}
+
+It is also possible to mix different references, like {[}@fig:figure1;
+@tbl:table1;{]}, which will be grouped in order they are specified.
+
+You can also have custom chapter reference labels, like @sec:tables
+
+Subfigures are supported, see {[}@fig:subfigures; @fig:subfigureB{]}
+
+\begin{figure}
+\hypertarget{fig:figure1}{%
+\centering
+\includegraphics{img/tux.png}
+\caption{alt text}\label{fig:figure1}
+}
+\end{figure}
+
+\leavevmode\vadjust pre{\hypertarget{fig:subfigures}{}}%
+\includegraphics{img/gnu.png} {[}Subfigure b{]}\{\#fig:subfigureB\}
+
+Subfigures caption
+
+\hypertarget{extended-syntax}{%
+\subsection{Extended Syntax}\label{extended-syntax}}
+
+These elements extend the basic syntax by adding additional features.
+Not all Markdown applications support these elements.
+\href{https://www.markdownguide.org/extended-syntax}{extended syntax}.
+
+\hypertarget{sec:tablas}{%
+\subsubsection{Tablas}\label{sec:tablas}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule()
+Syntax & Description \\
+\midrule()
+\endhead
+Header & Title \\
+Paragraph & Text \\
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}lcr@{}}
+\toprule()
+Item & Price & \# In stock \\
+\midrule()
+\endhead
+Juicy Apples & 1.99 & 739 \\
+Bananas & 1.89 & 6 \\
+\bottomrule()
+\end{longtable}
+
+\hypertarget{resaltado-de-sintaxis-en-bloques-de-cuxf3digo}{%
+\subsubsection{Resaltado de sintaxis en bloques de
+código}\label{resaltado-de-sintaxis-en-bloques-de-cuxf3digo}}
+
+es posible
+\href{https://pandoc.org/MANUAL.html\#syntax-highlighting}{Resaltado de
+sintaxis} en
+\href{https://pandoc.org/MANUAL.html\#fenced-code-blocks}{Bloques de
+codigo delimitado}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pandoc {-}{-}print{-}highlight{-}style pygments \textgreater{} my.theme}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\{}
+  \DataTypeTok{"firstName"}\FunctionTok{:} \StringTok{"John"}\FunctionTok{,}
+  \DataTypeTok{"lastName"}\FunctionTok{:} \StringTok{"Smith"}\FunctionTok{,}
+  \DataTypeTok{"age"}\FunctionTok{:} \DecValTok{25}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{footnote}{%
+\subsubsection{Footnote}\label{footnote}}
+
+Here's a sentence with a footnote. \footnote{This is the footnote.}
+
+\hypertarget{heading-id}{%
+\subsubsection{Heading ID}\label{heading-id}}
+
+\hypertarget{custom-id}{%
+\subsubsection{My Great Heading}\label{custom-id}}
+
+\hypertarget{definition-list}{%
+\subsubsection{Definition List}\label{definition-list}}
+
+\begin{description}
+\tightlist
+\item[term]
+definition
+\end{description}
+
+\hypertarget{strikethrough}{%
+\subsubsection{Strikethrough}\label{strikethrough}}
+
+\sout{The world is flat.}
+
+\hypertarget{task-list}{%
+\subsubsection{Task List}\label{task-list}}
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  Write the press release
+\item[$\square$]
+  Update the website
+\item[$\square$]
+  Contact the media
+\end{itemize}
+
+\hypertarget{emoji}{%
+\subsubsection{Emoji}\label{emoji}}
+
+That is so funny! :joy:
+
+(See also
+\href{https://www.markdownguide.org/extended-syntax/\#copying-and-pasting-emoji}{Copying
+and Pasting Emoji})
+
+\hypertarget{highlight}{%
+\subsubsection{Highlight}\label{highlight}}
+
+I need to highlight these ==very important words==.
+
+\hypertarget{subscript}{%
+\subsubsection{Subscript}\label{subscript}}
+
+H\textsubscript{2}O
+
+\hypertarget{superscript}{%
+\subsubsection{Superscript}\label{superscript}}
+
+X\textsuperscript{2}
+
+\hypertarget{referencias}{%
+\section{Referencias}\label{referencias}}

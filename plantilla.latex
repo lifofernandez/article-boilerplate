@@ -450,6 +450,8 @@ $endif$
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
+% \usepackage{import}
+
 \begin{document}
 
 %$if(has-frontmatter)$

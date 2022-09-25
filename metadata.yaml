@@ -16,20 +16,26 @@ abstract: >-
   Evitar el uso de interfaces captivas beneficia a todos los usuarios, deben
   poder encontrar lo que necesitan, comprender lo que encuentran y usarlo para
   realizar tareas.'
-
 reference-section-title: 'Referencias'
-
 bibliography: 
   - bib/referencias.bib
   - bib/SMS.bib
-
 #  - ep.bib  
 # nocite: |
 #   #@Guarino2020,@Kitchenham2011
 #   @*
 
-csl: ieee.csl
+#header-includes: |
+# \usepackage{grffile}
+# \usepackage{import}
 
+include-after:
+# - extra/crossref.tex
+# - extra/md-pandoc.tex
+#\import{./}{extra/md-pandoc.tex}
+#\import{./}{extra/crossref.tex}
+
+csl: ieee.csl
 # csl: iso690-author-date-es.csl
 # csl: apa-annotated-bibliography.csl
 
@@ -37,5 +43,18 @@ csl: ieee.csl
 # # https://github.com/seananderson/csl-abbrev
 
 colorlinks: true
+lang: es
 
 # template: plantilla.latex
+
+codeBlockCaptions: True
+figureTitle: |
+  Figure #
+lofTitle: |
+  ## List of Figures
+lotTitle: |
+  ## List of Tables
+tableTemplate: |
+  *$$tableTitle$$ $$i$$*$$titleDelim$$ $$t$$
+autoSectionLabels: True
+# title: pandoc-crossref demo document
