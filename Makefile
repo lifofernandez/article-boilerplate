@@ -16,15 +16,14 @@ pdf:
 		-o README.pdf
 		brave README.pdf
 lite:
-	cat article/*.md extra/md-pandoc.md extra/crossref.md  > README.md
-	@pandoc README.md \
-		--metadata-file=metadata.yaml --mathjax \
+	cat ./article/*.md ./extra/md-pandoc.md ./extra/crossref.md  > ./README.md
+	@pandoc ./README.md \
+		--metadata-file=./metadata.yaml --mathjax \
 	        -F pandoc-crossref --citeproc \
-		--highlight-style vendor/pygments.theme \
+		--highlight-style ./vendor/pygments.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
-		-o README.pdf
-		brave README.pdf
+		-o ./README.pdf
 
 # crossref:
 # 	@pandoc extra/crossref.md \
