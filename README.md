@@ -1,4 +1,4 @@
-# Producción de documentos con Pandoc
+# Producción de académica con Pandoc
 
 <!--- Temática que abordará --->
 
@@ -14,14 +14,19 @@ tipográfica y preparación de documentos de alta calidad _LaTeX_, estándar de
 facto para la comunicación y publicación de documentos académicos [@macfarlane;
 @knuth1986texbook].
 
-Mediante integraciones sencillas se consegue una infraestructura robusta con
+Mediante integraciones sencillas se consigue una infraestructura robusta con
 funciones diseñadas para gestionar exposición de extensas referencias,
 múltiples citas y referencias a diferentes fuentes, notación matemática,
 generación gráficos y diagramas, entre otras capacidades avanzadas, necesarias
 para la producción de documentación técnica y científica, todo el proceso es
 controlado mediante linea de comandos sin depender de interfaces captivas
-[@gancarz2003linux p.88-97]
+promoviendo la transparencia, la claridad y la reproducción [@gancarz2003linux
+p.88-97].
 
+<!--
+Se trata de una herramienta de código abierto que puede
+utilizarse por sí sola o a través del entorno de desarrollo integrado (IDE)
+-->
 
 ## Pandoc
 
@@ -56,6 +61,12 @@ y Word docx.
 Pandoc es software libre, publicado bajo la GPL.  Copyright 2006-2022 John
 MacFarlane.  --->
 
+<!--- Conjunto de herramientas de publicación académica potente, ampliable y
+repleto de funciones.
+Construya y personalizar con Pandoc, utilizar un sistema de composición
+tipográfica (_LaTeX_) y y componentes, y dé vida a los proyectos con potentes
+filtros.  --->
+
 ### Interfaz 
 
 La principal característica de las herramientas empleadas este proyecto es
@@ -73,19 +84,14 @@ otros); libera al autor de problemas estéticos y devuelve el control de estilo
 a la organización garantizando unidad en estética en la composiciones gráfica
 resultante de diversos productos.
 
-La formación de los estudiantes introducirá en la fuerza de trabajo una nueva
+Esta formación en los estudiantes introducirá en la fuerza de trabajo una nueva
 capacidad  con una inclinación arraigada y fundamental hacia la investigación
-reproducible.  Ademas se señala como futura linea de trabajo, la posibilidad
+reproducible. Ademas se señala como futura linea de trabajo, la posibilidad
 de generar documentos como el presente mediante operaciones remotas
-automáticas.
+automáticas @Baumer_Udwin_2015.
 
-<!--- Conjunto de herramientas de publicación académica potente, ampliable y
-repleto de funciones.
-Construya y personalizar con Pandoc, utilizar un sistema de composición
-tipográfica (_LaTeX_) y y componentes, y dé vida a los proyectos con potentes
-filtros.  --->
 
-### _Markdown_
+### Markdown
 
 _Markdown_ es una sintaxis  de formato de texto plano.
 El formato de texto es el marcado que se aplica a un texto simple para añadir
@@ -94,15 +100,13 @@ tamaño, y características especiales (como hipervínculos).
 Al texto resultante se le conoce como texto formateado, texto con estilos, o
 texto enriquecido @gruber.
 
-https://wires.onlinelibrary.wiley.com/doi/10.1002/wics.1348
-
 Lo que distingue a _Markdown_ de muchas otras sintaxis de marcado ligero, es su
 enfasis en la legibilidad.  El objetivo prisipal del diseño de la sintaxis de
 formato de _Markdown_ es hacerla lo más legible posible. La idea es que un
 documento con formato _Markdown_ sea publicable tal cual, como texto plano, sin
 que parezca que ha sido marcado con etiquetas o instrucciones de formato.
 
-Pandoc comprende una serie de extensiones útiles de la sintaxis de markdown,
+_Pandoc_ comprende una serie de extensiones útiles de la sintaxis de markdown,
 como los metadatos del documento (título, autor, fecha); las notas al pie; las
 tablas; las listas de definiciones; los superíndices y subíndices; la
 tachadura; las listas ordenadas mejoradas (el número de inicio y el estilo de
@@ -111,32 +115,20 @@ bloques de código de software delimitados con resaltado de sintaxis; las
 comillas inteligentes, los guiones y las elipses; el _Markdown_ dentro de bloques
 HTML; y el _LaTeX_ en línea.
 
-
 # Metodotología 
+<!--- describir el proceso -->
 
 En este capitulo se describe el método propuesto y utilizado para producir el
 presente documento. Primero se introduce a la integración de diferentes
-herramientas, algunas distribuidas con junto con _Pandoc_ y otras aportes
-independientes de la comunidad .
+herramientas, algunas distribuidas junto con _Pandoc_ y otras aportes
+independientes de la comunidad.
 
 Luego sitema de diagramcion y  generacion graficos que 
-permite crear diagramas y visualizaciones utilizando texto y código,
-Se trata de una herramienta de diagramación y graficación.
+permite crear visualizaciones utilizando texto y código.
+Seguido se expone el sistema citas y referencias biblograficas.
+Para concluir este capitulo se exponen cuestiones relacionadas a la notación matemáticas.
 
-Seguido se expone citas y referencias
-Para la gestison de bliografia Por ejemplo, esto significa que puede escribir
-una referencia como `@moolenaar2000` o también `[@knuth1986texbook p.3-9]` y
-_Pandoc_ a convertirá en una cita con el formato predefinido, utilizando
-cualquiera de los cientos de Lenguajes de Estilo de Cita (Citation Style
-Language - CSL) incluyendo estilos de nota al pie, numéricos y autoría, fuente
-y fechas), y añadirá una bibliografía con el formato adecuado al final del
-documento.
 
-Para concluir este capitulo se muesta notación matemáticas.
-Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
-documentos de _Markdown_. Las matemáticas de LaTeX se convierten (según lo
-requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
-MathML o roff eqn.
 
 <!--- basada en JavaScript
 que renderiza definiciones de texto inspiradas en Markdown para crear y
@@ -152,9 +144,7 @@ para modificar el AST intermedio.
 _Pandoc_ funciona como la pieza central que integra
 --->
 
-
 ## Integración
-<!--- describir el proceso -->
 
 Un potente sistema para escribir filtros.  El diseño modular: consta de un
 conjunto de lectores, que analizan el texto en un formato determinado y
@@ -343,7 +333,16 @@ sequenceDiagram
 ~~~
 --->
 
-## Bibliografías sofisticadas con BibLaTeX 
+## Bibliografías sofisticadas
+
+Para la gestison de bliografia Por ejemplo, esto significa que puede escribir
+una referencia como `@moolenaar2000` o también `[@knuth1986texbook p.3-9]` y
+_Pandoc_ a convertirá en una cita con el formato predefinido, utilizando
+cualquiera de los cientos de Lenguajes de Estilo de Cita (Citation Style
+Language - CSL) incluyendo estilos de nota al pie, numéricos y autoría, fuente
+y fechas), y añadirá una bibliografía con el formato adecuado al final del
+documento.
+
 
 
 <!---
@@ -354,6 +353,7 @@ BibLATEX – Sophisticated Bibliographies in LATEX
 Los datos bibliográficos pueden estar en formato BibTeX, BibLaTeX, CSL JSON o
 CSL YAML. Las citas funcionan en todos los formatos de salida.
 
+### BibLaTeX 
 BibLaTeX es una reimplementación completa de las facilidades bibliográficas
 proporcionadas por LaTeX.
 El formato de la bibliografía está totalmente
@@ -368,7 +368,27 @@ sistemas bibliográficos.
 
 ### CLS
 
+La
+referencias son una pieza clave en la comunicación académica, ya que
+proporcionan la atribución, enlazan referentes.
+Sin embargo, formatear manualmente
+las referencias puede llevar mucho tiempo, especialmente cuando se trata de
+múltiples publicaciones con diferentes estilos de citación.
+
+<!--- Programas como Zotero, Mendeley y Papers
+
 https://www.mendeley.com/guides/csl-editor/
+--->
+
+El software de gestión de referencias no sólo ayuda a gestionar bibliotecas de
+investigación, sino que también pueden generar automáticamente citas y
+bibliografías. Pero para formatear las referencias en el estilo deseado, estos
+programas necesitan descripciones de cada estilo de citación en un lenguaje que
+el ordenador pueda entender, el Lenguaje de Estilos de
+Citación (Citation Style Languaje - CSL) es el descriptor utilizado @zellecitation.
+
+https://docs.citationstyles.org/en/stable/specification.html
+
 
 El Lenguaje de Estilo de Citación (CSL) es un formato basado en XML para
 describir el formato de citas, notas y bibliografías, ofreciendo:
@@ -379,32 +399,21 @@ Para obtener más documentación, el esquema CSL, los estilos y las
 localizaciones, visite la página web del proyecto proyecto CSL,
 citationstyles.org.
 
+<!--
 Si alguna vez has escrito un trabajo de investigación,
 habrás trabajo de investigación,
+probablemente has incluido referencias a otros trabajos.
+--->
 
-probablemente has incluido referencias a otros trabajos. La
-referencias son importantes en la comunicación académica, ya que
-proporcionan la atribución, enlazan referentes.
 
-Sin embargo, formatear manualmente
-las referencias puede llevar mucho tiempo, especialmente cuando se trata de
-múltiples publicaciones con diferentes estilos de citación.
+## Notación matemática
 
-El software de gestión de referencias puede ayudar.
+MathJax
 
-<!--- Programas como Zotero, Mendeley y Papers --->
-
-No sólo ayudan a gestionar bibliotecas de
-investigación, sino que también pueden generar automáticamente citas y
-bibliografías.
-Pero para formatear las referencias en el estilo deseado, estos
-programas necesitan descripciones de cada estilo de citación en un lenguaje que
-el ordenador pueda entender. Como habrás adivinado, el Lenguaje de Estilos de
-Citación (Citation Style Languaje -CSL) es ese lenguaje
-
-https://docs.citationstyles.org/en/stable/specification.html
-
-## MathJax
+Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
+documentos de _Markdown_. Las matemáticas de LaTeX se convierten (según lo
+requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
+MathML o roff eqn.
 
 Se proporcionan varios métodos diferentes para representar las matemáticas en
 HTML, incluyendo MathJax y la traducción a MathML.
@@ -618,30 +627,30 @@ ordenación:
 - Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
 - Validación de los datos bibliográficos con respecto a un modelo de datos
 
-# Apnendice A: Pandoc's Markdown{-}
+# Apnendice A: Pandoc's Markdown{.unnumbered}
 
 Pandoc understands an extended and slightly revised version of
-John Gruber's [Markdown] syntax.  This document explains the syntax,
+John Gruber's [Markdown] syntax. This document explains the syntax,
 noting differences from original Markdown.
 
-## Paragraphs{-}
+## Paragraphs{.unlisted .unnumbered}
 
 A paragraph is one or more lines of text followed by one or more blank lines.
 Newlines are treated as spaces, so you can reflow your paragraphs as you like.
 If you need a hard line break, put two or more spaces at the end of a line.
 
-#### Extension: `escaped_line_breaks` ####{-}
+#### Extension: `escaped_line_breaks` ####{.unlisted .unnumbered}
 
 A backslash followed by a newline is also a hard line break.
 Note:  in multiline and grid table cells, this is the only way
 to create a hard line break, since trailing spaces in the cells
 are ignored.
 
-## Headings{-}
+## Headings{.unlisted .unnumbered}
 
 There are two kinds of headings: Setext and ATX.
 
-### Setext-style headings ###{-}
+### Setext-style headings ###{.unlisted .unnumbered}
 
 A setext-style heading is a line of text "underlined" with a row of `=` signs
 (for a level-one heading) or `-` signs (for a level-two heading):
@@ -656,7 +665,7 @@ The heading text can contain inline formatting, such as emphasis (see
 [Inline formatting], below).
 
 
-### ATX-style headings ###{-}
+### ATX-style headings ###{.unlisted .unnumbered}
 
 An ATX-style heading consists of one to six `#` signs and a line of
 text, optionally followed by any number of `#` signs.  The number of
@@ -670,7 +679,7 @@ As with setext-style headings, the heading text can contain formatting:
 
     # A level-one heading with a [link](/url) and *emphasis*
 
-#### Extension: `blank_before_header` ####{-}
+#### Extension: `blank_before_header` ####{.unlisted .unnumbered}
 
 Original Markdown syntax does not require a blank line before a heading.
 Pandoc does require this (except, of course, at the beginning of the
@@ -681,19 +690,19 @@ wrapping). Consider, for example:
     I like several of their flavors of ice cream:
     #22, for example, and #5.
 
-#### Extension: `space_in_atx_header` ####{-}
+#### Extension: `space_in_atx_header` ####{.unlisted .unnumbered}
 
 Many Markdown implementations do not require a space between the
 opening `#`s of an ATX heading and the heading text, so that
 `#5 bolt` and `#hashtag` count as headings.  With this extension,
 pandoc does require the space.
 
-### Heading identifiers ###{-}
+### Heading identifiers ###{.unlisted .unnumbered}
 
 See also the [`auto_identifiers`
 extension](#extension-auto_identifiers) above.
 
-#### Extension: `header_attributes` ####{-}
+#### Extension: `header_attributes` ####{.unlisted .unnumbered}
 
 Headings can be assigned attributes using this syntax at the end
 of the line containing the heading text:
@@ -723,7 +732,7 @@ Headings with the class `unnumbered` will not be numbered, even if
 context is equivalent to `.unnumbered`, and preferable in non-English
 documents.  So,
 
-    # My heading {-}
+    # My heading {.unlisted .unnumbered}
 
 is just the same as
 
@@ -734,7 +743,7 @@ the heading will not be included in a table of contents.
 (Currently this feature is only implemented for certain
 formats: those based on LaTeX and HTML, PowerPoint, and RTF.)
 
-#### Extension: `implicit_header_references` ####{-}
+#### Extension: `implicit_header_references` ####{.unlisted .unnumbered}
 
 Pandoc behaves as if reference links have been defined for each heading.
 So, to link to a heading
@@ -774,7 +783,7 @@ link will point to `bar`, not to `#foo`:
 
     See [foo]
 
-## Block quotations{-}
+## Block quotations{.unlisted .unnumbered}
 
 Markdown uses email conventions for quoting blocks of text.
 A block quotation is one or more paragraphs or other block elements
@@ -811,7 +820,7 @@ block in a block quote, you need five spaces after the `>`:
 
     >     code
 
-#### Extension: `blank_before_blockquote` ####{-}
+#### Extension: `blank_before_blockquote` ####{.unlisted .unnumbered}
 
 Original Markdown syntax does not require a blank line before a
 block quote.  Pandoc does require this (except, of course, at
@@ -825,9 +834,9 @@ not produce a nested block quote in pandoc:
     >> Nested.
 
 
-## Verbatim (code) blocks{-}
+## Verbatim (code) blocks{.unlisted .unnumbered}
 
-### Indented code blocks ###{-}
+### Indented code blocks ###{.unlisted .unnumbered}
 
 A block of text indented four spaces (or one tab) is treated as verbatim
 text: that is, special characters do not trigger special formatting,
@@ -843,9 +852,9 @@ of the verbatim text, and is removed in the output.
 Note: blank lines in the verbatim text need not begin with four spaces.
 
 
-### Fenced code blocks ###{-}
+### Fenced code blocks ###{.unlisted .unnumbered}
 
-#### Extension: `fenced_code_blocks` ####{-}
+#### Extension: `fenced_code_blocks` ####{.unlisted .unnumbered}
 
 In addition to standard indented code blocks, pandoc supports
 *fenced* code blocks.  These begin with a row of three or more
@@ -871,12 +880,12 @@ row of tildes or backticks at the start and end:
     ~~~~~~~~~~
     ~~~~~~~~~~~~~~~~
 
-#### Extension: `backtick_code_blocks` ####{-}
+#### Extension: `backtick_code_blocks` ####{.unlisted .unnumbered}
 
 Same as `fenced_code_blocks`, but uses backticks (`` ` ``) instead of tildes
 (`~`).
 
-#### Extension: `fenced_code_attributes` ####{-}
+#### Extension: `fenced_code_attributes` ####{.unlisted .unnumbered}
 
 Optionally, you may attach attributes to fenced or backtick code block using
 this syntax:
@@ -945,9 +954,9 @@ To set the highlighting style, use `--highlight-style`.
 For more information on highlighting, see [Syntax highlighting],
 below.
 
-## Line blocks{-}
+## Line blocks{.unlisted .unnumbered}
 
-#### Extension: `line_blocks` ####{-}
+#### Extension: `line_blocks` ####{.unlisted .unnumbered}
 
 A line block is a sequence of lines beginning with a vertical bar (`|`)
 followed by a space.  The division into lines will be preserved in
@@ -976,9 +985,9 @@ but not block-level formatting (such as block quotes or lists).
 
 This syntax is borrowed from [reStructuredText].
 
-## Lists{-}
+## Lists{.unlisted .unnumbered}
 
-### Bullet lists ###{-}
+### Bullet lists ###{.unlisted .unnumbered}
 
 A bullet list is a list of bulleted list items.  A bulleted list
 item begins with a bullet (`*`, `+`, or `-`).  Here is a simple
@@ -1067,7 +1076,7 @@ other blocks in a list item, the first line of each must be indented.
         Second paragraph of second
     list item.
 
-### Ordered lists ###{-}
+### Ordered lists ###{.unlisted .unnumbered}
 
 Ordered lists work just like bulleted lists, except that the items
 begin with enumerators rather than bullets.
@@ -1086,7 +1095,7 @@ and this one:
     7.  two
     1.  three
 
-#### Extension: `fancy_lists` ####{-}
+#### Extension: `fancy_lists` ####{.unlisted .unnumbered}
 
 Unlike original Markdown, pandoc allows ordered list items to be marked
 with uppercase and lowercase letters and roman numerals, in addition to
@@ -1117,7 +1126,7 @@ ordered list marker in place of a numeral:
     #. one
     #. two
 
-#### Extension: `startnum` ####{-}
+#### Extension: `startnum` ####{.unlisted .unnumbered}
 
 Pandoc also pays attention to the type of list marker used, and to the
 starting number, and both of these are preserved where possible in the
@@ -1146,16 +1155,16 @@ If default list markers are desired, use `#.`:
     #.  two
     #.  three
 
-#### Extension: `task_lists` ####{-}
+#### Extension: `task_lists` ####{.unlisted .unnumbered}
 
 Pandoc supports task lists, using the syntax of GitHub-Flavored Markdown.
 
     - [ ] an unchecked task list item
     - [x] checked item
 
-### Definition lists ###{-}
+### Definition lists ###{.unlisted .unnumbered}
 
-#### Extension: `definition_lists` ####{-}
+#### Extension: `definition_lists` ####{.unlisted .unnumbered}
 
 Pandoc supports definition lists, using the syntax of
 [PHP Markdown Extra] with some extensions.[^3]
@@ -1213,9 +1222,9 @@ hard wrapping, can be activated with `compact_definition_lists`: see
 [^3]:  I have been influenced by the suggestions of [David
   Wheeler](https://justatheory.com/2009/02/modest-markdown-proposal/).
 
-### Numbered example lists ###{-}
+### Numbered example lists ###{.unlisted .unnumbered}
 
-#### Extension: `example_lists` ####{-}
+#### Extension: `example_lists` ####{.unlisted .unnumbered}
 
 The special list marker `@` can be used for sequentially numbered
 examples. The first list item with a `@` marker will be numbered '1',
@@ -1248,7 +1257,7 @@ labels tend to be long, and indenting content to the
 first non-space character after the label would be awkward.
 
 
-### Ending a list ###{-}
+### Ending a list ###{.unlisted .unnumbered}
 
 What if you want to put an indented code block after a list?
 
@@ -1285,7 +1294,7 @@ of one big list:
     2.  dos
     3.  tres
 
-## Horizontal rules{-}
+## Horizontal rules{.unlisted .unnumbered}
 
 A line containing a row of three or more `*`, `-`, or `_` characters
 (optionally separated by spaces) produces a horizontal rule:
@@ -1299,7 +1308,7 @@ surrounding text by blank lines.  If a horizontal rule is not
 followed by a blank line, pandoc may try to interpret the
 lines that follow as a YAML metadata block or a table.
 
-## Tables{-}
+## Tables{.unlisted .unnumbered}
 
 Four kinds of tables may be used. The first three kinds presuppose the use of
 a fixed-width font, such as Courier. The fourth kind can be used with
@@ -1312,7 +1321,7 @@ illustrated in the examples below). A caption is a paragraph beginning
 with the string `Table:` (or `table:` or just `:`), which will be stripped
 off. It may appear either before or after the table.
 
-#### Extension: `simple_tables` ####{-}
+#### Extension: `simple_tables` ####{.unlisted .unnumbered}
 
 Simple tables look like this:
 
@@ -1406,7 +1415,7 @@ It is possible for a multiline table to have just one row, but the row
 should be followed by a blank line (and then the row of dashes that ends
 the table), or the table may be interpreted as a simple table.
 
-#### Extension: `grid_tables` ####{-}
+#### Extension: `grid_tables` ####{.unlisted .unnumbered}
 
 Grid tables look like this:
 
@@ -1445,7 +1454,7 @@ For headerless tables, the colons go on the top line instead:
     | Right         | Left          | Centered           |
     +---------------+---------------+--------------------+
 
-##### Grid table foot #####{-}
+##### Grid table foot #####{.unlisted .unnumbered}
 
 A table foot can be defined by enclosing it with separator lines
 that use `=` instead of `-`:
@@ -1516,9 +1525,9 @@ you'll need to add colons as above.
 
 [PHP Markdown Extra tables]: https://michelf.ca/projects/php-markdown/extra/#table
 
-## Metadata blocks{-}
+## Metadata blocks{.unlisted .unnumbered}
 
-#### Extension: `pandoc_title_block` ####{-}
+#### Extension: `pandoc_title_block` ####{.unlisted .unnumbered}
 
 If the file begins with a title block
 
@@ -1737,44 +1746,57 @@ following restrictions apply:
 [YAML escape sequence]: https://yaml.org/spec/1.2/spec.html#id2776092
 [Wikipedia entry on YAML syntax]:  https://en.wikipedia.org/wiki/YAML#Syntax
 
-# Apendice B: pandoc-crossref demo{-}
+# Apendice B: Crossref {.unnumbered}
 
-This is a demo file for pandoc-crossref. With this filter, you can cross-reference figures , display equations , tables  and sections)
+This is a demo file for pandoc-crossref. With this filter, you can
+cross-reference figures (see [@fig:figure1;@fig:figure2;@fig:figure3]), display
+equations (see @eq:eqn1), tables (see [@tbl:table1]) and sections
+([@sec:sec1;
+@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div])
+.
 
-For immediate example, see @fig:figure1
+For immediate example, see @fig:figure0
 
-There is also support for code blocks, for example, [@lst:captionAttr; @lst:tableCaption; @lst:wrappingDiv]
+![A figure](img/img1.jpg){#fig:figure0}
 
-It's possible to capitalize reference prefixes, like this: [@fig:figure1].
+There is also support for code blocks, for example, [@lst:captionAttr;
+@lst:tableCaption; @lst:wrappingDiv]
 
-In case of multiple references, capitalization is determined by first reference. [@fig:figure1; @fig:figure2] is capitalized, while [@fig:figure2; @Fig:figure1] is not.
+It's possible to capitalize reference prefixes, like this: [@Fig:figure1].
 
-It is also possible to mix different references, like [@fig:figure1; @tbl:table1; @lst:captionAttr; @lst:tableCaption; @fig:figure2; @fig:figure3], which will be grouped in order they are specified. You can even intermix this with regular citations, although it's not recommended: [@fig:figure1; @tbl:table1; @unprocessedCitation]
+In case of multiple references, capitalization is determined by first
+reference. [@Fig:figure1; @fig:figure2] is capitalized, while [@fig:figure2;
+@Fig:figure1] is not.
+
+It is also possible to mix different references, like [@fig:figure1;
+@tbl:table1; @lst:captionAttr; @lst:tableCaption; @fig:figure2; @fig:figure3],
+which will be grouped in order they are specified. You can even intermix this
+with regular citations, although it's not recommended: [@fig:figure1;
+@tbl:table1; @unprocessedCitation]
 
 You can also have custom chapter reference labels, like @sec:custlabs
 
-
 Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
 
-**Figures**
+## Figures {.unlisted .unnumbered #sec:sec1}
 
-![First figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure1}
+![First figure](img/img1.jpg){#fig:figure1}
 
-![Second figure](https://upload.wikimedia.org/wikipedia/commons/8/83/The_GNU_logo.png){#fig:figure2}
+![Second figure](img/img2.jpg){#fig:figure2}
 
-![Third figure](https://www.markdownguide.org/assets/images/tux.png){#fig:figure3}
+![Third figure](img/img3.jpg){#fig:figure3}
 
-![Unlabelled image](https://www.markdownguide.org/assets/images/tux.png)
+![Unlabelled image](img/img1.jpg)
 
-<div id="fig:subfig">
-![Subfigure a](https://upload.wikimedia.org/wikipedia/commons/8/83/The_GNU_logo.png)
+<div id="fig:subfigures">
+![Subfigure a](img/img1.jpg)
 
-![Subfigure b](https://www.markdownguide.org/assets/images/tux.png){#fig:subfig}
+![Subfigure b](img/img1.jpg){#fig:subfigureB}
 
 Subfigures caption
 </div>
 
-**Equations**
+## Equations  {.unlisted .unnumbered #sec:sec2} 
 
 Display equations are labelled and numbered
 
@@ -1783,14 +1805,14 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Since 0.1.6.0 those can also appear in the middle of paragraph
 $$a x^2 + b x^2 + c = 0$${#eq:quadr} like this.
 
-**Tables** 
+## Tables {.unlisted .unnumbered} 
 
 | First Header | Second Header |
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-: Table example {#tbl:table1}
+: Table example {#tbl:table1 .unlisted .unnumbered}}
 
 Table without caption:
 
@@ -1799,11 +1821,11 @@ Table without caption:
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-**Code blocks**
+## Code blocks {.unlisted .unnumbered}
 
 There are a couple options for code block labels. Those work only if code block id starts with `lst:`, e.g. `{#lst:label}`
 
-**`caption` attributes**
+### `caption` attribute {#sec:caption-attr .unlisted .unnumbered}
 
 `caption` attribute will be treated as code block caption. If code block has both id and `caption` attributes, it will be treated as numbered code block.
 
@@ -1814,11 +1836,11 @@ main = putStrLn "Hello World!"
 
 \pagebreak
 
-**Table-style captions**
+### Table-style captions{.unlisted .unnumbered #sec:table-capts}
 
 Enabled with `codeBlockCaptions` metadata option. If code block is immediately
-adjacent to paragraph, starting with `Listing: ` or `: `, said paragraph will be
-treated as code block caption.
+adjacent to paragraph, starting with `Listing: ` or `: `, said paragraph will
+be treated as code block caption.
 
 Listing: Listing caption
 
@@ -1827,7 +1849,7 @@ main :: IO ()
 main = putStrLn "Hello World!"
 ```
 
-**Wrapping div**
+### Wrapping div {.unlisted .unnumbered}
 
 Wrapping code block without label in a div with id `lst:...` and class, starting with `listing`, and adding paragraph before code block, but inside div, will treat said paragraph as code block caption.
 
@@ -1839,12 +1861,12 @@ main = putStrLn "Hello World!"
 ```
 </div>
 
-**Unnumbered chapter {-}**
+## Unnumbered chapter.  {.unlisted .unnumbered}
 
 This chapter doesn't change chapter prefix of referenced elements, instead keeping number of previous chapter, e.g.
 $$ S(x) = \int_{x_1}^{x_2} a x+b \  \mathrm{d}x $$ {#eq:eqn2}
 
-**Reference lists** 
+## Reference lists {.unlisted .unnumbered}
 
 It's also possible to show lists of figures and tables, like this:
 
@@ -1854,8 +1876,8 @@ It's also possible to show lists of figures and tables, like this:
 
 \listoflistings
 
-<!---
-*Custom labels* {label=AppA}{.unlisted}
+## Custom labels {label=AppA .unnumbered .unlisted}
 
-*This section will have custom label* {#sec:custlabs label=CustLab}
---->
+<!--
+### This section will have custom label {.unnambered #sec:custlabs label=CustLabs}
+-->

@@ -14,17 +14,17 @@ jobs:
       # - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
       # - run: npm install mermaid-filter
 
-      - name: Set up Python 3.1
-        #uses: actions/setup-python@v2
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
+      # - name: Set up Python 3.1
+      #   #uses: actions/setup-python@v2
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: 3.x
 
-      - uses: s-weigand/setup-conda@v1
-        with:
-          activate-conda: false
-      - run: conda --version
-      - run: which python
+      # - uses: s-weigand/setup-conda@v1
+      #   with:
+      #     activate-conda: false
+      # - run: conda --version
+      # - run: which python
 
       # - name: Install dependencies
       #   run: |
@@ -45,6 +45,10 @@ jobs:
       #    conda install pytest
       #    $CONDA/bin/pytest
 
+      - name: Install conda 
+        run: |
+          pip install conda
+
       - name: Install pandoc-plot
         run: |
           conda install -c conda-forge pandoc-plot
@@ -53,14 +57,14 @@ jobs:
           
       - run: mkdir -p output
 
-      - name: List files 
-        id: files_list
-        run: |
-          # ls node_modules -lha
-          # sudo ls /usr/bin/
-          ls -lha
-          ls ./
-          pwd
+      #- name: List files 
+      #  id: files_list
+      #  run: |
+      #    # ls node_modules -lha
+      #    # sudo ls /usr/bin/
+      #    ls -lha
+      #    ls ./
+      #    pwd
 
       - uses: docker://pandoc/latex:2.18
         with:
@@ -74,13 +78,14 @@ jobs:
           # Error running filter $CONDA/bin/pandoc-plot:
           # Could not find executable $CONDA/bin/pandoc-plot
           
-          args: >- 
-            ./README.md -f markdown
-            -F pandoc-crossref --mathjax --citeproc 
-            --highlight-style=./pygments.theme
-            --template=./plantilla --pdf-engine-opt=-shell-escape
-            -s --toc --toc-depth=2 --number-sections --columns=80
-            --output=output/README.pdf
+          args: 
+            make pdf
+            #./README.md -f markdown
+            #-F pandoc-crossref --mathjax --citeproc 
+            #--highlight-style=./pygments.theme
+            #--template=./plantilla --pdf-engine-opt=-shell-escape
+            #-s --toc --toc-depth=2 --number-sections --columns=80
+            #--output=output/README.pdf
 
       - uses: actions/upload-artifact@v3
         with:

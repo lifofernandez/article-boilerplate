@@ -1,28 +1,28 @@
 
-# Apnendice A: Pandoc's Markdown{-}
+# Apnendice A: Pandoc's Markdown{.unnumbered}
 
 Pandoc understands an extended and slightly revised version of
-John Gruber's [Markdown] syntax.  This document explains the syntax,
+John Gruber's [Markdown] syntax. This document explains the syntax,
 noting differences from original Markdown.
 
-## Paragraphs{-}
+## Paragraphs{.unlisted .unnumbered}
 
 A paragraph is one or more lines of text followed by one or more blank lines.
 Newlines are treated as spaces, so you can reflow your paragraphs as you like.
 If you need a hard line break, put two or more spaces at the end of a line.
 
-#### Extension: `escaped_line_breaks` ####{-}
+#### Extension: `escaped_line_breaks` ####{.unlisted .unnumbered}
 
 A backslash followed by a newline is also a hard line break.
 Note:  in multiline and grid table cells, this is the only way
 to create a hard line break, since trailing spaces in the cells
 are ignored.
 
-## Headings{-}
+## Headings{.unlisted .unnumbered}
 
 There are two kinds of headings: Setext and ATX.
 
-### Setext-style headings ###{-}
+### Setext-style headings ###{.unlisted .unnumbered}
 
 A setext-style heading is a line of text "underlined" with a row of `=` signs
 (for a level-one heading) or `-` signs (for a level-two heading):
@@ -37,7 +37,7 @@ The heading text can contain inline formatting, such as emphasis (see
 [Inline formatting], below).
 
 
-### ATX-style headings ###{-}
+### ATX-style headings ###{.unlisted .unnumbered}
 
 An ATX-style heading consists of one to six `#` signs and a line of
 text, optionally followed by any number of `#` signs.  The number of
@@ -51,7 +51,7 @@ As with setext-style headings, the heading text can contain formatting:
 
     # A level-one heading with a [link](/url) and *emphasis*
 
-#### Extension: `blank_before_header` ####{-}
+#### Extension: `blank_before_header` ####{.unlisted .unnumbered}
 
 Original Markdown syntax does not require a blank line before a heading.
 Pandoc does require this (except, of course, at the beginning of the
@@ -62,19 +62,19 @@ wrapping). Consider, for example:
     I like several of their flavors of ice cream:
     #22, for example, and #5.
 
-#### Extension: `space_in_atx_header` ####{-}
+#### Extension: `space_in_atx_header` ####{.unlisted .unnumbered}
 
 Many Markdown implementations do not require a space between the
 opening `#`s of an ATX heading and the heading text, so that
 `#5 bolt` and `#hashtag` count as headings.  With this extension,
 pandoc does require the space.
 
-### Heading identifiers ###{-}
+### Heading identifiers ###{.unlisted .unnumbered}
 
 See also the [`auto_identifiers`
 extension](#extension-auto_identifiers) above.
 
-#### Extension: `header_attributes` ####{-}
+#### Extension: `header_attributes` ####{.unlisted .unnumbered}
 
 Headings can be assigned attributes using this syntax at the end
 of the line containing the heading text:
@@ -104,7 +104,7 @@ Headings with the class `unnumbered` will not be numbered, even if
 context is equivalent to `.unnumbered`, and preferable in non-English
 documents.  So,
 
-    # My heading {-}
+    # My heading {.unlisted .unnumbered}
 
 is just the same as
 
@@ -115,7 +115,7 @@ the heading will not be included in a table of contents.
 (Currently this feature is only implemented for certain
 formats: those based on LaTeX and HTML, PowerPoint, and RTF.)
 
-#### Extension: `implicit_header_references` ####{-}
+#### Extension: `implicit_header_references` ####{.unlisted .unnumbered}
 
 Pandoc behaves as if reference links have been defined for each heading.
 So, to link to a heading
@@ -155,7 +155,7 @@ link will point to `bar`, not to `#foo`:
 
     See [foo]
 
-## Block quotations{-}
+## Block quotations{.unlisted .unnumbered}
 
 Markdown uses email conventions for quoting blocks of text.
 A block quotation is one or more paragraphs or other block elements
@@ -192,7 +192,7 @@ block in a block quote, you need five spaces after the `>`:
 
     >     code
 
-#### Extension: `blank_before_blockquote` ####{-}
+#### Extension: `blank_before_blockquote` ####{.unlisted .unnumbered}
 
 Original Markdown syntax does not require a blank line before a
 block quote.  Pandoc does require this (except, of course, at
@@ -206,9 +206,9 @@ not produce a nested block quote in pandoc:
     >> Nested.
 
 
-## Verbatim (code) blocks{-}
+## Verbatim (code) blocks{.unlisted .unnumbered}
 
-### Indented code blocks ###{-}
+### Indented code blocks ###{.unlisted .unnumbered}
 
 A block of text indented four spaces (or one tab) is treated as verbatim
 text: that is, special characters do not trigger special formatting,
@@ -224,9 +224,9 @@ of the verbatim text, and is removed in the output.
 Note: blank lines in the verbatim text need not begin with four spaces.
 
 
-### Fenced code blocks ###{-}
+### Fenced code blocks ###{.unlisted .unnumbered}
 
-#### Extension: `fenced_code_blocks` ####{-}
+#### Extension: `fenced_code_blocks` ####{.unlisted .unnumbered}
 
 In addition to standard indented code blocks, pandoc supports
 *fenced* code blocks.  These begin with a row of three or more
@@ -252,12 +252,12 @@ row of tildes or backticks at the start and end:
     ~~~~~~~~~~
     ~~~~~~~~~~~~~~~~
 
-#### Extension: `backtick_code_blocks` ####{-}
+#### Extension: `backtick_code_blocks` ####{.unlisted .unnumbered}
 
 Same as `fenced_code_blocks`, but uses backticks (`` ` ``) instead of tildes
 (`~`).
 
-#### Extension: `fenced_code_attributes` ####{-}
+#### Extension: `fenced_code_attributes` ####{.unlisted .unnumbered}
 
 Optionally, you may attach attributes to fenced or backtick code block using
 this syntax:
@@ -326,9 +326,9 @@ To set the highlighting style, use `--highlight-style`.
 For more information on highlighting, see [Syntax highlighting],
 below.
 
-## Line blocks{-}
+## Line blocks{.unlisted .unnumbered}
 
-#### Extension: `line_blocks` ####{-}
+#### Extension: `line_blocks` ####{.unlisted .unnumbered}
 
 A line block is a sequence of lines beginning with a vertical bar (`|`)
 followed by a space.  The division into lines will be preserved in
@@ -357,9 +357,9 @@ but not block-level formatting (such as block quotes or lists).
 
 This syntax is borrowed from [reStructuredText].
 
-## Lists{-}
+## Lists{.unlisted .unnumbered}
 
-### Bullet lists ###{-}
+### Bullet lists ###{.unlisted .unnumbered}
 
 A bullet list is a list of bulleted list items.  A bulleted list
 item begins with a bullet (`*`, `+`, or `-`).  Here is a simple
@@ -448,7 +448,7 @@ other blocks in a list item, the first line of each must be indented.
         Second paragraph of second
     list item.
 
-### Ordered lists ###{-}
+### Ordered lists ###{.unlisted .unnumbered}
 
 Ordered lists work just like bulleted lists, except that the items
 begin with enumerators rather than bullets.
@@ -467,7 +467,7 @@ and this one:
     7.  two
     1.  three
 
-#### Extension: `fancy_lists` ####{-}
+#### Extension: `fancy_lists` ####{.unlisted .unnumbered}
 
 Unlike original Markdown, pandoc allows ordered list items to be marked
 with uppercase and lowercase letters and roman numerals, in addition to
@@ -498,7 +498,7 @@ ordered list marker in place of a numeral:
     #. one
     #. two
 
-#### Extension: `startnum` ####{-}
+#### Extension: `startnum` ####{.unlisted .unnumbered}
 
 Pandoc also pays attention to the type of list marker used, and to the
 starting number, and both of these are preserved where possible in the
@@ -527,16 +527,16 @@ If default list markers are desired, use `#.`:
     #.  two
     #.  three
 
-#### Extension: `task_lists` ####{-}
+#### Extension: `task_lists` ####{.unlisted .unnumbered}
 
 Pandoc supports task lists, using the syntax of GitHub-Flavored Markdown.
 
     - [ ] an unchecked task list item
     - [x] checked item
 
-### Definition lists ###{-}
+### Definition lists ###{.unlisted .unnumbered}
 
-#### Extension: `definition_lists` ####{-}
+#### Extension: `definition_lists` ####{.unlisted .unnumbered}
 
 Pandoc supports definition lists, using the syntax of
 [PHP Markdown Extra] with some extensions.[^3]
@@ -594,9 +594,9 @@ hard wrapping, can be activated with `compact_definition_lists`: see
 [^3]:  I have been influenced by the suggestions of [David
   Wheeler](https://justatheory.com/2009/02/modest-markdown-proposal/).
 
-### Numbered example lists ###{-}
+### Numbered example lists ###{.unlisted .unnumbered}
 
-#### Extension: `example_lists` ####{-}
+#### Extension: `example_lists` ####{.unlisted .unnumbered}
 
 The special list marker `@` can be used for sequentially numbered
 examples. The first list item with a `@` marker will be numbered '1',
@@ -629,7 +629,7 @@ labels tend to be long, and indenting content to the
 first non-space character after the label would be awkward.
 
 
-### Ending a list ###{-}
+### Ending a list ###{.unlisted .unnumbered}
 
 What if you want to put an indented code block after a list?
 
@@ -666,7 +666,7 @@ of one big list:
     2.  dos
     3.  tres
 
-## Horizontal rules{-}
+## Horizontal rules{.unlisted .unnumbered}
 
 A line containing a row of three or more `*`, `-`, or `_` characters
 (optionally separated by spaces) produces a horizontal rule:
@@ -680,7 +680,7 @@ surrounding text by blank lines.  If a horizontal rule is not
 followed by a blank line, pandoc may try to interpret the
 lines that follow as a YAML metadata block or a table.
 
-## Tables{-}
+## Tables{.unlisted .unnumbered}
 
 Four kinds of tables may be used. The first three kinds presuppose the use of
 a fixed-width font, such as Courier. The fourth kind can be used with
@@ -693,7 +693,7 @@ illustrated in the examples below). A caption is a paragraph beginning
 with the string `Table:` (or `table:` or just `:`), which will be stripped
 off. It may appear either before or after the table.
 
-#### Extension: `simple_tables` ####{-}
+#### Extension: `simple_tables` ####{.unlisted .unnumbered}
 
 Simple tables look like this:
 
@@ -787,7 +787,7 @@ It is possible for a multiline table to have just one row, but the row
 should be followed by a blank line (and then the row of dashes that ends
 the table), or the table may be interpreted as a simple table.
 
-#### Extension: `grid_tables` ####{-}
+#### Extension: `grid_tables` ####{.unlisted .unnumbered}
 
 Grid tables look like this:
 
@@ -826,7 +826,7 @@ For headerless tables, the colons go on the top line instead:
     | Right         | Left          | Centered           |
     +---------------+---------------+--------------------+
 
-##### Grid table foot #####{-}
+##### Grid table foot #####{.unlisted .unnumbered}
 
 A table foot can be defined by enclosing it with separator lines
 that use `=` instead of `-`:
@@ -897,9 +897,9 @@ you'll need to add colons as above.
 
 [PHP Markdown Extra tables]: https://michelf.ca/projects/php-markdown/extra/#table
 
-## Metadata blocks{-}
+## Metadata blocks{.unlisted .unnumbered}
 
-#### Extension: `pandoc_title_block` ####{-}
+#### Extension: `pandoc_title_block` ####{.unlisted .unnumbered}
 
 If the file begins with a title block
 
