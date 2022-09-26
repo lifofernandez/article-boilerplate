@@ -16,8 +16,8 @@ pdf:
 		-o README.pdf
 		brave README.pdf
 lite:
-	cat ./article/*.md ./extra/md-pandoc.md ./extra/crossref.md  > ./README.md
-	@pandoc ./README.md \
+	cat ./article/*.md  > ./README.md
+	@pandoc ./README.md -f markdown \
 		--metadata-file=./metadata.yaml --mathjax \
 	        -F pandoc-crossref --citeproc \
 		--highlight-style ./vendor/pygments.theme \
