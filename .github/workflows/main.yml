@@ -48,10 +48,11 @@ jobs:
       - name: Install conda 
         run: |
           pip install conda
+          conda update conda
 
       - name: Install pandoc-plot
         run: |
-          conda install -c conda-forge pandoc-plot
+          #conda install -c conda-forge pandoc-plot
           echo $CONDA
           /usr/share/miniconda/bin/pandoc-plot -h
           
