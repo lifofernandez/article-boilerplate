@@ -50,7 +50,7 @@ jobs:
           echo $CONDA
           wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
           chmod +x Miniconda3-latest-Linux-x86_64.sh
-          ./Miniconda3-latest-Linux-x86_64.sh
+          ./Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
           #pip install conda
           #conda update conda
 
@@ -83,7 +83,7 @@ jobs:
           # Could not find executable $CONDA/bin/pandoc-plot
           
           args: 
-            make pdf
+            make lite
             #./README.md -f markdown
             #-F pandoc-crossref --mathjax --citeproc 
             #--highlight-style=./pygments.theme

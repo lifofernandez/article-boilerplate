@@ -86,9 +86,9 @@ resultante de diversos productos.
 
 Esta formación en los estudiantes introducirá en la fuerza de trabajo una nueva
 capacidad  con una inclinación arraigada y fundamental hacia la investigación
-reproducible. Ademas se señala como futura linea de trabajo, la posibilidad
-de generar documentos como el presente mediante operaciones remotas
-automáticas @Baumer_Udwin_2015.
+reproducible @Baumer_Udwin_2015. Ademas de la funcionalidad que se señala como
+futura linea de trabajo, la posibilidad de generar documentos como el presente
+mediante operaciones remotas automáticas.
 
 
 ### Markdown
@@ -119,20 +119,17 @@ HTML; y el _LaTeX_ en línea.
 <!--- describir el proceso -->
 
 En este capitulo se describe el método propuesto y utilizado para producir el
-presente documento. Primero se introduce a la integración de diferentes
-herramientas, algunas distribuidas junto con _Pandoc_ y otras aportes
-independientes de la comunidad.
+presente documento.
 
-Luego sitema de diagramcion y  generacion graficos que 
-permite crear visualizaciones utilizando texto y código.
-Seguido se expone el sistema citas y referencias biblograficas.
-Para concluir este capitulo se exponen cuestiones relacionadas a la notación matemáticas.
-
-
+Primero se introduce a la integración de diferentes herramientas, algunas
+distribuidas junto con _Pandoc_ y otras aportes independientes de la comunidad.
+Luego sistema de diagramación y  generación gráficos que permite crear
+visualizaciones utilizando texto y código.  Seguido se expone el sistema citas
+y referencias bibliográficas. Para concluir este capitulo se exponen cuestiones
+relacionadas a la notación matemática.
 
 <!--- basada en JavaScript
 que renderiza definiciones de texto inspiradas en Markdown para crear y
-
 modificar diagramas de forma dinámica.
 --->
 
@@ -146,13 +143,11 @@ _Pandoc_ funciona como la pieza central que integra
 
 ## Integración
 
-Un potente sistema para escribir filtros.  El diseño modular: consta de un
-conjunto de lectores, que analizan el texto en un formato determinado y
-producen una representación nativa del documento (Abstract Sintactic Three -
-AST), y un conjunto de escritores, que convierten esta representación nativa en
-un formato de destino.
-
-
+El diseño de _Pandoc_ es modular: consta de un conjunto de lectores, que
+analizan el texto en un formato determinado y producen una representación
+nativa del documento (Abstract Sintactic Three - AST), y un conjunto de
+escritores, que convierten esta representación nativa en un formato de destino.
+Ademas, incluye  un potente sistema para escribir filtros.
 
 <!--- Además, adjunte un cronograma de presentaciones intermedias, considerando
 que se debe realizar, como mínimo, una entrega intermedia antes de la entrega
@@ -165,19 +160,19 @@ gráficos mediante código.
 
 ## Gráficos y diagramas
 
-Diagramación y la documentación cuestan un tiempo precioso a los
-desarrolladores y quedan obsoletas rápidamente.
+La diagramación y conllevan tiempo a los investigadores y desarrolladores y
+quedan obsoletas rápidamente. Pero no tener diagramas o documentación arruina
+la productividad y perjudica el aprendizaje de la organización.
 
-Pero no tener diagramas o documentación arruina la productividad y perjudica el
-aprendizaje de la organización.
-
+<!---
 ### pandoc-plot
+--->
 
-_pandoc-plot_ es un filtro de _Pandoc_ para generar figuras a partir de bloques
-de código en documentos.
-
-Esta página está generada a partir de _Markdown_ utilizando _pandoc-plot_, para
-que puedas hacerte una idea de lo que es posible.
+Se destina esta tarena a _pandoc-plot_ es un filtro de _Pandoc_ para generar
+figuras a partir de bloques de código en documentos.  Los gráficos a
+continuación están generados a partir del condigo includo en el fichero
+_Markdown_ original utilizando _pandoc-plot_, para que demostrar las
+posibilidades de esta herramienta.
 
 https://laurentrdc.github.io/pandoc-plot/
 https://the-lum.github.io/puml-themes-gallery/

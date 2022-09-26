@@ -15,38 +15,48 @@ pdf:
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
 		-o README.pdf
 		brave README.pdf
-
-crossref:
-	@pandoc extra/crossref.md \
-		--mathjax \
-        	-F pandoc-crossref --citeproc \
+lite:
+	cat article/*.md extra/md-pandoc.md extra/crossref.md  > README.md
+	@pandoc README.md \
+		--metadata-file=metadata.yaml --mathjax \
+	        -F pandoc-crossref --citeproc \
 		--highlight-style vendor/pygments.theme \
-		--pdf-engine-opt=-shell-escape \
-		-s --columns=80 \
-		-o extra/crossref.pdf
-apendice:
-	@pandoc extra/md-pandoc.md
-		--mathjax \
-        	-F pandoc-crossref --citeproc \
-		--highlight-style vendor/pygments.theme \
-		--pdf-engine-opt=-shell-escape \
-		-s --columns=80 \
-       		-o extra/md-pandoc.pdf
-concat:
-	pdfunite README.pdf extra/md-pandoc.pdf extra/crossref.pdf concat.pdf
+		--template=plantilla --pdf-engine-opt=-shell-escape \
+		-s --toc --toc-depth=2 --number-sections --columns=80 \
+		-o README.pdf
+		brave README.pdf
 
-
-pandoc-plot:
-	git clone https://aur.archlinux.org/pandoc-plot-bin.git
-	cd ./pandoc-plot-bin;
-	makepkg -si
-	cd ../;
-	rm pandoc-plot-bin -r
-
-mermaid-filter:
-	sudo  npm install --global mermaid-filter
-
-
+# crossref:
+# 	@pandoc extra/crossref.md \
+# 		--mathjax \
+#         	-F pandoc-crossref --citeproc \
+# 		--highlight-style vendor/pygments.theme \
+# 		--pdf-engine-opt=-shell-escape \
+# 		-s --columns=80 \
+# 		-o extra/crossref.pdf
+# apendice:
+# 	@pandoc extra/md-pandoc.md
+# 		--mathjax \
+#         	-F pandoc-crossref --citeproc \
+# 		--highlight-style vendor/pygments.theme \
+# 		--pdf-engine-opt=-shell-escape \
+# 		-s --columns=80 \
+#        		-o extra/md-pandoc.pdf
+# concat:
+# 	pdfunite README.pdf extra/md-pandoc.pdf extra/crossref.pdf concat.pdf
+# 
+# 
+# pandoc-plot:
+# 	git clone https://aur.archlinux.org/pandoc-plot-bin.git
+# 	cd ./pandoc-plot-bin;
+# 	makepkg -si
+# 	cd ../;
+# 	rm pandoc-plot-bin -r
+# 
+# mermaid-filter:
+# 	sudo  npm install --global mermaid-filter
+# 
+# 
 #--include-after-body=extra/md-pandoc.tex \
 	#cat article/*.md extra/md-pandoc.md extra/crossref.md > README.md
 	
