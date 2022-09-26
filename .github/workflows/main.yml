@@ -81,22 +81,14 @@ jobs:
           # -F /usr/share/miniconda/bin/pandoc-plot 
           # Error running filter $CONDA/bin/pandoc-plot:
           # Could not find executable $CONDA/bin/pandoc-plot
+          
           args: >- 
             ./README.md -f markdown --metadata-file=./metadata.yaml
             -F pandoc-crossref --mathjax --citeproc 
-            --highlight-style=./pygments.theme
+            --highlight-style=./vendor/pygments.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
             --output=output/README.pdf
-
-#           args: >-
-# 	    ./README.md -f markdown 
-# 	    --metadata-file=./metadata.yaml --mathjax 
-# 	    -F pandoc-crossref --citeproc 
-# 	    --highlight-style=./vendor/pygments.theme 
-# 	    --template=plantilla --pdf-engine-opt=-shell-escape 
-# 	    -s --toc --toc-depth=2 --number-sections --columns=80 
-# 	    --output=output/README.pdf
 
 
       - uses: actions/upload-artifact@v3
