@@ -9,13 +9,13 @@ pdf:
 		--pdf-engine=lualatex \
 		--metadata-file=metadata.yaml --mathjax \
         	-F pandoc-plot \
-	        -F mermaid-filter \
 	        -F pandoc-crossref --citeproc \
 		--highlight-style vendor/pygments.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
 		-o README.pdf
 		brave README.pdf
+
 lite:
 	cat ./article/*.md  > ./README.md
 	@pandoc ./README.md -f markdown \
@@ -25,6 +25,13 @@ lite:
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
 		-o ./README.pdf
+
+pandoc-plot:
+	git clone https://aur.archlinux.org/pandoc-plot-bin.git
+	cd ./pandoc-plot-bin;
+	makepkg -si
+	cd ../;
+	rm pandoc-plot-bin -r
 
 # crossref:
 # 	@pandoc extra/crossref.md \
@@ -46,12 +53,6 @@ lite:
 # 	pdfunite README.pdf extra/md-pandoc.pdf extra/crossref.pdf concat.pdf
 # 
 # 
-# pandoc-plot:
-# 	git clone https://aur.archlinux.org/pandoc-plot-bin.git
-# 	cd ./pandoc-plot-bin;
-# 	makepkg -si
-# 	cd ../;
-# 	rm pandoc-plot-bin -r
 # 
 # mermaid-filter:
 # 	sudo  npm install --global mermaid-filter
