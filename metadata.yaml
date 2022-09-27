@@ -1,3 +1,4 @@
+# Proyect metadata
 institucion: Universidad Tecnológica Nacional
 facultad: 'Facultad Regional Buenos Aires' 
 departamento: 'Escuela de Posgrado' 
@@ -16,7 +17,13 @@ abstract: >-
   Evitar el uso de interfaces captivas beneficia a todos los usuarios, deben
   poder encontrar lo que necesitan, comprender lo que encuentran y usarlo para
   realizar tareas.'
+
+
+# Bibliografia y citas
 reference-section-title: 'Referencias'
+csl: ieee.csl
+# csl: iso690-author-date-es.csl
+# csl: apa-annotated-bibliography.csl
 bibliography: 
   - bib/referencias.bib
   - bib/SMS.bib
@@ -24,8 +31,14 @@ bibliography:
 # nocite: |
 #   #@Guarino2020,@Kitchenham2011
 #   @*
+# Citeproc https://github.com/jgm/citeproc#how-to-use-it
+linkCitations: True
 
-#header-includes: |
+# Configuraciones latex
+colorlinks: true
+lang: es
+header-includes: |
+  \usepackage{svg}
 # \usepackage{grffile}
 # \usepackage{import}
 
@@ -35,18 +48,13 @@ include-after:
 #\import{./}{extra/md-pandoc.tex}
 #\import{./}{extra/crossref.tex}
 
-csl: ieee.csl
-# csl: iso690-author-date-es.csl
-# csl: apa-annotated-bibliography.csl
 
 # citation-abbreviations: jabbrev.json
 # # https://github.com/seananderson/csl-abbrev
 
-colorlinks: true
-lang: es
 
-# template: plantilla.latex
 
+# Crossref 
 codeBlockCaptions: True
 figureTitle: |
   Figure #
@@ -57,4 +65,3 @@ lotTitle: |
 tableTemplate: |
   *$$tableTitle$$ $$i$$*$$titleDelim$$ $$t$$
 autoSectionLabels: True
-# title: pandoc-crossref demo document

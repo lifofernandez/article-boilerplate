@@ -1,5 +1,5 @@
 
-# Apnendice A: Pandoc's Markdown{.unnumbered}
+# Apendice A: Pandoc's Markdown {.unnumbered}
 
 Pandoc understands an extended and slightly revised version of
 John Gruber's [Markdown] syntax. This document explains the syntax,

@@ -451,6 +451,7 @@ $endif$
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 % \usepackage{import}
+% \usepackage{svg}
 
 \begin{document}
 
@@ -610,7 +611,7 @@ $endif$
 \setcounter{tocdepth}{$toc-depth$}
 
 
-\renewcommand{\contentsname}{Contendios}
+\renewcommand{\contentsname}{Contenidos}
 \tableofcontents
 }
 $endif$
