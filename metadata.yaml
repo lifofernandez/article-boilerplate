@@ -38,7 +38,7 @@ linkCitations: True
 colorlinks: true
 lang: es
 header-includes: |
-  \usepackage{svg}
+#  \usepackage{svg}
 # \usepackage{grffile}
 # \usepackage{import}
 
@@ -49,12 +49,8 @@ include-after:
 #\import{./}{extra/crossref.tex}
 
 
-# citation-abbreviations: jabbrev.json
-# # https://github.com/seananderson/csl-abbrev
 
-
-
-# Crossref 
+# Crossref opts
 codeBlockCaptions: True
 figureTitle: |
   Figure #
@@ -65,3 +61,6 @@ lotTitle: |
 tableTemplate: |
   *$$tableTitle$$ $$i$$*$$titleDelim$$ $$t$$
 autoSectionLabels: True
+
+# citation-abbreviations: jabbrev.json
+# # https://github.com/seananderson/csl-abbrev

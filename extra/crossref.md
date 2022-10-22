@@ -23,7 +23,7 @@ It is also possible to mix different references, like [@fig:figure1;
 @tbl:table1; @lst:captionAttr; @lst:tableCaption; @fig:figure2; @fig:figure3],
 which will be grouped in order they are specified. You can even intermix this
 with regular citations, although it's not recommended: [@fig:figure1;
-@tbl:table1; @unprocessedCitation]
+@tbl:table1]
 
 You can also have custom chapter reference labels, like @sec:custlabs
 
@@ -56,14 +56,15 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Since 0.1.6.0 those can also appear in the middle of paragraph
 $$a x^2 + b x^2 + c = 0$$ {#eq:quadr} like this.
 
-## Tables {.unlisted .unnumbered} 
+## Tables {.unlisted .unnumbered #tbl:table1 }
 
 | First Header | Second Header |
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-## Table example {#tbl:table1 .unlisted .unnumbered}}
+## Table example {.unlisted .unnumbered #tbl:table2 } 
+
 
 Table without caption:
 

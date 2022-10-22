@@ -4,6 +4,7 @@ install:
 	pip install matplotlib
 
 pdf:
+	make lite
 	cat article/*.md extra/md-pandoc.md extra/crossref.md  > README.md
 	@pandoc README.md \
 		--pdf-engine=lualatex \
@@ -17,14 +18,14 @@ pdf:
 		brave README.pdf
 
 lite:
-	cat ./article/*.md  > ./README.md
-	@pandoc ./README.md -f markdown \
+	cat ./article/*.md  > ./README-lite.md
+	@pandoc ./README-lite.md -f markdown \
 		--metadata-file=./metadata.yaml --mathjax \
 	        -F pandoc-crossref --citeproc \
 		--highlight-style ./vendor/pygments.theme \
 		--template=plantilla --pdf-engine-opt=-shell-escape \
 		-s --toc --toc-depth=2 --number-sections --columns=80 \
-		-o ./README.pdf
+		-o ./README-lite.pdf
 
 pandoc-plot:
 	git clone https://aur.archlinux.org/pandoc-plot-bin.git

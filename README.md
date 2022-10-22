@@ -310,17 +310,15 @@ documentos de _Markdown_. Las matemáticas de _LaTeX_ se convierten (según lo
 requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
 MathML o roff eqn.
 
-Se proporcionan varios métodos diferentes para representar las matemáticas en
-HTML, incluyendo MathJax y la traducción a MathML.
+Se proporcionan varios métodos diferentes para representar las matemáticas
+incluyendo sintaxis _MathJax_ y la traducción a _MathML_.
 
 Cuando $a \ne 0$, hay dos soluciones a \(ax^2 + bx + c = 0\) las cuales son $$x
 = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-<!-- 
-**Transformación de contenidos:** Logotipo estilizado de EpubMathJax
+**Transformación de contenidos:** EpubMathJax
 proporciona herramientas para transformar sus contenidos de fuentes impresas
 tradicionales en contenidos web y ePubs modernos y accesibles.
--->
 
 **Tipografía de alta calidad:** MathJax utiliza fuentes SVG, en lugar de de
 imágenes de mapa de bits, por lo que las ecuaciones se escalan con el
@@ -345,12 +343,12 @@ operaciones remotas automáticas.
 
 Para recrear el proceso que se utilizo para confeccionar este documentos
 Un ejemplo de como usar esta herramienta es el mismo comando que sirve para
-conseguir este documento desde su fuente en _Markdown_ .
-[^1]
+conseguir este documento desde su fuente en _Markdown_[^1].
 
-[^1]: Como conseguir una instalción funcional de _pandoc_ esta fuera del
-  alcance de este articulo. Para instrucciones completas de como installar la
-herramienta vea las indicaciones del autor @installPandoc.
+[^1]: No obstante, conseguir una instalción funcional de _pandoc_ depende del
+sistema en que se vaya ejecutar y esto sobrepasa el el alcance de este
+artículo. Para instrucciones para installar la herramienta cosultar las
+indicaciones su autor @installPandoc.
 
 ```console
 $ pandoc README.md \
@@ -1668,7 +1666,7 @@ It is also possible to mix different references, like [@fig:figure1;
 @tbl:table1; @lst:captionAttr; @lst:tableCaption; @fig:figure2; @fig:figure3],
 which will be grouped in order they are specified. You can even intermix this
 with regular citations, although it's not recommended: [@fig:figure1;
-@tbl:table1; @unprocessedCitation]
+@tbl:table1]
 
 You can also have custom chapter reference labels, like @sec:custlabs
 
@@ -1701,14 +1699,15 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Since 0.1.6.0 those can also appear in the middle of paragraph
 $$a x^2 + b x^2 + c = 0$$ {#eq:quadr} like this.
 
-## Tables {.unlisted .unnumbered} 
+## Tables {.unlisted .unnumbered #tbl:table1 }
 
 | First Header | Second Header |
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-## Table example {#tbl:table1 .unlisted .unnumbered}}
+## Table example {.unlisted .unnumbered #tbl:table2 } 
+
 
 Table without caption:
 

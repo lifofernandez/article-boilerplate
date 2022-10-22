@@ -14,49 +14,50 @@ jobs:
       # - run: sudo ln -s /usr/bin/nodejs /usr/bin/node
       # - run: npm install mermaid-filter
 
-      - name: Set up Python 3
-        #uses: actions/setup-python@v2
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-
-      # - uses: s-weigand/setup-conda@v1
-      #   with:
-      #     activate-conda: false
-      # - run: conda --version
-      # - run: which python
-
-      # - name: Install dependencies
-      #   run: |
-      #     pyton -V
-      #     # $CONDA is an environment variable pointing to the root of the miniconda directory
-      #     $CONDA/bin/conda env update --file environment.yml --name base
-
-      #- name: Lint with flake8
+      #- name: Set up Python 3
+      #  #uses: actions/setup-python@v2
+      #  uses: actions/setup-python@v4
+      #  with:
+      #    python-version: 3.x
+      
+      ## - uses: s-weigand/setup-conda@v1
+      ##   with:
+      ##     activate-conda: false
+      ## - run: conda --version
+      ## - run: which python
+      
+      ## - name: Install dependencies
+      ##   run: |
+      ##     pyton -V
+      ##     # $CONDA is an environment variable pointing to the root of the miniconda directory
+      ##     $CONDA/bin/conda env update --file environment.yml --name base
+      
+      ##- name: Lint with flake8
+      ##  run: |
+      ##    $CONDA/bin/conda install flake8
+      ##    # stop the build if there are Python syntax errors or undefined names
+      ##    $CONDA/bin/flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+      ##    # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+      ##    $CONDA/bin/flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      
+      ## - name: Test with pytest
+      ##   run: |
+      ##    conda install pytest
+      ##    $CONDA/bin/pytest
+      
+      #- name: Install miniconda 
       #  run: |
-      #    $CONDA/bin/conda install flake8
-      #    # stop the build if there are Python syntax errors or undefined names
-      #    $CONDA/bin/flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      #    # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-      #    $CONDA/bin/flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-      # - name: Test with pytest
-      #   run: |
-      #    conda install pytest
-      #    $CONDA/bin/pytest
-
-      - name: Install miniconda 
-        run: |
-          echo $CONDA
-          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-          chmod +x Miniconda3-latest-Linux-x86_64.sh
-          ./Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
-          #pip install conda
-          #conda update conda
-      #- name: Install pandoc-plot
-      #  run: |
-      #    conda install -c conda-forge pandoc-plot
-      #     #/usr/share/miniconda/bin/pandoc-plot -h
+      #    echo $CONDA
+      #    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+      #    chmod +x Miniconda3-latest-Linux-x86_64.sh
+      #    ./Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+      #    #pip install conda
+      #    #conda update conda
+      
+      ##- name: Install pandoc-plot
+      ##  run: |
+      ##    conda install -c conda-forge pandoc-plot
+      ##     #/usr/share/miniconda/bin/pandoc-plot -h
           
       - run: mkdir -p output
 
@@ -80,9 +81,9 @@ jobs:
           # -F /usr/share/miniconda/bin/pandoc-plot 
           # Error running filter $CONDA/bin/pandoc-plot:
           # Could not find executable $CONDA/bin/pandoc-plot
-          
+          # TODO: Add cat article/*.md > README-lite.md 
           args: >- 
-            ./README.md -f markdown --metadata-file=./metadata.yaml
+            ./README-lite.md -f markdown --metadata-file=./metadata.yaml
             -F pandoc-crossref --mathjax --citeproc 
             --highlight-style=./vendor/pygments.theme
             --template=./plantilla --pdf-engine-opt=-shell-escape
