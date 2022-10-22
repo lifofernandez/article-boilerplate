@@ -1,12 +1,10 @@
 
-# Apendice B: Crossref {.unnumbered}
+# Apendice B: Crossref {#sec:apendixB .unnumbered}
 
 This is a demo file for pandoc-crossref. With this filter, you can
 cross-reference figures (see [@fig:figure1;@fig:figure2;@fig:figure3]), display
-equations (see @eq:eqn1), tables (see [@tbl:table1]) and sections
-([@sec:sec1;
-@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div])
-.
+equations (see @eq:eqn1), tables (see @tbl:table1) and sections ([@sec:sec1;
+@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div]) .
 
 For immediate example, see @fig:figure0
 
@@ -49,14 +47,14 @@ Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
 Subfigures caption
 </div>
 
-## Equations  {.unlisted .unnumbered #sec:sec2} 
+## Equations {.unlisted .unnumbered #sec:sec2} 
 
 Display equations are labelled and numbered
 
 $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 
 Since 0.1.6.0 those can also appear in the middle of paragraph
-$$a x^2 + b x^2 + c = 0$${#eq:quadr} like this.
+$$a x^2 + b x^2 + c = 0$$ {#eq:quadr} like this.
 
 ## Tables {.unlisted .unnumbered} 
 
@@ -65,7 +63,7 @@ $$a x^2 + b x^2 + c = 0$${#eq:quadr} like this.
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-: Table example {#tbl:table1 .unlisted .unnumbered}}
+## Table example {#tbl:table1 .unlisted .unnumbered}}
 
 Table without caption:
 

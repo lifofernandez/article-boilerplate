@@ -1,12 +1,10 @@
 # Producción académica con Pandoc
 
-<!--- Temática que abordará --->
-
-Este proyecto describe la confección de escritos académicos o de complejidad
-considerable, sin la necesidad de interfaces gráficas.  Evitar el uso formatos
-codificados o de poca legibilidad beneficia a todos los usuarios, que deben
-poder encontrar lo que necesitan, comprender lo que encuentran y usarlo para
-realizar tareas @caleb.
+Este proyecto propone la confección de escritos académicos o de complejidad
+considerable, sin la necesidad de interfaces gráficas. Promover el uso formatos
+no codificados o de alta legibilidad beneficia a todos los usuarios, que deben
+poder encontrar facilmente lo que necesitan, comprender lo que encuentran y
+usarlo para realizar tareas @caleb.
 
 El objetivo de este trabajo es un entorno de autoría textos en el cual _Pandoc_
 es la pieza central que actúa como interprete del sistema de composición
@@ -15,25 +13,42 @@ facto para la comunicación y publicación de documentos académicos [@macfarlan
 @knuth1986texbook].
 
 Mediante integraciones sencillas se consigue una infraestructura robusta con
-funciones diseñadas para gestionar exposición de extensas referencias,
+funciones diseñadas para gestionar exposición de extensas biblografías,
 múltiples citas y referencias a diferentes fuentes, notación matemática,
 generación gráficos y diagramas, entre otras capacidades avanzadas, necesarias
-para la producción de documentación técnica y científica, todo el proceso es
-controlado mediante linea de comandos sin depender de interfaces captivas
-promoviendo la transparencia, la claridad y la reproducción [@gancarz2003linux
+en la producción de documentación técnica y científica, todo el proceso es
+controlado mediante linea de comandos sin depender de interfaces captivas,
+promoviendo la transparencia, claridad y reproducción [@gancarz2003linux
 p.88-97].
 
-<!--
-Se trata de una herramienta de código abierto que puede
-utilizarse por sí sola o a través del entorno de desarrollo integrado (IDE)
--->
+## Interfaz de usuario textual
+ 
+La principal característica de las herramientas y formatos involucrados en este
+proyecto es que están preparadas para interpretar instrucciones textuales. De
+los beneficios que trabajar de este modo habilita se destacan cuestiones de
+accesibilidad y la posibilidad de gestionar la exposición de conocimiento de la
+misma manera que se produce software [@hunt1999pragmatic; @das;
+@moolenaar2000].
+
+Separar contenido, referencias, estilos y procesos, en un contexto de
+organizaciones con actividades relacionadas a la publicación, donde la
+complejidad no solo reside en los documentos sino que también en la tarea, dado
+que involucra a múltiples agentes (autores, correctores y editores, entre
+otros) y devuelve el control de estilo a la organización, garantizando unidad
+en estética en la composición gráfica resultante de diversos productos.
+
+Esta formación introducirá en la fuerza de trabajo una nueva capacidad con una
+inclinación arraigada y fundamental hacia la investigación reproducible
+@Baumer_Udwin_2015. El lenguaje sigue siendo la mejor interfaz que se ha
+utilizado. Es sencillo, componible y ubicuo, está disponible en
+todos los sistemas. Es fácil de mantener, automatizar y ampliar @scale.
 
 ## Pandoc
 
-_Pandoc_ es una biblioteca de _Haskell_  para convertir de un
-formato de marcado ligero a otro, y una herramienta de línea de comandos que
-accede a las funciones en esta biblioteca para convertir entre 
-formatos y procesar textos @marlow2010haskell.
+_Pandoc_ es una biblioteca de _Haskell_  para convertir de un formato de
+marcado ligero a otro, y una herramienta de línea de comandos que accede a las
+funciones en esta biblioteca para convertir entre formatos y procesar textos
+@marlow2010haskell.
 
 El diseño de _Pandoc_ es modular, esta conformado por un conjunto de lectores,
 que analizan el texto en un formato determinado y producen una representación
@@ -41,67 +56,16 @@ nativa del documento en un árbol de sintaxis abstracta (Abstract Syntax Tree -
 AST) y un conjunto de escritores, que convierten esta representación a un
 formato de destino [@ASTImpl2003; @Neamtiu05understandingsource].
 
-<!---
-Por lo tanto, para añadir un formato de entrada o de
-salida basta con añadir un lector o un escritor.
-Los usuarios también pueden
-ejecutar filtros pandoc personalizados para modificar el AST intermedio
-
-La biblioteca incluye módulos separados para cada formato de entrada y salida,
-por lo que para añadir un nuevo formato (de entrada o salida) sólo hay que añadir
-un nuevo módulo.
---->
-
-<!--- https://explained-from-first-principles.com/number-theory/ --->
-<!--- Pandoc incluye una biblioteca Haskell y un programa de línea de comandos
-independiente.  --->
-
-<!--- incluyendo, pero sin limitarse a, varios sabores de _Markdown_, HTML, _LaTeX_
-y Word docx.
-Pandoc es software libre, publicado bajo la GPL.  Copyright 2006-2022 John
-MacFarlane.  --->
-
-<!--- Conjunto de herramientas de publicación académica potente, ampliable y
-repleto de funciones.
-Construya y personalizar con Pandoc, utilizar un sistema de composición
-tipográfica (_LaTeX_) y y componentes, y dé vida a los proyectos con potentes
-filtros.  --->
-
-## Interfaz 
-
-La principal característica de las herramientas empleadas este proyecto es
-que están preparadas para recibir instrucciones alojadas en
-archivos de texto. Entre los beneficios que trabajar de este modo habilita se
-destacan cuestiones de accesibilidad y la posibilidad de gestionar el
-conocimiento de la misma manera que se produce software [@hunt1999pragmatic;
-@das; @moolenaar2000].
-
-Separar contenido, referencias, estilos y procesos, en un contexto de
-organizaciones con actividades relacionadas a la publicación, donde la
-complejidad no solo reside en los documentos sino que también en la tarea, dado
-que involucra a múltiples agentes (como autores, correctores y editores, entre
-otros); libera al autor de problemas estéticos y devuelve el control de estilo
-a la organización garantizando unidad en estética en la composiciones gráfica
-resultante de diversos productos.
-
-Esta formación en los estudiantes introducirá en la fuerza de trabajo una nueva
-capacidad  con una inclinación arraigada y fundamental hacia la investigación
-reproducible @Baumer_Udwin_2015. Ademas de la funcionalidad que se señala como
-futura linea de trabajo, la posibilidad de generar documentos como el presente
-mediante operaciones remotas automáticas.
-
-
 ## Markdown
 
-_Markdown_ es una sintaxis  de formato de texto plano.
-El formato de texto es el marcado que se aplica a un texto simple para añadir
-datos de estilo más allá de la semántica de los elementos: colores, estilos, pesos
-tamaño, y características especiales (como hipervínculos).
-Al texto resultante se le conoce como texto formateado, texto con estilos, o
-texto enriquecido @gruber.
+_Markdown_ es una sintaxis  de formato de texto plano.  El formato de texto es
+el marcado que se aplica a un texto simple para añadir datos de estilo más allá
+de la semántica de los elementos: colores, estilos, pesos tamaño, y
+características especiales (como hipervínculos).  Al texto resultante se le
+conoce como texto formateado, texto con estilos, o texto enriquecido @gruber.
 
 Lo que distingue a _Markdown_ de muchas otras sintaxis de marcado ligero, es su
-enfasis en la legibilidad.  El objetivo prisipal del diseño de la sintaxis de
+énfasis en la legibilidad.  El objetivo prinsipal del diseño de la sintaxis de
 formato de _Markdown_ es hacerla lo más legible posible. La idea es que un
 documento con formato _Markdown_ sea publicable tal cual, como texto plano, sin
 que parezca que ha sido marcado con etiquetas o instrucciones de formato.
@@ -112,66 +76,58 @@ tablas; las listas de definiciones; los superíndices y subíndices; la
 tachadura; las listas ordenadas mejoradas (el número de inicio y el estilo de
 numeración son significativos); las listas de ejemplos en ejecución; los
 bloques de código de software delimitados con resaltado de sintaxis; las
-comillas inteligentes, los guiones y las elipses; el _Markdown_ dentro de bloques
-HTML; y el _LaTeX_ en línea.
+comillas inteligentes, los guiones y las elipses; el _Markdown_ dentro de
+bloques HTML; y el _LaTeX_ en línea.
 
 # Metodotología 
-
-<!--- describir el proceso -->
 
 En este capitulo se describe el método propuesto y utilizado para producir el
 presente documento.
 
-Primero se introduce a la integración de diferentes herramientas, algunas
+Primero se describe la integración de diferentes piezas de software, algunas
 distribuidas junto con _Pandoc_ y otras aportes independientes de la comunidad.
-Luego sistema de diagramación y  generación gráficos que permite crear
-visualizaciones utilizando texto y código.  Seguido se expone el sistema citas
+Seguido se presenta sistema de diagramación y generación gráficos que permite crear
+visualizaciones utilizando texto y código. Luego se expone el sistema citas
 y referencias bibliográficas. Para concluir este capitulo se exponen cuestiones
 relacionadas a la notación matemática.
-
-<!---
-Así, para
-añadir un formato de entrada o de salida basta con añadir un lector o un
-escritor. Los usuarios también pueden ejecutar filtros personalizados de pandoc
-para modificar el AST intermedio.
-_Pandoc_ funciona como la pieza central que integra
---->
 
 ## Integración
 
 El diseño de _Pandoc_ es modular: consta de un conjunto de lectores, que
 analizan el texto en un formato determinado y producen una representación
 nativa del documento (Abstract Sintactic Three - AST), y un conjunto de
-escritores, que convierten esta representación nativa en un formato de destino.
-Ademas, incluye  un potente sistema para escribir filtros.
+registros, que convierten esta representación nativa en un formato de destino.
 
-<!--- Además, adjunte un cronograma de presentaciones intermedias, considerando
-que se debe realizar, como mínimo, una entrega intermedia antes de la entrega
-final.  --->
+Ademas, incluye un potente sistema para escribir filtros, para incluir un
+formato de entrada o de salida basta con añadir un lector o un escritor.
+También es posible crear filtros personalizados para modificar el AST
+intermedio.
 
 De los múltiples maneras de personalizar _Pandoc_ para que se adapte a los
-requisitos de cada proyecto, se destaca el uso de un sistema de plantillas y un
+requisitos de cada proyecto, se destaca el uso de un sistema de plantillas, un
 potente sistema de citas y bibliografías automáticas y la generación de
 gráficos mediante código.
 
 ## Gráficos y diagramas
 
-La diagramación y conllevan tiempo a los investigadores y desarrolladores y
-quedan obsoletas rápidamente. Pero no tener diagramas o documentación arruina
-la productividad y perjudica el aprendizaje de la organización.
+La diagramación conlleva tiempo a los investigadores y desarrolladores, los
+gráficos producidos suelen quedar obsoletos rápidamente. Pero no tener
+diagramas o documentación arruina la productividad y perjudica el aprendizaje
+de la organización.
 
-<!--- ### pandoc-plot --->
+Se destina esta tarea a _pandoc-plot_, un filtro de _Pandoc_ para generar
+figuras a partir de bloques de código en los documentos @pandocplot.
+Al actual, _pandoc-plot_ es compatible con el siguiente conjunto de
+herramientas de trazado: matplotlib; _plotly_python, plotly_r, matlabplot,
+mathplot, octaveplot, ggplot2, gnuplot, graphviz, bokeh, plotsjl_ y _plantuml_.
 
-Se destina esta tarena a _pandoc-plot_ es un filtro de _Pandoc_ para generar
-figuras a partir de bloques de código en documentos.  Los gráficos a
-continuación están generados a partir del condigo includo en el fichero
-_Markdown_ original utilizando _pandoc-plot_, para que demostrar las
-posibilidades de esta herramienta.
+En este trabajo se implementan dos de ellas, _Matplotlib_ y _PlantUML_
+[@matplotlib; @plantuml]. En los apartados a continuación se exponen gráficos
+generados con dichas herramientas partir del condigo incluido en el fichero
+_Markdown_ original, para que demostrar las posibilidades de esta herramienta.
 
-https://laurentrdc.github.io/pandoc-plot/
-https://the-lum.github.io/puml-themes-gallery/
 
-<!--- Matplotlib --->
+### Matplotlib
 
 ```{.matplotlib }
 import numpy as np
@@ -184,12 +140,12 @@ positive_r = r >= 0
 fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 5), subplot_kw={'polar': True})
 
 for ax in (ax1, ax2):
-    if ax == ax2:
-        # change negative r values to positive, rotating theta by 180º
-        theta = np.where(r >= 0, theta, theta + np.pi)
-        r = np.abs(r)
-    ax.plot(theta[positive_r], r[positive_r], color='skyblue')
-    ax.plot(theta[~positive_r], r[~positive_r], color='tomato')
+  if ax == ax2:
+    # change negative r values to positive, rotating theta by 180º
+    theta = np.where(r >= 0, theta, theta + np.pi)
+    r = np.abs(r)
+  ax.plot(theta[positive_r], r[positive_r], color='skyblue')
+  ax.plot(theta[~positive_r], r[~positive_r], color='tomato')
 ax1.set_title('Default: negative $r$\non same side as $theta$')
 ax2.set_title('Negative $r$ on other side')
 
@@ -229,7 +185,7 @@ c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
 plt.title('This is an example figure')
 ```
 
-<!--- plantUML --->
+### PlantUML
 
 ```{.plantuml}
 @startuml
@@ -295,41 +251,35 @@ DNS is Idle
 @enduml
 ```
 
-## Bibliografías sofisticadas
-
-Para la gestison de bliografia Por ejemplo, esto significa que puede escribir
-una referencia como `@moolenaar2000` o también `[@knuth1986texbook p.3-9]` y
-_Pandoc_ a convertirá en una cita con el formato predefinido, utilizando
-cualquiera de los cientos de Lenguajes de Estilo de Cita (Citation Style
-Language - CSL) incluyendo estilos de nota al pie, numéricos y autoría, fuente
-y fechas), y añadirá una bibliografía con el formato adecuado al final del
-documento.
-
 <!---
 Citas y referencias bibliogáficas 
 BibLATEX – Sophisticated Bibliographies in LATEX
 --->
+## Citas, referencias y bibliografía
 
-Los datos bibliográficos pueden estar en formato BibTeX, BibLaTeX, CSL JSON o
-CSL YAML. Las citas funcionan en todos los formatos de salida.
+Para citar, enlazar a referencias y exposición de bibliografía consultada se
+emplea _BibLaTeX_, una herramienta y un formato de archivo que se utilizan para
+describir y procesar listas de referencias, sobre todo en combinación con
+documentos _LaTeX_.
+
+Los datos bibliográficos de entrada pueden estar en formato BibTeX, BibLaTeX,
+CSL JSON o CSL YAML. Las citas funcionan en todos los formatos de salida.
 
 ### BibLaTeX 
 
-La palabra ,,BibTeX'' es una herramienta y un formato de archivo que se
-utilizan para describir y procesar listas de referencias, sobre todo en
-combinación con documentos LaTeX.
+_BibLaTeX_ una reimplementación completa de las facilidades bibliográficas
+proporcionadas por _LaTeX_. Esto significa, por ejemplo que al declarar una
+referencia como `@moolenaar2000` o también `[@knuth1986texbook p.3-9]` _Pandoc_
+las convertirá en una cita con el formato predefinido, utilizando cualquiera de
+los cientos de Lenguajes de Estilo de Cita (Citation Style Language - CSL),
+incluyendo estilos de nota al pie, numéricos y autoría, fuente y fechas; y
+añadirá a la referencia bibliografía con el formato adecuado al final del
+documento.
 
-BibLaTeX es una reimplementación completa de las facilidades bibliográficas
-proporcionadas por LaTeX.
-El formato de la bibliografía está totalmente
-controlado por las macros de LaTeX, y un conocimiento práctico de LaTeX debería
-ser suficiente para diseñar nuevos estilos de bibliografía y citación.
-BibLATEX tiene muchas características que rivalizan o superan a otros
-sistemas bibliográficos.
-
-<!--- BibLATEX utiliza su propio programa de respaldo de datos llamado "biber"
-para leer y procesar los datos bibliográficos.  --->
-
+El formato de la bibliografía está totalmente controlado por las macros de
+_LaTeX_, y un conocimiento práctico de _LaTeX_ debería ser suficiente para
+diseñar nuevos estilos de bibliografía y citación. _BibLaTeX_ tiene muchas
+características que rivalizan o superan a otros sistemas bibliográficos.
 
 ### Lenguaje de Estilo de Citación
 
@@ -338,42 +288,25 @@ proporcionan la atribución, enlazan referentes.  Sin embargo, formatear
 manualmente las referencias puede llevar mucho tiempo, especialmente cuando se
 trata de múltiples publicaciones con diferentes estilos de citación.
 
-<!--- Programas como Zotero, Mendeley y Papers
-https://www.mendeley.com/guides/csl-editor/ --->
-
 El software de gestión de referencias no sólo ayuda a gestionar bibliotecas de
 investigación, sino que también pueden generar automáticamente citas y
 bibliografías. Pero para formatear las referencias en el estilo deseado, estos
 programas necesitan descripciones de cada estilo de citación en un lenguaje que
 el ordenador pueda entender, el Lenguaje de Estilo de Citación (Citation Style
-Languaje - CSL) es el descriptor utilizado @zellecitation.
+Languaje - CSL) es el descriptor utilizado es un formato basado en XML para
+describir el formato de citas, notas y bibliografías @zellecitation.
 
-El Lenguaje de Estilo de Citación (CSL) es un formato basado en XML para
-describir el formato de citas, notas y bibliografías, ofreciendo:
+### Pandoc crossref
 
-Para obtener más documentación, el esquema CSL, los estilos y las
-localizaciones, visite la página web del proyecto proyecto CSL,
-citationstyles.org.
-
-### citeproc 
-
-citeproc analiza los archivos de estilo CSL y los utiliza para generar una
-lista de citas y entradas bibliográficas formateadas. Para más información
-sobre CSL, consulte https://citationstyles.org/.
-
-Esta biblioteca genera citas y bibliografía formateadas según el estilo CSL.
-Actualmente la versión 1.0.2 de la especificación CSL es el objetivo.
-
-<!--
-Si alguna vez has escrito un trabajo de investigación,
-habrás trabajo de investigación,
-probablemente has incluido referencias a otros trabajos.
---->
+_pandoc-crossref_ es un filtro de para numerar figuras, ecuaciones, tablas y
+referencias cruzadas a las mismas @crossref. En Apéndice B @sec:apendixB, se expone 
+el documento oficial de demostración las capacidades de esta herramienta,
+incluido en la cadena de procesos de estos proyectos.
 
 ## Notación matemática
 
-Las matemáticas de LaTeX (e incluso las macros) pueden utilizarse en los
-documentos de _Markdown_. Las matemáticas de LaTeX se convierten (según lo
+Las matemáticas de _LaTeX_ (e incluso las macros) pueden utilizarse en los
+documentos de _Markdown_. Las matemáticas de _LaTeX_ se convierten (según lo
 requiera el formato de salida) en unicode, objetos de ecuación nativos de Word,
 MathML o roff eqn.
 
@@ -383,21 +316,25 @@ HTML, incluyendo MathJax y la traducción a MathML.
 Cuando $a \ne 0$, hay dos soluciones a \(ax^2 + bx + c = 0\) las cuales son $$x
 = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
+<!-- 
 **Transformación de contenidos:** Logotipo estilizado de EpubMathJax
 proporciona herramientas para transformar sus contenidos de fuentes impresas
 tradicionales en contenidos web y ePubs modernos y accesibles.
+-->
 
-**Tipografía de alta calidad:** MathJax utiliza CSS con fuentes web o SVG, en
-lugar de de imágenes de mapa de bits o Flash, por lo que las ecuaciones se
-escalan con el texto circundante en todos los niveles de zoom.
+**Tipografía de alta calidad:** MathJax utiliza fuentes SVG, en lugar de de
+imágenes de mapa de bits, por lo que las ecuaciones se escalan con el
+texto circundante.
 
 **Modular la entrada y la salida:** MathJax es altamente modular en la entrada
-y la salida. Utiliza MathML, TeX, y ASCIImath como entrada y produce HTML+CSS,
-SVG, o MathML como salida.
+y la salida. Utiliza MathML, TeX, y ASCIImath como entrada y MathML como
+salida.
 
 **Accesible y reutilizable:** MathJax funciona con lectores de pantalla y
 proporciona zoom de expresión y exploración interactiva. También puede copiar
 ecuaciones en Office, LaTeX, wikis y otro software.
+
+
 
 # Resultados
 
@@ -1707,14 +1644,12 @@ following restrictions apply:
 [YAML escape sequence]: https://yaml.org/spec/1.2/spec.html#id2776092
 [Wikipedia entry on YAML syntax]:  https://en.wikipedia.org/wiki/YAML#Syntax
 
-# Apendice B: Crossref {.unnumbered}
+# Apendice B: Crossref {#sec:apendixB .unnumbered}
 
 This is a demo file for pandoc-crossref. With this filter, you can
 cross-reference figures (see [@fig:figure1;@fig:figure2;@fig:figure3]), display
-equations (see @eq:eqn1), tables (see [@tbl:table1]) and sections
-([@sec:sec1;
-@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div])
-.
+equations (see @eq:eqn1), tables (see @tbl:table1) and sections ([@sec:sec1;
+@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div]) .
 
 For immediate example, see @fig:figure0
 
@@ -1757,14 +1692,14 @@ Subfigures are supported, see [@fig:subfigures; @fig:subfigureB]
 Subfigures caption
 </div>
 
-## Equations  {.unlisted .unnumbered #sec:sec2} 
+## Equations {.unlisted .unnumbered #sec:sec2} 
 
 Display equations are labelled and numbered
 
 $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 
 Since 0.1.6.0 those can also appear in the middle of paragraph
-$$a x^2 + b x^2 + c = 0$${#eq:quadr} like this.
+$$a x^2 + b x^2 + c = 0$$ {#eq:quadr} like this.
 
 ## Tables {.unlisted .unnumbered} 
 
@@ -1773,7 +1708,7 @@ $$a x^2 + b x^2 + c = 0$${#eq:quadr} like this.
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-: Table example {#tbl:table1 .unlisted .unnumbered}}
+## Table example {#tbl:table1 .unlisted .unnumbered}}
 
 Table without caption:
 
