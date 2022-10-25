@@ -1,17 +1,17 @@
 
-# Apendice A: Pandoc's Markdown {.unnumbered}
+# Apendice A: Pandoc's Markdown {#sec:apendixA}
 
 Pandoc understands an extended and slightly revised version of
 John Gruber's [Markdown] syntax. This document explains the syntax,
 noting differences from original Markdown.
 
-## Paragraphs{.unlisted .unnumbered}
+## Paragraphs {.unlisted .unnumbered}
 
 A paragraph is one or more lines of text followed by one or more blank lines.
 Newlines are treated as spaces, so you can reflow your paragraphs as you like.
 If you need a hard line break, put two or more spaces at the end of a line.
 
-#### Extension: `escaped_line_breaks` ####{.unlisted .unnumbered}
+#### Extension: `escaped_line_breaks` #### {.unlisted .unnumbered}
 
 A backslash followed by a newline is also a hard line break.
 Note:  in multiline and grid table cells, this is the only way
@@ -474,9 +474,9 @@ with uppercase and lowercase letters and roman numerals, in addition to
 Arabic numerals. List markers may be enclosed in parentheses or followed by a
 single right-parenthesis or period. They must be separated from the
 text that follows by at least one space, and, if the list marker is a
-capital letter with a period, by at least two spaces.[^2]
+capital letter with a period, by at least two spaces.[^3]
 
-[^2]:  The point of this rule is to ensure that normal paragraphs
+[^3]:  The point of this rule is to ensure that normal paragraphs
     starting with people's initials, like
 
         B. Russell was an English philosopher.
@@ -539,7 +539,7 @@ Pandoc supports task lists, using the syntax of GitHub-Flavored Markdown.
 #### Extension: `definition_lists` ####{.unlisted .unnumbered}
 
 Pandoc supports definition lists, using the syntax of
-[PHP Markdown Extra] with some extensions.[^3]
+[PHP Markdown Extra] with some extensions.[^4]
 
     Term 1
 
@@ -591,7 +591,7 @@ Note that space between items in a definition list is required.
 hard wrapping, can be activated with `compact_definition_lists`: see
 [Non-default extensions], below.)
 
-[^3]:  I have been influenced by the suggestions of [David
+[^4]:  I have been influenced by the suggestions of [David
   Wheeler](https://justatheory.com/2009/02/modest-markdown-proposal/).
 
 ### Numbered example lists ###{.unlisted .unnumbered}
@@ -707,7 +707,7 @@ Simple tables look like this:
 
 The header and table rows must each fit on one line.  Column
 alignments are determined by the position of the header text relative
-to the dashed line below it:[^4]
+to the dashed line below it:[^5]
 
   - If the dashed line is flush with the header text on the right side
     but extends beyond it on the left, the column is right-aligned.
@@ -718,7 +718,7 @@ to the dashed line below it:[^4]
   - If the dashed line is flush with the header text on both sides,
     the default alignment is used (in most cases, this will be left).
 
-[^4]:  This scheme is due to Michel Fortin, who proposed it on the
+[^5]:  This scheme is due to Michel Fortin, who proposed it on the
        [Markdown discussion list](http://six.pairlist.net/pipermail/markdown-discuss/2005-March/001097.html).
 
 The table must end with a blank line, or a line of dashes followed by

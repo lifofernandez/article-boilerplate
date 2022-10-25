@@ -1,7 +1,7 @@
 install:
 	sudo pacman -S ghc cabal-install pandoc texlive-most plantuml pandoc-crossref 
-	make pandoc-plot
 	pip install matplotlib
+	make pandoc-plot
 
 pdf:
 	make lite
@@ -34,6 +34,7 @@ pandoc-plot:
 	cd ../;
 	rm pandoc-plot-bin -r
 
+
 # crossref:
 # 	@pandoc extra/crossref.md \
 # 		--mathjax \
@@ -62,8 +63,6 @@ pandoc-plot:
 #--include-after-body=extra/md-pandoc.tex \
 	#cat article/*.md extra/md-pandoc.md extra/crossref.md > README.md
 	
-
-
 # wget https://sourceforge.net/projects/plantuml/files/plantuml.jar/download -O plantuml.jar
 # pandoc --print-highlight-style pygments > my.theme
 # wget raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl

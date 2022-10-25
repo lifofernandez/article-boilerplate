@@ -334,78 +334,68 @@ ecuaciones en Office, LaTeX, wikis y otro software.
 
 
 
+
 # Resultados
 
-El resultado de este proyecto es la integración de diferentes piezas de software y
-andamiaje necesario para reproducir este proyecto: configuraciones, estructura,
-filtros, plantillas (_LaTeX_, CLSs, resaltado de sintaxis) y ejemplo de 
-operaciones remotas automáticas.
+El resultado de este proyecto es la integración de diferentes piezas de
+software y andamiaje necesario para reproducir este proyecto: fuentes de
+entrada, configuraciones, estructura, filtros, plantillas (_LaTeX_, CLSs,
+resaltado de sintaxis) y un ejemplo flujo de trabajo acciones integración
+remota automatizada.
 
-Para recrear el proceso que se utilizo para confeccionar este documentos
-Un ejemplo de como usar esta herramienta es el mismo comando que sirve para
-conseguir este documento desde su fuente en _Markdown_[^1].
-
-[^1]: No obstante, conseguir una instalción funcional de _pandoc_ depende del
-sistema en que se vaya ejecutar y esto sobrepasa el el alcance de este
-artículo. Para instrucciones para installar la herramienta cosultar las
-indicaciones su autor @installPandoc.
-
-```console
-$ pandoc README.md \
-  -F pandoc-plot --metadata-file=metadata.yaml --mathjax \
-  -F pandoc-crossref --citeproc \
-  --highlight-style pygments.theme \
-  --template=plantilla --pdf-engine-opt=-shell-escape \
-  -s --toc --toc-depth=2 --number-sections --columns=80 \
-  -o README.pdf
-```
-
-Ejecutar el comando precedente en una sistema con una instancia de _Pandoc_
-funcionando produce las este documento y declara: plantillas: General _LaTeX_,
-lenguaje de estilo de citas, resaltado de código.  Módulos extra como filtros:
-Notación matemática, gestión de Referencias, citas y generación de gráficos.
+<!--
+Notación matemática, gestión de referencias, citas y generación de gráficos.
 Entre otras configuraciones generales involucradas en el proceso, la
 profundidad la tabla de contenidos.  y archivo de entrada y de salida.
+-->
 
-<!--- ### Generar Documentos (PDF) Con una version funcionando en ejecutar en
-la terminal del mismo el siguiente sentencia:
+Para recrear este proceso, principalmente hay 2 opciones:
+
+La mas directa es realizar un _fork_ el repositorio en el cual esta alojado el
+contenido en linea [@fork, @repo]. Después de realizar modificaciones necesarias,
+esto dispara acciones en el repositorio y genera este documento.
+
+Para trabajar en una copia local es necesario clonar el contenido,
+es necesario ejecutar los siguientes comando en un terminal de sistema [^1].
 
 ```console
-pandoc README.md --mathjax \
-   -F pandoc-crossref -F mermaid-filter --citeproc \
-   --template=plantilla --pdf-engine-opt=-shell-escape \
-   -s --toc --toc-depth=3 --number-sections --columns=80 \
-   -o README.pdf
+$ git clone https://github.com/lifofernandez/article-boilerplate.git
+$ cd article-boilerplate
+$ sudo make install
+$ pandoc README.md \
+    -F pandoc-plot --metadata-file=metadata.yaml --mathjax \
+    -F pandoc-crossref --citeproc \
+    --highlight-style pygments.theme \
+    --template=plantilla --pdf-engine-opt=-shell-escape \
+    -s --toc --toc-depth=2 --number-sections --columns=80 \
+    -o README.pdf
 ```
-La salida de este comadno 
-produce un documento grafico en formato PDF 
-a partir del LINK
-de este mismo texto cuya fuente
-es el markdown
---->
 
-## Sintaxis extendida de Markdown 
+[^1]: Conseguir una instalación funcional de _pandoc_ y sus dependecias es
+condicionante el sistema en el que se ejecute. Para instrucciones especificas
+consultar las indicaciones su autor @installPandoc.
+
+## Sintaxis extendida de _Markdown_
 
 Hay un aspecto en el que los objetivos de _Pandoc_ difieren de los originales
-de Markdown. Mientras que _Markdown_ fue diseñado para la generación de HTML en
+de _Markdown_. Mientras que _Markdown_ fue diseñado para la generación de HTML en
 mente, _Pandoc_ está preparado para producir múltiples formatos de salida.
 
-La versión mejorada de _Markdown_ de _Pandoc_ entiende una versión ampliada y
-ligeramente revisada de la sintaxis original de Gruber, incluye sintaxis para
-tablas, listas de definiciones, bloques de metadatos, notas a pie de página,
-citas, matemáticas y mucho más.
-
-https://github.github.com/gfm/
-https://pandoc.org/MANUAL.html#pandocs-markdown
+En Apéndice A (@sec:apendixA) expone la versión mejorada de _Markdown_ de
+_Pandoc_ que comprende una versión ampliada y ligeramente revisada de la
+sintaxis original[^2]. Incluye sintaxis para tablas, listas de definiciones,
+bloques de metadatos, notas a pie de página, citas y matemáticas y entre otros
+@pandocmd.
 
 ## Numeración y referencias cruzadas
 
-https://github.com/lierdakil/pandoc-crossref/raw/master/docs/demo/output.pdf
 
-<!---
-Se acompaña este o
-Para ver una lista completa de cada una de estas 
---->
+Para consultar una lista completa de las funcionalidades avanzadas de
+_pandoc-crossref_ el módulo de _pandoc_ para realizar referencias cruzadas.
+Acompaña este artículo la demostración de su autor en Apéndice B
+(@sec:apendixB).
+
+[^2]: El contenido de los apéndices se encuentran en su idioma original.
 
 
 # Conclusión
@@ -523,19 +513,19 @@ ordenación:
 - Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
 - Validación de los datos bibliográficos con respecto a un modelo de datos
 
-# Apendice A: Pandoc's Markdown {.unnumbered}
+# Apendice A: Pandoc's Markdown {#sec:apendixA}
 
 Pandoc understands an extended and slightly revised version of
 John Gruber's [Markdown] syntax. This document explains the syntax,
 noting differences from original Markdown.
 
-## Paragraphs{.unlisted .unnumbered}
+## Paragraphs {.unlisted .unnumbered}
 
 A paragraph is one or more lines of text followed by one or more blank lines.
 Newlines are treated as spaces, so you can reflow your paragraphs as you like.
 If you need a hard line break, put two or more spaces at the end of a line.
 
-#### Extension: `escaped_line_breaks` ####{.unlisted .unnumbered}
+#### Extension: `escaped_line_breaks` #### {.unlisted .unnumbered}
 
 A backslash followed by a newline is also a hard line break.
 Note:  in multiline and grid table cells, this is the only way
@@ -998,9 +988,9 @@ with uppercase and lowercase letters and roman numerals, in addition to
 Arabic numerals. List markers may be enclosed in parentheses or followed by a
 single right-parenthesis or period. They must be separated from the
 text that follows by at least one space, and, if the list marker is a
-capital letter with a period, by at least two spaces.[^2]
+capital letter with a period, by at least two spaces.[^3]
 
-[^2]:  The point of this rule is to ensure that normal paragraphs
+[^3]:  The point of this rule is to ensure that normal paragraphs
     starting with people's initials, like
 
         B. Russell was an English philosopher.
@@ -1063,7 +1053,7 @@ Pandoc supports task lists, using the syntax of GitHub-Flavored Markdown.
 #### Extension: `definition_lists` ####{.unlisted .unnumbered}
 
 Pandoc supports definition lists, using the syntax of
-[PHP Markdown Extra] with some extensions.[^3]
+[PHP Markdown Extra] with some extensions.[^4]
 
     Term 1
 
@@ -1115,7 +1105,7 @@ Note that space between items in a definition list is required.
 hard wrapping, can be activated with `compact_definition_lists`: see
 [Non-default extensions], below.)
 
-[^3]:  I have been influenced by the suggestions of [David
+[^4]:  I have been influenced by the suggestions of [David
   Wheeler](https://justatheory.com/2009/02/modest-markdown-proposal/).
 
 ### Numbered example lists ###{.unlisted .unnumbered}
@@ -1231,7 +1221,7 @@ Simple tables look like this:
 
 The header and table rows must each fit on one line.  Column
 alignments are determined by the position of the header text relative
-to the dashed line below it:[^4]
+to the dashed line below it:[^5]
 
   - If the dashed line is flush with the header text on the right side
     but extends beyond it on the left, the column is right-aligned.
@@ -1242,7 +1232,7 @@ to the dashed line below it:[^4]
   - If the dashed line is flush with the header text on both sides,
     the default alignment is used (in most cases, this will be left).
 
-[^4]:  This scheme is due to Michel Fortin, who proposed it on the
+[^5]:  This scheme is due to Michel Fortin, who proposed it on the
        [Markdown discussion list](http://six.pairlist.net/pipermail/markdown-discuss/2005-March/001097.html).
 
 The table must end with a blank line, or a line of dashes followed by
@@ -1642,12 +1632,16 @@ following restrictions apply:
 [YAML escape sequence]: https://yaml.org/spec/1.2/spec.html#id2776092
 [Wikipedia entry on YAML syntax]:  https://en.wikipedia.org/wiki/YAML#Syntax
 
-# Apendice B: Crossref {#sec:apendixB .unnumbered}
+# Apendice B: Crossref {#sec:apendixB}
 
 This is a demo file for pandoc-crossref. With this filter, you can
 cross-reference figures (see [@fig:figure1;@fig:figure2;@fig:figure3]), display
-equations (see @eq:eqn1), tables (see @tbl:table1) and sections ([@sec:sec1;
-@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div]) .
+equations (see @eq:eqn1), tables (see [@tbl:table1])
+<!--
+and sections ([@sec:sec1;
+@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div])
+-->
+.
 
 For immediate example, see @fig:figure0
 
@@ -1699,14 +1693,16 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Since 0.1.6.0 those can also appear in the middle of paragraph
 $$a x^2 + b x^2 + c = 0$$ {#eq:quadr} like this.
 
-## Tables {.unlisted .unnumbered #tbl:table1 }
+## Tables {.unlisted .unnumbered}
 
 | First Header | Second Header |
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-## Table example {.unlisted .unnumbered #tbl:table2 } 
+: Table example {#tbl:table1}
+
+## Table example {.unlisted .unnumbered} 
 
 
 Table without caption:
@@ -1715,6 +1711,7 @@ Table without caption:
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
+
 
 ## Code blocks {.unlisted .unnumbered}
 
@@ -1728,8 +1725,6 @@ There are a couple options for code block labels. Those work only if code block 
 main :: IO ()
 main = putStrLn "Hello World!"
 ```
-
-\pagebreak
 
 ### Table-style captions{.unlisted .unnumbered #sec:table-capts}
 
@@ -1771,8 +1766,8 @@ It's also possible to show lists of figures and tables, like this:
 
 \listoflistings
 
-## Custom labels {label=AppA .unnumbered .unlisted}
-
 <!--
+## Custom labels {.unnumbered .unlisted}
+
 ### This section will have custom label {.unnambered #sec:custlabs label=CustLabs}
 -->

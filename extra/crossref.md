@@ -1,10 +1,14 @@
 
-# Apendice B: Crossref {#sec:apendixB .unnumbered}
+# Apendice B: Crossref {#sec:apendixB}
 
 This is a demo file for pandoc-crossref. With this filter, you can
 cross-reference figures (see [@fig:figure1;@fig:figure2;@fig:figure3]), display
-equations (see @eq:eqn1), tables (see @tbl:table1) and sections ([@sec:sec1;
-@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div]) .
+equations (see @eq:eqn1), tables (see [@tbl:table1])
+<!--
+and sections ([@sec:sec1;
+@sec:sec2; @sec:caption-attr; @sec:table-capts; @sec:wrapping-div])
+-->
+.
 
 For immediate example, see @fig:figure0
 
@@ -56,14 +60,16 @@ $$ P_i(x) = \sum_i a_i x^i $$ {#eq:eqn1}
 Since 0.1.6.0 those can also appear in the middle of paragraph
 $$a x^2 + b x^2 + c = 0$$ {#eq:quadr} like this.
 
-## Tables {.unlisted .unnumbered #tbl:table1 }
+## Tables {.unlisted .unnumbered}
 
 | First Header | Second Header |
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
 
-## Table example {.unlisted .unnumbered #tbl:table2 } 
+: Table example {#tbl:table1}
+
+## Table example {.unlisted .unnumbered} 
 
 
 Table without caption:
@@ -72,6 +78,7 @@ Table without caption:
 |:-------------|:--------------|
 | Content Cell | Content Cell  |
 | Content Cell | Content Cell  |
+
 
 ## Code blocks {.unlisted .unnumbered}
 
@@ -85,8 +92,6 @@ There are a couple options for code block labels. Those work only if code block 
 main :: IO ()
 main = putStrLn "Hello World!"
 ```
-
-\pagebreak
 
 ### Table-style captions{.unlisted .unnumbered #sec:table-capts}
 
@@ -128,8 +133,8 @@ It's also possible to show lists of figures and tables, like this:
 
 \listoflistings
 
-## Custom labels {label=AppA .unnumbered .unlisted}
-
 <!--
+## Custom labels {.unnumbered .unlisted}
+
 ### This section will have custom label {.unnambered #sec:custlabs label=CustLabs}
 -->

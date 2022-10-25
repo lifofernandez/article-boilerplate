@@ -4,13 +4,13 @@ facultad: 'Facultad Regional Buenos Aires'
 departamento: 'Escuela de Posgrado' 
 carrera: 'Maestría en Ingeniería en Sistemas de Información'
 director: 'Dra. Ma. Florencia Pollo Cattaneo'
-programa: 'Herramientas para el desarrollo de Tesis 2021'
+programa: 'Herramientas para el desarrollo de Tesis 2022'
 subtitle: 'Trabajo Práctico Final'
 title: 'Producción académica con Pandoc'
 tutor: 'Florencia Pollo Cattaneo'
 date:  'Octubre 2022'
 place: 'Buenos Aires, Argentina'
-tags: ['authoring', 'texto plano', 'CLI', 'pandoc']
+tags: ['authoring', 'plain text', 'CLI', 'pandoc']
 author: Lisandro Fernández
 abstract: >-
   Pandoc como entorno textutal de producción de documentos académicos.
@@ -20,6 +20,7 @@ abstract: >-
 
 
 # Bibliografia y citas
+# Citeproc https://github.com/jgm/citeproc#how-to-use-it
 reference-section-title: 'Referencias'
 csl: ieee.csl
 # csl: iso690-author-date-es.csl
@@ -31,14 +32,13 @@ bibliography:
 # nocite: |
 #   #@Guarino2020,@Kitchenham2011
 #   @*
-# Citeproc https://github.com/jgm/citeproc#how-to-use-it
 linkCitations: True
 
 # Configuraciones latex
 colorlinks: true
 lang: es
 header-includes: |
-#  \usepackage{svg}
+# \usepackage{svg}
 # \usepackage{grffile}
 # \usepackage{import}
 
@@ -49,9 +49,9 @@ include-after:
 #\import{./}{extra/crossref.tex}
 
 
-
 # Crossref opts
 codeBlockCaptions: True
+autoSectionLabels: True
 figureTitle: |
   Figure #
 lofTitle: |
@@ -60,7 +60,6 @@ lotTitle: |
   ## List of Tables
 tableTemplate: |
   *$$tableTitle$$ $$i$$*$$titleDelim$$ $$t$$
-autoSectionLabels: True
 
 # citation-abbreviations: jabbrev.json
 # # https://github.com/seananderson/csl-abbrev
