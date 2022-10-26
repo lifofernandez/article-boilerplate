@@ -295,4 +295,3 @@ tex2pdf.*
 
 #pandoc-plot
 plots/
-mermaid-filter.err

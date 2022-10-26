@@ -381,7 +381,7 @@ Hay un aspecto en el que los objetivos de _Pandoc_ difieren de los originales
 de _Markdown_. Mientras que _Markdown_ fue diseñado para la generación de HTML en
 mente, _Pandoc_ está preparado para producir múltiples formatos de salida.
 
-En Apéndice A (@sec:apendixA) expone la versión mejorada de _Markdown_ de
+En Apéndice A (@Sec:apendixA) expone la versión mejorada de _Markdown_ de
 _Pandoc_ que comprende una versión ampliada y ligeramente revisada de la
 sintaxis original[^2]. Incluye sintaxis para tablas, listas de definiciones,
 bloques de metadatos, notas a pie de página, citas y matemáticas y entre otros
@@ -389,75 +389,55 @@ bloques de metadatos, notas a pie de página, citas y matemáticas y entre otros
 
 ## Numeración y referencias cruzadas
 
-
 Para consultar una lista completa de las funcionalidades avanzadas de
 _pandoc-crossref_ el módulo de _pandoc_ para realizar referencias cruzadas.
 Acompaña este artículo la demostración de su autor en Apéndice B
-(@sec:apendixB).
+(@Sec:apendixB).
 
 [^2]: El contenido de los apéndices se encuentran en su idioma original.
 
 
+
 # Conclusión
 
-<!--- contar lo que se hizo Tenga en cuenta que en la entrega final, deberá
-realizar una conclusión donde se tendrán que detallar las futuras líneas de
-trabajo. Hablar del capitulo --->
+Este capítulo concluye el estudio. En primer lugar, se cubren los
+objetivos de investigación. El segundo subcapítulo presenta la contribución de
+esta trabajo, y los dos últimos subapartados presentan las limitaciones del
+estudio y las sugerencias para desarrollos futuros, respectivamente.
 
-Este capítulo concluye el estudio.
-El objetivo de es investigar el proceso de producción de documentos con herramientas rudimentales.
-En primer lugar, se responde a las preguntas de investigación.
-El segundo subcapítulo presenta la contribución de esta tesis,
-y los dos últimos subcapítulos presentan las limitaciones del estudio
-y las sugerencias para desarrollos futuros, respectivamente.
+## Alcance
 
-## Objetivos
+Es este proyecto desarrollar una una una una una una una una cadena de
+producción de documentos científica y técnica sin depender de interfaces
+gráficas o captivas.
 
-Se consigue un cadena de producción 
-
-Características generales: un formato libre y abierto, componentes isolados,
-compactos y robustos; amplia compatibilidad con requisitos de estilo, miles de
-estilos disponibles predefinidos por la comunidad, etiquetas de bibliografía
-altamente personalizable y fuentes de datos remotas para publicaciones
-frecuentes con información dinámico.
-
-Citas y citas: localización automática de estilos, infraestructura para la
-distribución y actualización de estilos, compleja modificación de datos sobre
-la en producción y basada en macros sin cambiar las fuentes de datos.
-
-
-<!--- Reglas de herencia de fuentes de datos altamente personalizables Un modo
-de herramienta para transformar las fuentes de datos bibliográficos Por bibtext
-algunos: Soporte completo de Unicode Recodificación automática de datos
-bibliográficos (UTF-9 -> latin1, macros LATEX -> UTF-8, etc.) Sistema de
-desambiguación automática de nombres y listas de nombres altamente sofisticado
-acceso directo mediante sistemas rudimentales.  --->
+Las características generales de este entorno son: formatos libres y abiertos,
+componentes aislados, compactos y robustos; amplia compatibilidad con
+requisitos de estilo, predefinidos por la comunidad o personalizados por el
+usuario. Vinculación a fuentes de datos remotas para publicaciones recurrentes
+con información dinámica.
 
 ## Aporte
 
-Es intención que este proyecto que sirva como plantilla para proyectos
-similares, patrones de diseño y guia de  buenas practicas para la producción de
-documentos gráficos de alta complejidad.
+Es intención que este trabajo que sirva como punto de partida en contextos
+similares, reutilizado patrones de diseño y siguiendo guía de buenas prácticas
+en la producción de documentos gráficos de alta complejidad.
 
-Si bien que este proyecto está enfocado a la producción de literatura
-académica, esta misma cadena puede ser considerada en en el desarrollo de
-cualquier sistemas de gestión documental, registros médicos, documentos
-legales, certificados, etc.
+Si bien este proyecto está enfocado a la producción de literatura académica,
+esta misma cadena de producción puede ser aplicada en el desarrollo de
+cualquier otro sistema como por ejemplo, gestión documental, registros médicos,
+documentos legales, certificados legales, entre otros.
 
-Donde productos gráficos imprimibles se generan mediante rutinas directamente
-de bases de datos, una capa codificada extra que opaca la relación con el
-interprete el y el contenido, se recomienda un proceso similar al descripto de
-respaldo del la información en contenedores de formato simple y legible, sin
-codificar u opacar habilitando ser manipulados con herramientas obicuas, con
+En una implementación organizacional esto puede ser aprovechado ejecutando en
+servidor remotos como servicio de preparación de documentos gráficos.  En
+aquellos contextos que los productos gráficos se generan mediante rutinas
+directamente de bases de datos, una capa codificada extra que opaca la relación
+entre el interprete y el contenido, se recomienda un proceso similar al
+descripto de respaldo de la información en contenedores de formato simple y
+legible, sin codificar.
 
-Pero en una implementación organizacional esto puede ser solucionado ejecutando
-en servidor públicos donde con acceso web como un servicio de preparación de
-documentos gráficos, tanto preparando para impresión o para ser consumidos
-mediante exploradores de internet solamente se carguen como insumos los
-ficheros de contenido o
-
-Aunque los escuadrones son autónomos, es importante que los especialistas (por
-ejemplo, los desarrolladores de) se alineen en las mejores prácticas.
+Aunque los escuadrones sean autónomos, es importante que los especialistas (por
+ejemplo, editores) se alineen en las mejores prácticas.
 
 ## Limitaciones
 
@@ -465,22 +445,13 @@ Dado que la representación intermedia de un documento por parte de _Pandoc_ es
 menos expresiva que muchos de los formatos entre los que convierte, no hay que
 esperar conversiones exactas entre todos los formatos.  Mientras que las
 conversiones de _Markdown_ de _Pandoc_ a todos los formatos aspiran a ser
-perfectas, las conversiones de formatos más expresivos que _Markdown_ de _Pandoc_
-pueden tener diferencias.
+perfectas, las conversiones de formatos más expresivos pueden tener
+diferencias.
 
 _Pandoc_ intenta conservar los elementos estructurales de un documento, pero no
-los detalles de formato, como el tamaño de los márgenes.  Y algunos elementos
+los detalles de formato, como el tamaño de los márgenes. Algunos elementos
 del documento, como por ejemplo tablas complejas, pueden no encajar en el
 modelo de documento simple de _Pandoc_. 
-
-Los módulos empleados maduraron y se incluyen en la la distribución principal
-de _Pandoc_ cambiar configuraciones agregar funcionalidades y rutinas puede
-variar y depender de versiones de las herramientas en las diferente
-distribuciones y sistemas operativos puede inferir en la integración y
-operaciones.
-
-<!--- esto puede mitigar con trabajos encauzados mediante matrices  de SOs --->
-
 
 ## Futuras lineas de trabajo
 
@@ -512,6 +483,7 @@ ordenación:
 - Soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas
 - Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
 - Validación de los datos bibliográficos con respecto a un modelo de datos
+
 
 # Apendice A: Pandoc's Markdown {#sec:apendixA}
 
