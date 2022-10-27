@@ -4,7 +4,6 @@ install:
 	make pandoc-plot
 
 pdf:
-	make lite
 	cat article/*.md extra/md-pandoc.md extra/crossref.md  > README.md
 	@pandoc README.md \
 		--pdf-engine=lualatex \
