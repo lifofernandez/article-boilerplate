@@ -397,88 +397,98 @@ Acompaña este artículo la demostración de su autor en Apéndice B
 # Conclusión
 
 Este capítulo concluye el estudio. En primer lugar, se cubren los
-objetivos de investigación. El segundo subcapítulo presenta la contribución de
-esta trabajo, y los dos últimos subapartados presentan las limitaciones del
-estudio y las sugerencias para desarrollos futuros, respectivamente.
+objetivos de investigación. El segundo subcapítulo presenta la
+contribución de esta trabajo, y los dos últimos subapartados
+presentan las limitaciones del estudio y las sugerencias para
+desarrollos futuros, respectivamente.
 
 ## Alcance
 
-Es este proyecto desarrollar una una una una una una una una cadena de
-producción de documentos científica y técnica sin depender de interfaces
+El animo de este proyecto es desarrollar una cadena de producción
+de documentos científicos y técnicos sin depender de interfaces
 gráficas o captivas.
 
-Las características generales de este entorno son: formatos libres y abiertos,
-componentes aislados, compactos y robustos; amplia compatibilidad con
-requisitos de estilo, predefinidos por la comunidad o personalizados por el
-usuario. Vinculación a fuentes de datos remotas para publicaciones recurrentes
-con información dinámica.
+Las características generales de este entorno son: formatos libres
+y abiertos, componentes aislados, compactos y robustos; amplia
+compatibilidad con requisitos de estilo, predefinidos por la
+comunidad o personalizados por el usuario. Vinculación a fuentes
+de datos remotas para publicaciones recurrentes con información
+dinámica.
 
 ## Aporte
 
-Es intención que este trabajo que sirva como punto de partida en contextos
-similares, reutilizado patrones de diseño y siguiendo guía de buenas prácticas
-en la producción de documentos gráficos de alta complejidad.
+Es intención que este trabajo que sirva como punto de partida en
+contextos similares, reutilizado patrones de diseño y siguiendo
+guía de buenas prácticas en la producción de documentos gráficos
+de alta complejidad.
 
-Si bien este proyecto está enfocado a la producción de literatura académica,
-esta misma cadena de producción puede ser aplicada en el desarrollo de
-cualquier otro sistema como por ejemplo, gestión documental, registros médicos,
-documentos legales, certificados legales, entre otros.
+Si bien este proyecto está enfocado a la producción de literatura
+académica, esta misma cadena de producción puede ser aplicada en
+el desarrollo de cualquier otro sistema como por ejemplo, gestión
+documental, registros médicos, documentos legales, certificados
+legales, entre otros.
 
-En una implementación organizacional esto puede ser aprovechado ejecutando en
-servidor remotos como servicio de preparación de documentos gráficos.  En
-aquellos contextos que los productos gráficos se generan mediante rutinas
-directamente de bases de datos, una capa codificada extra que opaca la relación
-entre el interprete y el contenido, se recomienda un proceso similar al
-descripto de respaldo de la información en contenedores de formato simple y
-legible, sin codificar.
+En una implementación organizacional esto puede ser aprovechado
+ejecutando en servidor remotos como servicio de preparación de
+documentos gráficos.  En aquellos contextos que los productos
+gráficos se generan mediante rutinas directamente de bases de
+datos, una capa codificada extra que opaca la relación entre el
+interprete y el contenido, se recomienda un proceso similar al
+descripto de respaldo de la información en contenedores de formato
+simple y legible, sin codificar.
 
-Aunque los escuadrones sean autónomos, es importante que los especialistas (por
-ejemplo, editores) se alineen en las mejores prácticas.
+Aunque los escuadrones sean autónomos, es importante que los
+especialistas (por ejemplo, editores) se alineen en las mejores
+prácticas.
 
 ## Limitaciones
 
-Dado que la representación intermedia de un documento por parte de _Pandoc_ es
-menos expresiva que muchos de los formatos entre los que convierte, no hay que
-esperar conversiones exactas entre todos los formatos.  Mientras que las
-conversiones de _Markdown_ de _Pandoc_ a todos los formatos aspiran a ser
-perfectas, las conversiones de formatos más expresivos pueden tener
-diferencias.
+Dado que la representación intermedia de un documento por parte de
+_Pandoc_ es menos expresiva que muchos de los formatos entre los
+que convierte, no hay que esperar conversiones exactas entre todos
+los formatos.  Mientras que las conversiones de _Markdown_ de
+_Pandoc_ a todos los formatos aspiran a ser perfectas, las
+conversiones de formatos más expresivos pueden tener diferencias.
 
-_Pandoc_ intenta conservar los elementos estructurales de un documento, pero no
-los detalles de formato, como el tamaño de los márgenes. Algunos elementos
-del documento, como por ejemplo tablas complejas, pueden no encajar en el
-modelo de documento simple de _Pandoc_. 
+_Pandoc_ intenta conservar los elementos estructurales de un
+documento, pero no los detalles de formato, como el tamaño de los
+márgenes. Algunos elementos del documento, como por ejemplo tablas
+complejas, pueden no encajar en el modelo de documento simple de
+_Pandoc_. 
 
 ## Futuras lineas de trabajo
 
 Se señala como áreas de desarrollo 
 
-### Operaciones remotas automáticas
 
-https://pandoc.org/installing.html#github-actions
+### Entrega continua 
 
-disponible el repositorio con
+Como se puede comprar en el respositorio que aloja el este proyecto
+el documento PDF de salida puede ser producido  
+mediante Operaciones remotas automáticas @actions.
 
 [![Build remoto](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
 
-Integracion continua
-https://about.gitlab.com/features/continuous-integration/
-
+Servicios como estos acortan las brecha entre las actividades y
+los equipos de producciòn, al imponer la automatización en la
+construcción y entrega de documentos. Los servicios de
+entrega continuna compilan los cambios incrementales en el
+contenido de los autores, los enlazan, los empaquetan y los
+ejectuan en un entorno remoto preconfigurado.
 
 ### Revisión sistemática de literatura
 
-Para revisiones de literatura que comprometen múltiples bibliografías y
-@Kitchenham2006
+Este proceder promueve capacidades como ordenación personalizable,
+Bibligrafías jeraquizadas por sección; soporte de poliglosia para
+el cambio automático de idioma de las entradas y citas
+bibliográficas; modelo de datos personalizable para que los
+usuarios puedan definir sus propios tipos de datos bibliográficos;
+validación de datos bibliográficos con respecto a un modelo.
 
-Que deben de información bibliográfica en el mismo documento con diferente
-ordenación:
-
-- Ordenación altamente personalizable mediante el Algoritmo de Cotejo Unicode (Unicode Collation Algorithm - UCA) (https://www.unicode.org/reports/tr10/)
-- Adaptación de CLDR (https://cldr.unicode.org/)
-- Bibligrafías jeraquizadas por capítulo, sección, etc.
-- Soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas
-- Modelo de datos altamente personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos
-- Validación de los datos bibliográficos con respecto a un modelo de datos
+En investigaciones del tipo revisiones de literatura, donde se
+involucran múltiples cuerpos bibliográocos con diferentes
+ordenación y modos exponerse, enfoques como este pueden
+simplificar el proceso @Kitchenham2006.
 
 
 # Apendice A: Pandoc's Markdown {#sec:apendixA}
