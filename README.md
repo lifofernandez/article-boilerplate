@@ -428,14 +428,12 @@ el desarrollo de cualquier otro sistema como por ejemplo, gestión
 documental, registros médicos, documentos legales, certificados
 legales, entre otros.
 
-En una implementación organizacional esto puede ser aprovechado
-ejecutando en servidor remotos como servicio de preparación de
-documentos gráficos.  En aquellos contextos que los productos
-gráficos se generan mediante rutinas directamente de bases de
-datos, una capa codificada extra que opaca la relación entre el
-interprete y el contenido, se recomienda un proceso similar al
-descripto de respaldo de la información en contenedores de formato
-simple y legible, sin codificar.
+En una implementación organizacional esto puede ser aprovechado servicio remoto
+de preparación de documentos gráficos. En aquellos contextos que los productos
+gráficos se generan mediante rutinas directamente de bases de datos, una capa
+codificada extra que opaca la relación entre el interprete y el contenido, se
+recomienda un proceso similar al descripto de respaldo de la información en
+contenedores de formato simple y legible, sin codificar.
 
 Aunque los escuadrones sean autónomos, es importante que los
 especialistas (por ejemplo, editores) se alineen en las mejores
@@ -458,37 +456,36 @@ _Pandoc_.
 
 ## Futuras lineas de trabajo
 
-Se señala como áreas de desarrollo 
-
+Se señalan como áreas de vacancia el desarrollo primero acciones remotas
+automáticas con el fin de generar entregas continuas y las configuraciones
+especiales para investigaciones del tipo revisión sistemática de literatura
+@Kitchenham2006.
 
 ### Entrega continua 
 
-Como se puede comprar en el respositorio que aloja el este proyecto
-el documento PDF de salida puede ser producido  
-mediante Operaciones remotas automáticas @actions.
+Como se puede comprar en el repositorio que aloja el este proyecto el
+documento PDF de salida puede ser producido  mediante Operaciones remotas
+automáticas @actions.
 
 [![Build remoto](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
 
-Servicios como estos acortan las brecha entre las actividades y
-los equipos de producciòn, al imponer la automatización en la
-construcción y entrega de documentos. Los servicios de
-entrega continuna compilan los cambios incrementales en el
-contenido de los autores, los enlazan, los empaquetan y los
-ejectuan en un entorno remoto preconfigurado.
+Servicios como estos acortan las brecha entre las actividades y los equipos de
+producción, al imponer la automatización en la construcción y entrega de
+documentos. Los servicios de entrega continua compilan los cambios
+incrementales en el contenido de los autores, los enlazan, los empaquetan y los
+ejecutan en un entorno remoto preconfigurado.
 
 ### Revisión sistemática de literatura
 
-Este proceder promueve capacidades como ordenación personalizable,
-Bibligrafías jeraquizadas por sección; soporte de poliglosia para
-el cambio automático de idioma de las entradas y citas
-bibliográficas; modelo de datos personalizable para que los
-usuarios puedan definir sus propios tipos de datos bibliográficos;
-validación de datos bibliográficos con respecto a un modelo.
+Este proceder promueve capacidades como ordenación personalizable, bibliografías
+jerarquizadas por sección, soporte de poliglosia para el cambio automático de
+idioma de las entradas y citas bibliográficas; modelo de datos personalizable
+para que los usuarios puedan definir sus propios tipos de datos bibliográficos y
+validarlos con respecto a un modelo.
 
-En investigaciones del tipo revisiones de literatura, donde se
-involucran múltiples cuerpos bibliográocos con diferentes
-ordenación y modos exponerse, enfoques como este pueden
-simplificar el proceso @Kitchenham2006.
+En investigaciones del tipo revisiones de literatura, donde se involucran
+múltiples cuerpos bibliográficos con diferente ordenación y exposición,
+enfoques como el desarrollado simplifican el trabajo y asisten en el proceso.
 
 
 # Apendice A: Pandoc's Markdown {#sec:apendixA}
