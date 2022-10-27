@@ -250,11 +250,6 @@ DNS is Processing
 DNS is Idle
 @enduml
 ```
-
-<!---
-Citas y referencias bibliogáficas 
-BibLATEX – Sophisticated Bibliographies in LATEX
---->
 ## Citas, referencias y bibliografía
 
 Para citar, enlazar a referencias y exposición de bibliografía consultada se
@@ -355,8 +350,9 @@ La mas directa es realizar un _fork_ el repositorio en el cual esta alojado el
 contenido en linea [@fork, @repo]. Después de realizar modificaciones necesarias,
 esto dispara acciones en el repositorio y genera este documento.
 
-Para trabajar en una copia local es necesario clonar el contenido,
-es necesario ejecutar los siguientes comando en un terminal de sistema [^1].
+Para trabajar en una copia local es necesario es ejecutar los siguientes
+comando en un terminal de sistema para, clonar el contenido, inicializar el proyecto
+y generar el documento.  [^1].
 
 ```console
 $ git clone https://github.com/lifofernandez/article-boilerplate.git
@@ -371,7 +367,7 @@ $ pandoc README.md \
     -o README.pdf
 ```
 
-[^1]: Conseguir una instalación funcional de _pandoc_ y sus dependecias es
+[^1]: Conseguir una instalación funcional de _pandoc_ y sus dependencias es
 condicionante el sistema en el que se ejecute. Para instrucciones especificas
 consultar las indicaciones su autor @installPandoc.
 

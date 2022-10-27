@@ -60,6 +60,7 @@ jobs:
       ##     #/usr/share/miniconda/bin/pandoc-plot -h
           
       - run: mkdir -p output
+      - run: cat article/*.md > README-lite.md 
 
       #- name: List files 
       #  id: files_list
@@ -89,6 +90,7 @@ jobs:
             --template=./plantilla --pdf-engine-opt=-shell-escape
             -s --toc --toc-depth=2 --number-sections --columns=80
             --output=output/README.pdf
+
       - uses: actions/upload-artifact@v3
         with:
           name: output
