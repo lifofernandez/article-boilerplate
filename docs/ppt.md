@@ -91,8 +91,7 @@ li { font-size:28px; }
 - **Ubicuo:** Todos los sistema operativo cuenta con al menos un editor de texto plano. 
 - **Fácil de manipular, mantener y comprobar:** Procesos rudimentarios. No presenta dificultades ante la necesidad de actualización. Es sencillo agregar rutinas de testeo sin emplear o desarrollar herramientas especiales .
 - **Liviano:** Determinante cuando los recursos de sistema son limitados.
-- **Seguro contra la obsolescencia:** Perduran por sobre otros formatos, aun cuando caduquen las aplicaciones que las hayan
-creado.
+- **Seguro contra la obsolescencia:** Perduran por sobre otros formatos, aun cuando caduquen las aplicaciones que las hayan creado.
 - **Accesibilidad:** Beneficia a todos los usuarios, incluidas las personas con discapacidades cognitivas, con poca capacidad de lectura y las que se enfrentan a un tema o un idioma desconocido; estos deben ser capaces de encontrar lo que necesitan, entender lo que encuentran y utilizarlo para realizar tareas.
 
 ---
