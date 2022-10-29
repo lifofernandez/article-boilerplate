@@ -177,13 +177,18 @@ N = 150
 r = 2 * np.random.rand(N)
 theta = 2 * np.pi * np.random.rand(N)
 area = 200 * r**2
-colors = theta
+colors = theta 
 
-fig = plt.figure()
+# fig = plt.figure() 
+fig = plt.figure(dpi=1200) 
+
 ax = fig.add_subplot(111, projection='polar')
 c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
 plt.title('This is an example figure')
 ```
+
+<!--
+-->
 
 ### PlantUML
 
@@ -352,7 +357,7 @@ esto dispara acciones en el repositorio y genera este documento.
 
 Para trabajar en una copia local es necesario es ejecutar los siguientes
 comando en un terminal de sistema para, clonar el contenido, inicializar el proyecto
-y generar el documento.  [^1].
+y generar el documento [^1].
 
 ```console
 $ git clone https://github.com/lifofernandez/article-boilerplate.git
@@ -368,7 +373,8 @@ $ pandoc README.md \
 ```
 
 [^1]: Conseguir una instalación funcional de _pandoc_ y sus dependencias es
-condicionante el sistema en el que se ejecute. Para instrucciones especificas
+condicionante el sistema en el que se ejecute. Las rutinas proveidas estan destinadas a sistemas Arch Linux.
+Para instrucciones especificas
 consultar las indicaciones su autor @installPandoc.
 
 ## Sintaxis extendida de _Markdown_

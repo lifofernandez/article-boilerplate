@@ -13,11 +13,11 @@ place: 'Buenos Aires, Argentina'
 tags: ['authoring', 'plain text', 'CLI', 'pandoc']
 author: Lisandro Fernández
 abstract: >-
-  Pandoc como entorno textutal de producción de documentos académicos.
-  Evitar el uso de interfaces captivas beneficia a todos los usuarios, deben
-  poder encontrar lo que necesitan, comprender lo que encuentran y usarlo para
-  realizar tareas.'
-
+  Entorno de producción de literatura académica y documentación técnica con
+  _Pandoc_ como interprete y _LaTeX_ como sistema de composición tipográfica.
+  Generación gráficos, diagramas y notación matemática; gestión de citas,
+  referencias cruzadas y bibliografía. Evitando el uso de interfaces gráficas y/o
+  captivas.
 
 # Bibliografia y citas
 # Citeproc https://github.com/jgm/citeproc#how-to-use-it
