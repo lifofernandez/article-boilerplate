@@ -211,8 +211,8 @@ $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 Una cadena de producción de documentos científicos y técnicos sin depender de interfaces gráficas o captivas.
 
 Las características generales de este entorno son:
-* formatos libres y abiertos, componentes aislados, compactos y robustos.
-* amplia compatibilidad con requisitos de estilo, predefinidos por la comunidad o personalizados por el usuario.
+* Formatos libres y abiertos, componentes aislados, compactos y robustos.
+* Amplia compatibilidad con requisitos de estilo, predefinidos por la comunidad o personalizados por el usuario.
 * Vinculación a fuentes de datos remotas para publicaciones recurrentes con información dinámica.
 
 ---
@@ -228,6 +228,7 @@ La salida puede ser producido  mediante operaciones remotas automáticas.
 [![w:300](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
 
 Los servicios de entrega continua compilan los cambios incrementales en el contenido de los autores, los enlazan, los empaquetan y los ejecutan en un entorno remoto preconfigurado.Servicios como estos acortan las brecha entre las actividades y los equipos de producción, al imponer la automatización en la construcción y entrega de documentos. 
+
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3f9YvjqUTlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
