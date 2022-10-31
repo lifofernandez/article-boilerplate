@@ -84,7 +84,6 @@ escrita en Perl, que convierte el formato de texto plano en HTML.
 - ✨ Magic ✨
 - Salida HTML 
 ```
-
 ---
 ## Pandoc
 <style scoped>
@@ -168,10 +167,13 @@ plt.title('This is an example figure')
 Declarar una referencia como `@moolenaar2000` o también `[@knuth1986texbook
 p.3-9]`.
 
-_Pandoc_ convertirá la bibliografia _BibLaTeX_,
-en una cita, añadirá la referencia bibliográfica al final
-del documento con el formato
-predefinido en *Lenguajes de Estilo de Cita* (Citation Style Language - CSL),
+En bibliografia _BibLaTeX_, una reimplementación completa de las
+facilidades bibliográficas proporcionadas por _LaTeX_.
+_Pandoc_ convertirá en una cita, añadirá la referencia bibliografía al final
+del documento con el formato adecuado.
+
+# Formato predefinido
+Lenguajes de Estilo de Cita (Citation Style Language - CSL),
 incluyendo estilos de: nota al pie, numéricos y autoría, fuente y fechas.
 
 ---
@@ -207,8 +209,8 @@ $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 Una cadena de producción de documentos científicos y técnicos sin depender de interfaces gráficas o captivas.
 
 Las características generales de este entorno son:
-* Formatos libres y abiertos, componentes aislados, compactos y robustos.
-* Amplia compatibilidad con requisitos de estilo, predefinidos por la comunidad o personalizados por el usuario.
+* formatos libres y abiertos, componentes aislados, compactos y robustos.
+* amplia compatibilidad con requisitos de estilo, predefinidos por la comunidad o personalizados por el usuario.
 * Vinculación a fuentes de datos remotas para publicaciones recurrentes con información dinámica.
 
 ---
@@ -240,9 +242,9 @@ En revisiones de literatura del tipo estudio de mapeo sistemático, donde se inv
 <style scoped>
 p { columns: 2; }
 </style>
-# ¡Gracias!
+# Gracias
 **¿Preguntas?**<br>
-**Pull Requests bienvenidos:** [github.com/lifofernandez/article-boilerplate](https://github.com/lifofernandez/article-boilerplate)
+**¡Pull Requests bienvenidos!** [github.com/lifofernandez/article-boilerplate](https://github.com/lifofernandez/article-boilerplate)
 <br>
 ![w:400 h:400](qrcode_github.com.png)
 
