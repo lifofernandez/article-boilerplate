@@ -68,7 +68,7 @@ Keywords: _authoring, plain text, CLI, pandoc_.
 # 1. Introducción
 * Markdown
 * Pandoc
-* Interfaz Textual de Usuario ~Interfaces Captivas~
+* Interfaz Textual de Usuario ~~Interfaces Captivas~~
 
 ---
 ## Markdow
@@ -105,7 +105,7 @@ li { font-size:32; }
 - **Seguro contra la obsolescencia:** Perduran por sobre otros formatos, aun cuando caduquen las aplicaciones que las hayan creado.
 
 ---
-## Interfaz Textual de Usuario ~Interfaces Captivas~
+## Interfaz Textual de Usuario ~~Interfaces Captivas~~
 
 >... nuestro material base no es la madera ni el hierro, es el conocimiento.  [...] el **mejor formato para almacenar el conocimiento de forma persistente es el texto plano.** [...]  nos da la posibilidad de manipular el conocimiento, tanto manual como programáticamente, utilizando prácticamente cualquier las herramientas a nuestra disposición.
 
@@ -139,9 +139,7 @@ Fuente: [twilio.com/blog/abstract-syntax-trees](https://www.twilio.com/blog/abst
 ![h:550 w:auto](writers2.jpg)
 
 ---
-## Gráficos y diagramas
-
-Matplotlib y PlantUML con pandoc-plot.
+## Matplotlib y PlantUML con pandoc-plot.
 
 ```
 import numpy as np
@@ -164,7 +162,7 @@ plt.title('This is an example figure')
 
 
 ---
-## Referencias cruzadas, citas y CSL.
+## Referencias cruzadas, gestion de biblografía y estilo de citado.
 
 Declarar una referencia como `@moolenaar2000` o también `[@knuth1986texbook
 p.3-9]`.
@@ -228,6 +226,7 @@ La salida puede ser producido  mediante operaciones remotas automáticas.
 [![w:300](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/lifofernandez/thesis-sandbox/actions/workflows/main.yml)
 
 Los servicios de entrega continua compilan los cambios incrementales en el contenido de los autores, los enlazan, los empaquetan y los ejecutan en un entorno remoto preconfigurado.Servicios como estos acortan las brecha entre las actividades y los equipos de producción, al imponer la automatización en la construcción y entrega de documentos. 
+
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3f9YvjqUTlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
