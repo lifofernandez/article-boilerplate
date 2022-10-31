@@ -168,11 +168,10 @@ plt.title('This is an example figure')
 Declarar una referencia como `@moolenaar2000` o también `[@knuth1986texbook
 p.3-9]`.
 
-_Pandoc_ convertirá la bibliografia _BibLaTeX_,
-en una cita, añadirá la referencia bibliográfica al final
-del documento con el formato
-predefinido en *Lenguajes de Estilo de Cita* (Citation Style Language - CSL),
-incluyendo estilos de: nota al pie, numéricos y autoría, fuente y fechas.
+_Pandoc_ convertirá la bibliografia _BibLaTeX_, en una cita, añadirá la
+referencia bibliográfica al final del documento con el formato predefinido
+en *Lenguajes de Estilo de Cita* (Citation Style Language - CSL), incluyendo
+estilos de: nota al pie, numéricos y autoría, fuente y fechas.
 
 ---
 ## Notación matemática
@@ -227,7 +226,8 @@ Los servicios de entrega continua compilan los cambios incrementales en el conte
 
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3f9YvjqUTlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3f9YvjqUTlw/0.jpg)](https://www.youtube.com/watch?v=3f9YvjqUTlw)
+
 
 ---
 ### Revisión sistemática de literatura
