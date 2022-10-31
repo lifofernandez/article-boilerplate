@@ -1,3 +1,7 @@
+ppt:
+	cp README.md docs/README.md 
+	cp README.pdf docs/README.pdf
+	marp -I docs/content -o docs && mv docs/ppt.html docs/index.html && marp -s docs
 install:
 	sudo pacman -S ghc cabal-install pandoc texlive-most plantuml pandoc-crossref 
 	pip install matplotlib

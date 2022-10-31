@@ -4,7 +4,7 @@ Este proyecto propone la confección de escritos académicos o de complejidad
 considerable, sin la necesidad de interfaces gráficas. Promover el uso formatos
 no codificados o de alta legibilidad beneficia a todos los usuarios, que deben
 poder encontrar facilmente lo que necesitan, comprender lo que encuentran y
-usarlo para realizar tareas @das.
+usarlo para realizar tareas @caleb.
 
 El objetivo de este trabajo es un entorno de autoría textos en el cual _Pandoc_
 es la pieza central que actúa como interprete del sistema de composición
@@ -27,7 +27,7 @@ La principal característica de las herramientas y formatos involucrados en este
 proyecto es que están preparadas para interpretar instrucciones textuales. De
 los beneficios que trabajar de este modo habilita se destacan cuestiones de
 accesibilidad y la posibilidad de gestionar la exposición de conocimiento de la
-misma manera que se produce software [@hunt1999pragmatic; 
+misma manera que se produce software [@hunt1999pragmatic; @das;
 @moolenaar2000].
 
 Separar contenido, referencias, estilos y procesos, en un contexto de
