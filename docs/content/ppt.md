@@ -50,7 +50,9 @@ Octubre 2022. Buenos Aires, Argentina.
 ---
 # Article Boilerplate
 
-Entorno de producción de literatura académica y documentación técnica con _Pandoc_ como interprete y _LaTeX_ como sistema de composición tipográfica. Generación gráficos, diagramas y notación matemática; gestión de citas, referencias cruzadas y bibliografía. Evitando el uso de interfaces gráficas y captivas.
+Entorno de **producción de literatura académica** y documentación técnica con _Pandoc_ como interprete y _LaTeX_ como sistema de composición tipográfica.
+Generación gráficos, diagramas y notación matemática; gestión de citas, referencias cruzadas y bibliografía.
+**Evitando el uso de interfaces gráficas y captivas**.
 
 Keywords: _authoring, plain text, CLI, pandoc_.
 
@@ -97,20 +99,22 @@ p { columns: 2; }
 ](https://peerj.com/articles/cs-112/)
 
 ---
-<style scoped>
-li { font-size:32; }
-</style>
-- **Ubicuo:** Todos los sistemas operativos cuenta con al menos un editor de texto plano. 
-- **Fácil de manipular, mantener y comprobar:** Procesos rudimentarios. No presenta dificultades ante la necesidad de actualización. Es sencillo agregar rutinas de testeo sin emplear o desarrollar herramientas especiales.
-- **Liviano:** Determinante cuando los recursos de sistema son limitados. 
-- **Seguro contra la obsolescencia:** Perduran por sobre otros formatos, aun cuando caduquen las aplicaciones que las hayan creado.
-
----
 ## Interfaz Textual de Usuario ~~Interfaces Captivas~~
 
 >... nuestro material base no es la madera ni el hierro, es el conocimiento.  [...] el **mejor formato para almacenar el conocimiento de forma persistente es el texto plano.** [...]  nos da la posibilidad de manipular el conocimiento, tanto manual como programáticamente, utilizando prácticamente cualquier las herramientas a nuestra disposición.
 
 *(Hunt, 1999)*
+
+---
+### Interfaz de texto (Text User Interface - TUI)
+<style scoped>
+li { font-size:30; }
+</style>
+- **Ubicuo:** Todos los sistemas operativos cuenta con al menos un editor de texto plano. 
+- **Fácil de manipular, mantener y comprobar:** Procesos rudimentarios. No presenta dificultades ante la necesidad de actualización. Es sencillo agregar rutinas de testeo sin emplear o desarrollar herramientas especiales.
+- **Liviano:** Determinante cuando los recursos de sistema son limitados. 
+- **No queda obsoleto:** Perduran por sobre otros formatos, aun cuando caduquen las aplicaciones que las hayan creado.
+
 
 ---
 # 2. Integración
@@ -126,7 +130,7 @@ Notación matemática.
 ![escritores](4Q1Fa-SX8smqvRKZYupkUeodmma76QViKAZASsyP4wLlap2YAyRr9Oz3mOaYGYL7VERPmhmgk0flsS)
 
 ---
-## AKA Parser
+### AKA Parser
 ![parser]( QRjqUpCw9t8dOD1VfI4OrZnRZLmtsbXpn5bUZKRlpc2o6-nAOx-8IFtABbxyxV1ncZaMz8EGF75C-H
 )
 
@@ -137,7 +141,8 @@ Fuente: [twilio.com/blog/abstract-syntax-trees](https://www.twilio.com/blog/abst
 
 ---
 ## Escritores
-![h:550 w:auto](writers2.jpg)
+
+![h:540 w:auto](writers2.jpg)
 
 ---
 ## Matplotlib y PlantUML con pandoc-plot.
@@ -158,8 +163,10 @@ c = ax.scatter(
 )
 plt.title('This is an example figure')
 ```
+
 ---
-![w:auto h:600](sphx_glr_polar_scatter_001.png)
+### Ejemplo MatplotLib
+![h:550 w:auto ](sphx_glr_polar_scatter_001.png)
 
 
 ---
@@ -168,10 +175,8 @@ plt.title('This is an example figure')
 Declarar una referencia como `@moolenaar2000` o también `[@knuth1986texbook
 p.3-9]`.
 
-_Pandoc_ convertirá la bibliografia _BibLaTeX_, en una cita, añadirá la
-referencia bibliográfica al final del documento con el formato predefinido
-en *Lenguajes de Estilo de Cita* (Citation Style Language - CSL), incluyendo
-estilos de: nota al pie, numéricos y autoría, fuente y fechas.
+_Pandoc_ **convertirá la bibliografia _BibLaTeX_ en una cita, añadirá la referencia bibliográfica** al final del documentos.
+Estilizadas con el formato predefinido mediante **Lenguajes de Estilo de Cita** (Citation Style Language - CSL), incluyendo estilos de: nota al pie, numéricos y autoría, fuente y fechas.
 
 ---
 ## Notación matemática
@@ -225,16 +230,20 @@ La salida puede ser producido  mediante operaciones remotas automáticas.
 Los servicios de entrega continua compilan los cambios incrementales en el contenido de los autores, los enlazan, los empaquetan y los ejecutan en un entorno remoto preconfigurado.Servicios como estos acortan las brecha entre las actividades y los equipos de producción, al imponer la automatización en la construcción y entrega de documentos. 
 
 ---
+## Reutilizar este trabajo
+
+Despues de "forkear" el proyecto: 
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3f9YvjqUTlw/0.jpg)](https://www.youtube.com/watch?v=3f9YvjqUTlw)
+Modificar el contenido y realizar un _commit_.
 
 
 ---
 ### Revisión sistemática de literatura
 
-Este proceder promueve capacidades como ordenación personalizable, bibliografías jerarquizadas por sección, soporte de poliglosia para el cambio automático de idioma de las entradas y citas bibliográficas; modelo de datos personalizable para que los usuarios puedan definir sus propios tipos de datos bibliográficos y validarlos con respecto a un modelo.
+Este proceder promueve capacidades como: **ordenación personalizable, bibliografías jerarquizadas por sección, soporte de poliglosia** para el cambio automático de idioma de las entradas y citas bibliográficas; **modelo de datos bibliograficos personalizable** para que los usuarios puedan definir sus propios y **validar con respecto a un modelo**.
 
-En revisiones de literatura del tipo estudio de mapeo sistemático, donde se involucran múltiples cuerpos bibliográficos con diferente ordenación y exposición, enfoques como el desarrollado simplifican el trabajo y asisten en el proceso.
+En **revisiones de literatura** tipo estudio de mapeo sistemático, donde se involucran múltiples cuerpos bibliográficos con diferente ordenación y exposición, **enfoques como el desarrollado simplifican el trabajo y asisten en el proceso**.
 
 ---
 <style scoped>
