@@ -68,7 +68,7 @@ Keywords: _authoring, plain text, CLI, pandoc_.
 # 1. Introducción
 * Markdown
 * Pandoc
-* Interfaz Textual de Usuario ~Interfaces Captivas~
+* Interfaz Textual de Usuario ~~Interfaces Captivas~~
 
 ---
 ## Markdow
@@ -84,6 +84,7 @@ escrita en Perl, que convierte el formato de texto plano en HTML.
 - ✨ Magic ✨
 - Salida HTML 
 ```
+
 ---
 ## Pandoc
 <style scoped>
@@ -105,7 +106,7 @@ li { font-size:32; }
 - **Seguro contra la obsolescencia:** Perduran por sobre otros formatos, aun cuando caduquen las aplicaciones que las hayan creado.
 
 ---
-## Interfaz Textual de Usuario ~Interfaces Captivas~
+## Interfaz Textual de Usuario ~~Interfaces Captivas~~
 
 >... nuestro material base no es la madera ni el hierro, es el conocimiento.  [...] el **mejor formato para almacenar el conocimiento de forma persistente es el texto plano.** [...]  nos da la posibilidad de manipular el conocimiento, tanto manual como programáticamente, utilizando prácticamente cualquier las herramientas a nuestra disposición.
 
@@ -139,9 +140,7 @@ Fuente: [twilio.com/blog/abstract-syntax-trees](https://www.twilio.com/blog/abst
 ![h:550 w:auto](writers2.jpg)
 
 ---
-## Gráficos y diagramas
-
-Matplotlib y PlantUML con pandoc-plot.
+## Matplotlib y PlantUML con pandoc-plot.
 
 ```
 import numpy as np
@@ -164,7 +163,7 @@ plt.title('This is an example figure')
 
 
 ---
-## Referencias cruzadas, citas y CSL.
+## Referencias cruzadas, gestion de biblografía y estilo de citado.
 
 Declarar una referencia como `@moolenaar2000` o también `[@knuth1986texbook
 p.3-9]`.
@@ -244,9 +243,9 @@ En revisiones de literatura del tipo estudio de mapeo sistemático, donde se inv
 <style scoped>
 p { columns: 2; }
 </style>
-# Gracias
+# ¡Gracias!
 **¿Preguntas?**<br>
-**¡Pull Requests bienvenidos!** [github.com/lifofernandez/article-boilerplate](https://github.com/lifofernandez/article-boilerplate)
+**Pull Requests bienvenidos:** [github.com/lifofernandez/article-boilerplate](https://github.com/lifofernandez/article-boilerplate)
 <br>
 ![w:400 h:400](qrcode_github.com.png)
 
