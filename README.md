@@ -6,20 +6,20 @@ no codificados o de alta legibilidad beneficia a todos los usuarios, que deben
 poder encontrar facilmente lo que necesitan, comprender lo que encuentran y
 usarlo para realizar tareas @das.
 
-El objetivo de este trabajo es un entorno de autoría textos en el cual _Pandoc_
-es la pieza central que actúa como interprete del sistema de composición
-tipográfica y preparación de documentos de alta calidad _LaTeX_, estándar de
-facto para la comunicación y publicación de documentos académicos [@macfarlane;
-@knuth1986texbook].
+El objetivo de este trabajo es un entorno de autoría de textos en el cual
+_Pandoc_ es la pieza central que actúa como interprete del sistema de
+composición tipográfica y preparación de documentos de alta calidad _LaTeX_,
+estándar de facto para la comunicación y publicación de documentos académicos
+[@macfarlane; @knuth1986texbook].
 
 Mediante integraciones sencillas se consigue una infraestructura robusta con
 funciones diseñadas para gestionar exposición de extensas biblografías,
 múltiples citas y referencias a diferentes fuentes, notación matemática,
-generación gráficos y diagramas, entre otras capacidades avanzadas, necesarias
-en la producción de documentación técnica y científica, todo el proceso es
-controlado mediante linea de comandos sin depender de interfaces captivas,
-promoviendo la transparencia, claridad y reproducción [@gancarz2003linux
-p.88-97].
+generación de gráficos y diagramas, entre otras capacidades avanzadas,
+necesarias en la producción de documentación técnica y científica, todo el
+proceso es controlado mediante linea de comandos sin depender de interfaces
+captivas, promoviendo la transparencia, claridad y reproducción
+[@gancarz2003linux p.88-97].
 
 ## Interfaz de usuario textual
  
@@ -32,10 +32,10 @@ misma manera que se produce software [@hunt1999pragmatic;
 
 Separar contenido, referencias, estilos y procesos, en un contexto de
 organizaciones con actividades relacionadas a la publicación, donde la
-complejidad no solo reside en los documentos sino que también en la tarea, dado
-que involucra a múltiples agentes (autores, correctores y editores, entre
-otros) y devuelve el control de estilo a la organización, garantizando unidad
-en estética en la composición gráfica resultante de diversos productos.
+complejidad no solo reside en los documentos sino que también en la tarea que
+involucra a múltiples agentes (autores, correctores y editores, entre otros)
+devuelve el control de estilo a la organización. Garantiza unidad en estética
+en la composición gráfica resultante de productos diversos.
 
 Esta formación introducirá en la fuerza de trabajo una nueva capacidad con una
 inclinación arraigada y fundamental hacia la investigación reproducible
@@ -65,7 +65,7 @@ características especiales (como hipervínculos).  Al texto resultante se le
 conoce como texto formateado, texto con estilos, o texto enriquecido @gruber.
 
 Lo que distingue a _Markdown_ de muchas otras sintaxis de marcado ligero, es su
-énfasis en la legibilidad.  El objetivo prinsipal del diseño de la sintaxis de
+énfasis en la legibilidad.  El objetivo principal del diseño de la sintaxis de
 formato de _Markdown_ es hacerla lo más legible posible. La idea es que un
 documento con formato _Markdown_ sea publicable tal cual, como texto plano, sin
 que parezca que ha sido marcado con etiquetas o instrucciones de formato.
@@ -86,10 +86,10 @@ presente documento.
 
 Primero se describe la integración de diferentes piezas de software, algunas
 distribuidas junto con _Pandoc_ y otras aportes independientes de la comunidad.
-Seguido se presenta sistema de diagramación y generación gráficos que permite crear
-visualizaciones utilizando texto y código. Luego se expone el sistema citas
-y referencias bibliográficas. Para concluir este capitulo se exponen cuestiones
-relacionadas a la notación matemática.
+Seguido se presenta el filtro de diagramación y generación gráficos que permite
+crear visualizaciones utilizando texto y código. Luego se expone el sistema
+citas y referencias bibliográficas. Para concluir este capitulo se exponen
+cuestiones relacionadas a la notación matemática.
 
 ## Integración
 
@@ -103,7 +103,7 @@ formato de entrada o de salida basta con añadir un lector o un escritor.
 También es posible crear filtros personalizados para modificar el AST
 intermedio.
 
-De los múltiples maneras de personalizar _Pandoc_ para que se adapte a los
+De las múltiples maneras de personalizar _Pandoc_ para que se adapte a los
 requisitos de cada proyecto, se destaca el uso de un sistema de plantillas, un
 potente sistema de citas y bibliografías automáticas y la generación de
 gráficos mediante código.
@@ -117,14 +117,14 @@ de la organización.
 
 Se destina esta tarea a _pandoc-plot_, un filtro de _Pandoc_ para generar
 figuras a partir de bloques de código en los documentos @pandocplot.
-Al actual, _pandoc-plot_ es compatible con el siguiente conjunto de
+actualmente, _pandoc-plot_ es compatible con el siguiente conjunto de
 herramientas de trazado: matplotlib; _plotly_python, plotly_r, matlabplot,
 mathplot, octaveplot, ggplot2, gnuplot, graphviz, bokeh, plotsjl_ y _plantuml_.
 
 En este trabajo se implementan dos de ellas, _Matplotlib_ y _PlantUML_
 [@matplotlib; @plantuml]. En los apartados a continuación se exponen gráficos
 generados con dichas herramientas partir del condigo incluido en el fichero
-_Markdown_ original, para que demostrar las posibilidades de esta herramienta.
+_Markdown_ original, para demostrar las posibilidades de esta herramienta.
 
 
 ### Matplotlib
@@ -194,7 +194,6 @@ plt.title('This is an example figure')
 
 ```{.plantuml}
 @startuml
-!theme plain
 
 package "Some Group" {
   HTTP - [First Component]
@@ -284,13 +283,13 @@ características que rivalizan o superan a otros sistemas bibliográficos.
 ### Lenguaje de Estilo de Citación
 
 La referencias son una pieza clave en la comunicación académica, ya que
-proporcionan la atribución, enlazan referentes.  Sin embargo, formatear
+proporcionan la atribución y enlazan referencias. Sin embargo, formatear
 manualmente las referencias puede llevar mucho tiempo, especialmente cuando se
 trata de múltiples publicaciones con diferentes estilos de citación.
 
 El software de gestión de referencias no sólo ayuda a gestionar bibliotecas de
 investigación, sino que también pueden generar automáticamente citas y
-bibliografías. Pero para formatear las referencias en el estilo deseado, estos
+bibliografías. Para formatear las referencias en el estilo deseado, estos
 programas necesitan descripciones de cada estilo de citación en un lenguaje que
 el ordenador pueda entender, el Lenguaje de Estilo de Citación (Citation Style
 Languaje - CSL) es el descriptor utilizado es un formato basado en XML para
@@ -300,7 +299,7 @@ describir el formato de citas, notas y bibliografías @zellecitation.
 
 _pandoc-crossref_ es un filtro de para numerar figuras, ecuaciones, tablas y
 referencias cruzadas a las mismas @crossref. En Apéndice B @sec:apendixB, se expone 
-el documento oficial de demostración las capacidades de esta herramienta,
+el documento oficial de demostración de las capacidades de esta herramienta,
 incluido en la cadena de procesos de estos proyectos.
 
 ## Notación matemática
@@ -337,11 +336,10 @@ ecuaciones en Office, LaTeX, wikis y otro software.
 
 # Resultados
 
-El resultado de este proyecto es la integración de diferentes piezas de
-software y andamiaje necesario para reproducir este proyecto: fuentes de
-entrada, configuraciones, estructura, filtros, plantillas (_LaTeX_, CLSs,
-resaltado de sintaxis) y un ejemplo flujo de trabajo acciones integración
-remota automatizada.
+El resultado es la integración de diferentes piezas de software y andamiaje
+necesario para reproducir este proyecto: fuentes de entrada, configuraciones,
+estructura, filtros, plantillas (_LaTeX_, CLSs, resaltado de sintaxis) y un
+ejemplo de acciones remotas para entrega continua.
 
 <!--
 Notación matemática, gestión de referencias, citas y generación de gráficos.
@@ -351,13 +349,13 @@ profundidad la tabla de contenidos.  y archivo de entrada y de salida.
 
 Para recrear este proceso, principalmente hay 2 opciones:
 
-La mas directa es realizar un _fork_ el repositorio en el cual esta alojado el
+La más directa es realizar un _fork_ del repositorio en el cual esta alojado el
 contenido en linea [@fork, @repo]. Después de realizar modificaciones necesarias,
 esto dispara acciones en el repositorio y genera este documento.
 
 Para trabajar en una copia local es necesario es ejecutar los siguientes
-comando en un terminal de sistema para, clonar el contenido, inicializar el proyecto
-y generar el documento [^1].
+comandos en una terminal de sistema para clonar el contenido, inicializar el
+proyecto y generar el documento [^1].
 
 ```console
 $ git clone https://github.com/lifofernandez/article-boilerplate.git
@@ -373,9 +371,10 @@ $ pandoc README.md \
 ```
 
 [^1]: Conseguir una instalación funcional de _pandoc_ y sus dependencias es
-condicionante el sistema en el que se ejecute. Las rutinas proveidas estan destinadas a sistemas Arch Linux.
-Para instrucciones especificas
-consultar las indicaciones su autor @installPandoc.
+condicionante el sistema en el que se ejecute. Las rutinas proveidas estan
+destinadas a sistemas Arch Linux.  Para instrucciones especificas consultar las
+indicaciones de su autor @installPandoc.
+
 
 ## Sintaxis extendida de _Markdown_
 
@@ -383,7 +382,7 @@ Hay un aspecto en el que los objetivos de _Pandoc_ difieren de los originales
 de _Markdown_. Mientras que _Markdown_ fue diseñado para la generación de HTML en
 mente, _Pandoc_ está preparado para producir múltiples formatos de salida.
 
-En Apéndice A (@Sec:apendixA) expone la versión mejorada de _Markdown_ de
+En Apéndice A (@Sec:apendixA) se expone la versión mejorada de _Markdown_ de
 _Pandoc_ que comprende una versión ampliada y ligeramente revisada de la
 sintaxis original[^2]. Incluye sintaxis para tablas, listas de definiciones,
 bloques de metadatos, notas a pie de página, citas y matemáticas y entre otros
@@ -392,8 +391,8 @@ bloques de metadatos, notas a pie de página, citas y matemáticas y entre otros
 ## Numeración y referencias cruzadas
 
 Para consultar una lista completa de las funcionalidades avanzadas de
-_pandoc-crossref_ el módulo de _pandoc_ para realizar referencias cruzadas.
-Acompaña este artículo la demostración de su autor en Apéndice B
+_pandoc-crossref_, el filtro de _pandoc_ para realizar referencias cruzadas, 
+acompaña este artículo la demostración de su autor en Apéndice B
 (@Sec:apendixB).
 
 [^2]: El contenido de los apéndices se encuentran en su idioma original.
@@ -404,7 +403,7 @@ Acompaña este artículo la demostración de su autor en Apéndice B
 
 Este capítulo concluye el estudio. En primer lugar, se cubren los
 objetivos de investigación. El segundo subcapítulo presenta la
-contribución de esta trabajo, y los dos últimos subapartados
+contribución de este trabajo, y los dos últimos subapartados
 presentan las limitaciones del estudio y las sugerencias para
 desarrollos futuros, respectivamente.
 
@@ -423,8 +422,8 @@ dinámica.
 
 ## Aporte
 
-Es intención que este trabajo que sirva como punto de partida en
-contextos similares, reutilizado patrones de diseño y siguiendo
+Es intención que este trabajo sirva como punto de partida en
+contextos similares, reutilizando patrones de diseño y siguiendo
 guía de buenas prácticas en la producción de documentos gráficos
 de alta complejidad.
 
@@ -434,12 +433,12 @@ el desarrollo de cualquier otro sistema como por ejemplo, gestión
 documental, registros médicos, documentos legales, certificados
 legales, entre otros.
 
-En una implementación organizacional esto puede ser aprovechado servicio remoto
-de preparación de documentos gráficos. En aquellos contextos que los productos
-gráficos se generan mediante rutinas directamente de bases de datos, una capa
-codificada extra que opaca la relación entre el interprete y el contenido, se
-recomienda un proceso similar al descripto de respaldo de la información en
-contenedores de formato simple y legible, sin codificar.
+En una implementación organizacional esto puede ser aprovechado como servicio
+remoto de preparación de documentos gráficos. En aquellos contextos que los
+productos gráficos se generan mediante rutinas directamente de bases de datos,
+una capa codificada extra que opaca la relación entre el interprete y el
+contenido, se recomienda un proceso similar al descripto de respaldo de la
+información en contenedores de formato simple y legible, sin codificar.
 
 Aunque los escuadrones sean autónomos, es importante que los
 especialistas (por ejemplo, editores) se alineen en las mejores
@@ -462,14 +461,14 @@ _Pandoc_.
 
 ## Futuras lineas de trabajo
 
-Se señalan como áreas de vacancia el desarrollo primero acciones remotas
-automáticas con el fin de generar entregas continuas y las configuraciones
+Se señalan como áreas de desarrollo, primero las acciones remotas automáticas
+con el fin de generar entregas continuas y seguido, las configuraciones
 especiales para investigaciones del tipo revisión sistemática de literatura
 @Kitchenham2006.
 
 ### Entrega continua 
 
-Como se puede comprar en el repositorio que aloja el este proyecto el
+Como se puede comprar en el repositorio que aloja este proyecto el
 documento PDF de salida puede ser producido  mediante Operaciones remotas
 automáticas @actions.
 
@@ -483,11 +482,11 @@ ejecutan en un entorno remoto preconfigurado.
 
 ### Revisión sistemática de literatura
 
-Este proceder promueve capacidades como ordenación personalizable, bibliografías
-jerarquizadas por sección, soporte de poliglosia para el cambio automático de
-idioma de las entradas y citas bibliográficas; modelo de datos personalizable
-para que los usuarios puedan definir sus propios tipos de datos bibliográficos y
-validarlos con respecto a un modelo.
+Este proceder promueve capacidades como ordenación personalizable,
+bibliografías jerarquizadas por sección, soporte de poliglosia para el cambio
+automático de idioma de las entradas y citas bibliográficas; modelo de datos
+personalizable para que los usuarios puedan definir sus propios tipos de datos
+bibliográficos y validarlos con respecto a un modelo.
 
 En investigaciones del tipo revisiones de literatura, donde se involucran
 múltiples cuerpos bibliográficos con diferente ordenación y exposición,

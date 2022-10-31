@@ -16,7 +16,7 @@ abstract: >-
   Entorno de producción de literatura académica y documentación técnica con
   _Pandoc_ como interprete y _LaTeX_ como sistema de composición tipográfica.
   Generación gráficos, diagramas y notación matemática; gestión de citas,
-  referencias cruzadas y bibliografía. Evitando el uso de interfaces gráficas y/o
+  referencias cruzadas y bibliografía. Evitando el uso de interfaces gráficas o
   captivas.
 
 # Bibliografia y citas
